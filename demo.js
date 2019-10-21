@@ -7091,7 +7091,7 @@ var author$project$Demo$Buttons$view = function (model) {
 		cp: author$project$Demo$Buttons$heroButtons,
 		cH: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/buttons/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Button'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-buttons'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-button')
 		},
@@ -7500,7 +7500,7 @@ var author$project$Demo$Cards$view = function (model) {
 		cp: author$project$Demo$Cards$heroCard,
 		cH: 'Cards contain content and actions about a single subject.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/cards/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Card'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-cards'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-card')
 		},
@@ -8379,7 +8379,7 @@ var author$project$Demo$Checkbox$view = function (model) {
 		cp: author$project$Demo$Checkbox$heroCheckboxes(model),
 		cH: 'Checkboxes allow the user to select multiple options from a set.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/checkboxes/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Checkbox'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-checkboxes'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox')
 		},
@@ -8783,7 +8783,7 @@ var author$project$Demo$Chips$view = function (model) {
 		cp: author$project$Demo$Chips$heroChips,
 		cH: 'Chips are compact elements that allow users to enter information, select a choice, filter content, or trigger an action.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/chips/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Chips'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-chips'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips')
 		},
@@ -9551,7 +9551,7 @@ var author$project$Demo$Dialog$view = function (model) {
 		cp: author$project$Demo$Dialog$heroDialog,
 		cH: 'Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/dialogs/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Dialog'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-dialogs'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-dialog')
 		},
@@ -10021,7 +10021,7 @@ var author$project$Demo$Drawer$view = function (model) {
 		cp: author$project$Demo$Drawer$heroDrawer,
 		cH: 'The navigation drawer slides in from the left and contains the navigation destinations for your app.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/drawers/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Drawer'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-navigation-drawer'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer')
 		},
@@ -10430,7 +10430,7 @@ var author$project$Demo$Elevation$view = function (model) {
 		cp: author$project$Demo$Elevation$heroElevation,
 		cH: 'Elevation is the relative depth, or distance, between two surfaces along the z-axis.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/elevation/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Elevation'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-elevation'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation')
 		},
@@ -10702,7 +10702,7 @@ var author$project$Demo$Fabs$view = function (model) {
 			]),
 		cH: 'Floating action buttons represents the primary action in an application. Only one floating action button is recommended per screen to represent the most common action.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/buttons/floating-action-buttons/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Fab'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-fab'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/')
 		},
@@ -10936,7 +10936,7 @@ var author$project$Demo$IconButton$view = function (model) {
 			]),
 		cH: 'Icons are appropriate for buttons that allow a user to take actions or make a selection, such as adding or removing a star to an item.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/buttons/icon-buttons/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-IconButton'),
 			cz: elm$core$Maybe$Just('https://material.io/design/components/buttons.html#toggle-button'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-button')
 		},
@@ -11189,7 +11189,7 @@ var author$project$Demo$ImageList$view = function (model) {
 			]),
 		cH: 'Image lists display a collection of images in an organized grid.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/image-lists/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-ImageList'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-image-list'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-image-list')
 		},
@@ -11450,7 +11450,7 @@ var author$project$Demo$LayoutGrid$view = function (model) {
 		cp: author$project$Demo$LayoutGrid$heroGrid,
 		cH: 'Material design’s responsive UI is based on a 12-column grid layout.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/layout-grid/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-LayoutGrid'),
 			cz: elm$core$Maybe$Nothing,
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid')
 		},
@@ -11672,7 +11672,7 @@ var author$project$Demo$LinearProgress$view = function (model) {
 			]),
 		cH: 'Progress indicators display the length of a process or express an unspecified wait time.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/linear-progress/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-LinearProgress'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-progress-indicators'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-linear-progress')
 		},
@@ -12465,7 +12465,7 @@ var author$project$Demo$Lists$view = function (model) {
 		cp: author$project$Demo$Lists$heroList,
 		cH: 'Lists present multiple line items vertically as a single continuous element.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/lists/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-List'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-lists'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-list')
 		},
@@ -12668,7 +12668,7 @@ var author$project$Demo$Menus$view = function (model) {
 			]),
 		cH: 'Menus display a list of choices on a transient sheet of material.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/menus/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Menu'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-menus'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-menu')
 		},
@@ -12988,7 +12988,7 @@ var author$project$Demo$RadioButtons$view = function (model) {
 			]),
 		cH: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/radio-buttons/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Radio'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-radio-buttons'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-radio')
 		},
@@ -13171,7 +13171,7 @@ var author$project$Demo$Ripple$view = function (model) {
 			]),
 		cH: 'Ripples are visual representations used to communicate the status of a component or interactive element.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/ripples/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Ripple'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-states'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple')
 		},
@@ -13577,7 +13577,7 @@ var author$project$Demo$Selects$view = function (model) {
 			]),
 		cH: 'Selects allow users to select from a single-option menu. It functions as a wrapper around the browser\'s native <select> element.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/select-menus/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Select'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-text-fields'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-select')
 		},
@@ -14036,7 +14036,7 @@ var author$project$Demo$Slider$view = function (model) {
 			]),
 		cH: 'Sliders let users select from a range of values by moving the slider thumb.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/sliders/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Slider'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-sliders'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-slider')
 		},
@@ -14337,7 +14337,7 @@ var author$project$Demo$Snackbar$view = function (model) {
 			[author$project$Demo$Snackbar$heroMessage]),
 		cH: 'Snackbars provide brief feedback about an operation through a message at the bottom of the screen.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/snackbars/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Snackbar'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-snackbar'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar')
 		},
@@ -14725,7 +14725,7 @@ var author$project$Demo$Switch$view = function (model) {
 		cp: author$project$Demo$Switch$heroSwitch(model),
 		cH: 'Switches communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/switches/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Switch'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-switches'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch')
 		},
@@ -15202,7 +15202,7 @@ var author$project$Demo$TabBar$view = function (model) {
 			]),
 		cH: 'Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy. The Tab Bar contains the Tab Scroller and Tab components.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/tabs/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TabBar'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-tabs'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-bar')
 		},
@@ -16371,7 +16371,7 @@ var author$project$Demo$TextFields$view = function (model) {
 			]),
 		cH: 'Text fields allow users to input, edit, and select text. Text fields typically reside in forms but can appear in other places, like dialog boxes and search.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/input-controls/text-field/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TextField'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-text-fields'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield')
 		},
@@ -16828,7 +16828,7 @@ var author$project$Demo$Theme$view = function (model) {
 			]),
 		cH: 'Color in Material Design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/theme/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Theme'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-color-theming'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme')
 		},
@@ -16998,7 +16998,7 @@ var author$project$Demo$TopAppBar$view = function (model) {
 			]),
 		cH: 'Top App Bars are a container for items such as application title, navigation icon, and action items.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/top-app-bar/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TopAppBar'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-app-bar-top'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar')
 		},
@@ -17172,7 +17172,7 @@ var author$project$Demo$Typography$view = function (model) {
 			]),
 		cH: 'Roboto is the standard typeface on Android and Chrome.',
 		cI: {
-			cg: elm$core$Maybe$Just('https://material.io/components/web/catalog/typography/'),
+			cg: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Typography'),
 			cz: elm$core$Maybe$Just('https://material.io/go/design-typography'),
 			cL: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-typography')
 		},
