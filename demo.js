@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.bk.ac === region.bz.ac)
+	if (region.bk.ad === region.bz.ad)
 	{
-		return 'on line ' + region.bk.ac;
+		return 'on line ' + region.bk.ad;
 	}
-	return 'on lines ' + region.bk.ac + ' through ' + region.bz.ac;
+	return 'on lines ' + region.bk.ad + ' through ' + region.bz.ad;
 }
 
 
@@ -5260,17 +5260,17 @@ var $author$project$Demo$Drawer$defaultModel = {};
 var $author$project$Demo$Elevation$defaultModel = {};
 var $author$project$Demo$Fabs$defaultModel = {};
 var $author$project$Demo$FixedTopAppBar$defaultModel = {};
-var $author$project$Demo$IconButton$defaultModel = {_: $elm$core$Dict$empty};
+var $author$project$Demo$IconButton$defaultModel = {aa: $elm$core$Dict$empty};
 var $author$project$Demo$ImageList$defaultModel = {};
 var $author$project$Demo$LayoutGrid$defaultModel = {};
 var $author$project$Demo$LinearProgress$defaultModel = {};
-var $author$project$Demo$Lists$defaultModel = {aF: 1, o: $elm$core$Set$empty, al: $elm$core$Maybe$Nothing, aQ: 1};
+var $author$project$Demo$Lists$defaultModel = {aG: 1, o: $elm$core$Set$empty, am: $elm$core$Maybe$Nothing, aQ: 1};
 var $author$project$Demo$Menus$defaultModel = {cF: false};
 var $author$project$Demo$ModalDrawer$defaultModel = {a_: false, aP: 0};
 var $author$project$Demo$PermanentDrawer$defaultModel = {aP: 0};
 var $author$project$Demo$ProminentTopAppBar$defaultModel = {};
 var $author$project$Demo$RadioButtons$defaultModel = {
-	am: $elm$core$Dict$fromList(
+	an: $elm$core$Dict$fromList(
 		_List_fromArray(
 			[
 				_Utils_Tuple2('hero', 'radio-buttons-hero-radio-1'),
@@ -5292,22 +5292,22 @@ var $author$project$Demo$Slider$defaultModel = {
 			]))
 };
 var $author$project$Material$Snackbar$initialQueue = {l: 0, q: _List_Nil};
-var $author$project$Demo$Snackbar$defaultModel = {aj: $author$project$Material$Snackbar$initialQueue};
+var $author$project$Demo$Snackbar$defaultModel = {ak: $author$project$Material$Snackbar$initialQueue};
 var $author$project$Demo$StandardTopAppBar$defaultModel = {};
 var $author$project$Demo$Switch$defaultModel = {
-	av: $elm$core$Dict$fromList(
+	aw: $elm$core$Dict$fromList(
 		_List_fromArray(
 			[
 				_Utils_Tuple2('hero-switch', true)
 			]))
 };
-var $author$project$Demo$TabBar$defaultModel = {C: 0, aG: 0, aH: 0, aI: 0};
+var $author$project$Demo$TabBar$defaultModel = {C: 0, aH: 0, aI: 0, aJ: 0};
 var $author$project$Demo$TextFields$defaultModel = {m: ''};
 var $author$project$Demo$Theme$defaultModel = {};
 var $author$project$Demo$TopAppBar$defaultModel = {};
 var $author$project$Demo$Typography$defaultModel = {};
 var $author$project$Main$defaultModel = function (key) {
-	return {ca: $author$project$Demo$Buttons$defaultModel, M: $author$project$Demo$Cards$defaultModel, v: false, N: $author$project$Demo$Checkbox$defaultModel, P: $author$project$Demo$Chips$defaultModel, S: $author$project$Demo$DenseTopAppBar$defaultModel, T: $author$project$Demo$Dialog$defaultModel, U: $author$project$Demo$DismissibleDrawer$defaultModel, ch: $author$project$Demo$Drawer$defaultModel, V: $author$project$Demo$Elevation$defaultModel, X: $author$project$Demo$Fabs$defaultModel, Y: $author$project$Demo$FixedTopAppBar$defaultModel, Z: $author$project$Demo$IconButton$defaultModel, aa: $author$project$Demo$ImageList$defaultModel, bF: key, ab: $author$project$Demo$LayoutGrid$defaultModel, ad: $author$project$Demo$LinearProgress$defaultModel, ae: $author$project$Demo$Lists$defaultModel, af: $author$project$Demo$Menus$defaultModel, ag: $author$project$Demo$ModalDrawer$defaultModel, ah: $author$project$Demo$PermanentDrawer$defaultModel, ai: $author$project$Demo$ProminentTopAppBar$defaultModel, ak: $author$project$Demo$RadioButtons$defaultModel, an: $author$project$Demo$Ripple$defaultModel, ao: $author$project$Demo$Selects$defaultModel, ap: $author$project$Demo$ShortCollapsedTopAppBar$defaultModel, aq: $author$project$Demo$ShortTopAppBar$defaultModel, ar: $author$project$Demo$Slider$defaultModel, as: $author$project$Demo$Snackbar$defaultModel, at: $author$project$Demo$StandardTopAppBar$defaultModel, au: $author$project$Demo$Switch$defaultModel, aw: $author$project$Demo$TabBar$defaultModel, ay: $author$project$Demo$TextFields$defaultModel, az: $author$project$Demo$Theme$defaultModel, cQ: $author$project$Demo$TopAppBar$defaultModel, aC: $author$project$Demo$Typography$defaultModel, a: $author$project$Demo$Url$Button};
+	return {ca: $author$project$Demo$Buttons$defaultModel, M: $author$project$Demo$Cards$defaultModel, v: false, N: $author$project$Demo$Checkbox$defaultModel, P: $author$project$Demo$Chips$defaultModel, S: $author$project$Demo$DenseTopAppBar$defaultModel, T: $author$project$Demo$Dialog$defaultModel, V: $author$project$Demo$DismissibleDrawer$defaultModel, ch: $author$project$Demo$Drawer$defaultModel, W: $author$project$Demo$Elevation$defaultModel, Y: $author$project$Demo$Fabs$defaultModel, Z: $author$project$Demo$FixedTopAppBar$defaultModel, _: $author$project$Demo$IconButton$defaultModel, ab: $author$project$Demo$ImageList$defaultModel, bF: key, ac: $author$project$Demo$LayoutGrid$defaultModel, ae: $author$project$Demo$LinearProgress$defaultModel, af: $author$project$Demo$Lists$defaultModel, ag: $author$project$Demo$Menus$defaultModel, ah: $author$project$Demo$ModalDrawer$defaultModel, ai: $author$project$Demo$PermanentDrawer$defaultModel, aj: $author$project$Demo$ProminentTopAppBar$defaultModel, al: $author$project$Demo$RadioButtons$defaultModel, ao: $author$project$Demo$Ripple$defaultModel, ap: $author$project$Demo$Selects$defaultModel, aq: $author$project$Demo$ShortCollapsedTopAppBar$defaultModel, ar: $author$project$Demo$ShortTopAppBar$defaultModel, as: $author$project$Demo$Slider$defaultModel, at: $author$project$Demo$Snackbar$defaultModel, au: $author$project$Demo$StandardTopAppBar$defaultModel, av: $author$project$Demo$Switch$defaultModel, ax: $author$project$Demo$TabBar$defaultModel, az: $author$project$Demo$TextFields$defaultModel, aA: $author$project$Demo$Theme$defaultModel, cQ: $author$project$Demo$TopAppBar$defaultModel, aD: $author$project$Demo$Typography$defaultModel, a: $author$project$Demo$Url$Button};
 };
 var $author$project$Demo$Url$Card = {$: 2};
 var $author$project$Demo$Url$Checkbox = {$: 3};
@@ -6104,14 +6104,14 @@ var $author$project$Demo$IconButton$update = F2(
 		return _Utils_update(
 			model,
 			{
-				_: A3(
+				aa: A3(
 					$elm$core$Dict$update,
 					index,
 					function (state) {
 						return $elm$core$Maybe$Just(
 							!A2($elm$core$Maybe$withDefault, false, state));
 					},
-					model._)
+					model.aa)
 			});
 	});
 var $author$project$Demo$ImageList$update = F2(
@@ -6141,13 +6141,13 @@ var $author$project$Demo$Lists$update = F2(
 				return _Utils_update(
 					model,
 					{
-						al: $elm$core$Maybe$Just(index)
+						am: $elm$core$Maybe$Just(index)
 					});
 			case 2:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aF: index});
+					{aG: index});
 			default:
 				var index = msg.a;
 				return _Utils_update(
@@ -6203,7 +6203,7 @@ var $author$project$Demo$RadioButtons$update = F2(
 		return _Utils_update(
 			model,
 			{
-				am: A3($elm$core$Dict$insert, group, index, model.am)
+				an: A3($elm$core$Dict$insert, group, index, model.an)
 			});
 	});
 var $author$project$Demo$Ripple$update = F2(
@@ -6356,9 +6356,9 @@ var $author$project$Demo$Snackbar$update = F2(
 					function (queue) {
 						return _Utils_update(
 							model,
-							{aj: queue});
+							{ak: queue});
 					},
-					A3($author$project$Material$Snackbar$update, $author$project$Demo$Snackbar$SnackbarMsg, snackbarMsg, model.aj));
+					A3($author$project$Material$Snackbar$update, $author$project$Demo$Snackbar$SnackbarMsg, snackbarMsg, model.ak));
 			default:
 				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 		}
@@ -6373,14 +6373,14 @@ var $author$project$Demo$Switch$update = F2(
 		return _Utils_update(
 			model,
 			{
-				av: A3(
+				aw: A3(
 					$elm$core$Dict$update,
 					id,
 					function (state) {
 						return $elm$core$Maybe$Just(
 							!A2($elm$core$Maybe$withDefault, false, state));
 					},
-					model.av)
+					model.aw)
 			});
 	});
 var $author$project$Demo$TabBar$update = F2(
@@ -6395,17 +6395,17 @@ var $author$project$Demo$TabBar$update = F2(
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aG: index});
+					{aH: index});
 			case 2:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aI: index});
+					{aJ: index});
 			default:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aH: index});
+					{aI: index});
 		}
 	});
 var $author$project$Demo$TextFields$update = F2(
@@ -6523,7 +6523,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							V: A2($author$project$Demo$Elevation$update, msg_, model.V)
+							W: A2($author$project$Demo$Elevation$update, msg_, model.W)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 11:
@@ -6541,7 +6541,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							U: A2($author$project$Demo$DismissibleDrawer$update, msg_, model.U)
+							V: A2($author$project$Demo$DismissibleDrawer$update, msg_, model.V)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 20:
@@ -6550,7 +6550,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ag: A2($author$project$Demo$ModalDrawer$update, msg_, model.ag)
+							ah: A2($author$project$Demo$ModalDrawer$update, msg_, model.ah)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 21:
@@ -6559,7 +6559,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ah: A2($author$project$Demo$PermanentDrawer$update, msg_, model.ah)
+							ai: A2($author$project$Demo$PermanentDrawer$update, msg_, model.ai)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 13:
@@ -6568,7 +6568,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							X: A2($author$project$Demo$Fabs$update, msg_, model.X)
+							Y: A2($author$project$Demo$Fabs$update, msg_, model.Y)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 14:
@@ -6577,7 +6577,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							Z: A2($author$project$Demo$IconButton$update, msg_, model.Z)
+							_: A2($author$project$Demo$IconButton$update, msg_, model._)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 15:
@@ -6586,7 +6586,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aa: A2($author$project$Demo$ImageList$update, msg_, model.aa)
+							ab: A2($author$project$Demo$ImageList$update, msg_, model.ab)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 19:
@@ -6595,7 +6595,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							af: A2($author$project$Demo$Menus$update, msg_, model.af)
+							ag: A2($author$project$Demo$Menus$update, msg_, model.ag)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 22:
@@ -6604,7 +6604,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ak: A2($author$project$Demo$RadioButtons$update, msg_, model.ak)
+							al: A2($author$project$Demo$RadioButtons$update, msg_, model.al)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 23:
@@ -6613,7 +6613,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							an: A2($author$project$Demo$Ripple$update, msg_, model.an)
+							ao: A2($author$project$Demo$Ripple$update, msg_, model.ao)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 24:
@@ -6622,7 +6622,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ao: A2($author$project$Demo$Selects$update, msg_, model.ao)
+							ap: A2($author$project$Demo$Selects$update, msg_, model.ap)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 25:
@@ -6631,7 +6631,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ar: A2($author$project$Demo$Slider$update, msg_, model.ar)
+							as: A2($author$project$Demo$Slider$update, msg_, model.as)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 26:
@@ -6644,16 +6644,16 @@ var $author$project$Main$update = F2(
 						function (snackbar) {
 							return _Utils_update(
 								model,
-								{as: snackbar});
+								{at: snackbar});
 						},
-						A2($author$project$Demo$Snackbar$update, msg_, model.as)));
+						A2($author$project$Demo$Snackbar$update, msg_, model.at)));
 			case 28:
 				var msg_ = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{
-							au: A2($author$project$Demo$Switch$update, msg_, model.au)
+							av: A2($author$project$Demo$Switch$update, msg_, model.av)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 30:
@@ -6662,7 +6662,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ay: A2($author$project$Demo$TextFields$update, msg_, model.ay)
+							az: A2($author$project$Demo$TextFields$update, msg_, model.az)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 29:
@@ -6671,7 +6671,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aw: A2($author$project$Demo$TabBar$update, msg_, model.aw)
+							ax: A2($author$project$Demo$TabBar$update, msg_, model.ax)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 16:
@@ -6680,7 +6680,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ab: A2($author$project$Demo$LayoutGrid$update, msg_, model.ab)
+							ac: A2($author$project$Demo$LayoutGrid$update, msg_, model.ac)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 18:
@@ -6689,7 +6689,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ae: A2($author$project$Demo$Lists$update, msg_, model.ae)
+							af: A2($author$project$Demo$Lists$update, msg_, model.af)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 31:
@@ -6698,7 +6698,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							az: A2($author$project$Demo$Theme$update, msg_, model.az)
+							aA: A2($author$project$Demo$Theme$update, msg_, model.aA)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 32:
@@ -6716,7 +6716,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ad: A2($author$project$Demo$LinearProgress$update, msg_, model.ad)
+							ae: A2($author$project$Demo$LinearProgress$update, msg_, model.ae)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 33:
@@ -6725,7 +6725,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aC: A2($author$project$Demo$Typography$update, msg_, model.aC)
+							aD: A2($author$project$Demo$Typography$update, msg_, model.aD)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 27:
@@ -6734,7 +6734,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							at: A2($author$project$Demo$StandardTopAppBar$update, msg_, model.at)
+							au: A2($author$project$Demo$StandardTopAppBar$update, msg_, model.au)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 38:
@@ -6743,7 +6743,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							Y: A2($author$project$Demo$FixedTopAppBar$update, msg_, model.Y)
+							Z: A2($author$project$Demo$FixedTopAppBar$update, msg_, model.Z)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 35:
@@ -6761,7 +6761,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ai: A2($author$project$Demo$ProminentTopAppBar$update, msg_, model.ai)
+							aj: A2($author$project$Demo$ProminentTopAppBar$update, msg_, model.aj)
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 34:
@@ -6770,7 +6770,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ap: A2($author$project$Demo$ShortCollapsedTopAppBar$update, msg_, model.ap)
+							aq: A2($author$project$Demo$ShortCollapsedTopAppBar$update, msg_, model.aq)
 						}),
 					$elm$core$Platform$Cmd$none);
 			default:
@@ -6779,7 +6779,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aq: A2($author$project$Demo$ShortTopAppBar$update, msg_, model.aq)
+							ar: A2($author$project$Demo$ShortTopAppBar$update, msg_, model.ar)
 						}),
 					$elm$core$Platform$Cmd$none);
 		}
@@ -6900,7 +6900,7 @@ var $author$project$Material$Typography$headline1 = $elm$html$Html$Attributes$cl
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
-var $author$project$Material$Button$buttonConfig = {j: _List_Nil, ce: false, aK: false, cq: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, cR: false};
+var $author$project$Material$Button$buttonConfig = {j: _List_Nil, ce: false, U: false, aL: $elm$core$Maybe$Nothing, cq: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, bn: $elm$core$Maybe$Nothing, cR: false};
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $author$project$Demo$Buttons$heroMargin = _List_fromArray(
@@ -6908,6 +6908,8 @@ var $author$project$Demo$Buttons$heroMargin = _List_fromArray(
 		A2($elm$html$Html$Attributes$style, 'margin', '16px 32px')
 	]);
 var $author$project$Material$Button$Outlined = 3;
+var $elm$html$Html$a = _VirtualDom_node('a');
+var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$core$Maybe$map = F2(
 	function (f, maybe) {
 		if (!maybe.$) {
@@ -6945,6 +6947,19 @@ var $author$project$Material$Button$denseCs = function (_v0) {
 		$elm$html$Html$Attributes$class('mdc-button--dense')) : $elm$core$Maybe$Nothing;
 };
 var $elm$json$Json$Encode$bool = _Json_wrap;
+var $elm$html$Html$Attributes$boolProperty = F2(
+	function (key, bool) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$bool(bool));
+	});
+var $elm$html$Html$Attributes$disabled = $elm$html$Html$Attributes$boolProperty('disabled');
+var $author$project$Material$Button$disabledAttr = function (_v0) {
+	var disabled = _v0.U;
+	return $elm$core$Maybe$Just(
+		$elm$html$Html$Attributes$disabled(disabled));
+};
 var $elm$virtual_dom$VirtualDom$property = F2(
 	function (key, value) {
 		return A2(
@@ -6954,7 +6969,7 @@ var $elm$virtual_dom$VirtualDom$property = F2(
 	});
 var $elm$html$Html$Attributes$property = $elm$virtual_dom$VirtualDom$property;
 var $author$project$Material$Button$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -6979,6 +6994,16 @@ var $elm$core$List$filterMap = F2(
 			_List_Nil,
 			xs);
 	});
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $author$project$Material$Button$hrefAttr = function (_v0) {
+	var href = _v0.aL;
+	return A2($elm$core$Maybe$map, $elm$html$Html$Attributes$href, href);
+};
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$Material$Button$labelElt = function (label) {
 	return $elm$core$Maybe$Just(
@@ -7036,7 +7061,7 @@ var $elm$core$Basics$negate = function (n) {
 	return -n;
 };
 var $author$project$Material$Button$tabIndexProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return disabled ? $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -7046,6 +7071,12 @@ var $author$project$Material$Button$tabIndexProp = function (_v0) {
 			$elm$html$Html$Attributes$property,
 			'tabIndex',
 			$elm$json$Json$Encode$int(0)));
+};
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $author$project$Material$Button$targetAttr = function (_v0) {
+	var href = _v0.aL;
+	var target = _v0.bn;
+	return (!_Utils_eq(href, $elm$core$Maybe$Nothing)) ? A2($elm$core$Maybe$map, $elm$html$Html$Attributes$target, target) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$Button$trailingIconElt = function (config) {
 	return config.cR ? $author$project$Material$Button$iconElt(config) : $elm$core$Maybe$Nothing;
@@ -7070,29 +7101,43 @@ var $author$project$Material$Button$button = F3(
 		return A3(
 			$elm$html$Html$node,
 			'mdc-button',
-			_Utils_ap(
-				A2(
-					$elm$core$List$filterMap,
-					$elm$core$Basics$identity,
-					_List_fromArray(
-						[
-							$author$project$Material$Button$rootCs,
-							$author$project$Material$Button$variantCs(variant),
-							$author$project$Material$Button$denseCs(config),
-							$author$project$Material$Button$disabledProp(config),
-							$author$project$Material$Button$tabIndexProp(config),
-							$author$project$Material$Button$clickHandler(config)
-						])),
-				config.j),
 			A2(
 				$elm$core$List$filterMap,
 				$elm$core$Basics$identity,
 				_List_fromArray(
 					[
-						$author$project$Material$Button$leadingIconElt(config),
-						$author$project$Material$Button$labelElt(label),
-						$author$project$Material$Button$trailingIconElt(config)
-					])));
+						$author$project$Material$Button$disabledProp(config)
+					])),
+			_List_fromArray(
+				[
+					A2(
+					(!_Utils_eq(config.aL, $elm$core$Maybe$Nothing)) ? $elm$html$Html$a : $elm$html$Html$button,
+					_Utils_ap(
+						A2(
+							$elm$core$List$filterMap,
+							$elm$core$Basics$identity,
+							_List_fromArray(
+								[
+									$author$project$Material$Button$rootCs,
+									$author$project$Material$Button$variantCs(variant),
+									$author$project$Material$Button$denseCs(config),
+									$author$project$Material$Button$disabledAttr(config),
+									$author$project$Material$Button$tabIndexProp(config),
+									$author$project$Material$Button$hrefAttr(config),
+									$author$project$Material$Button$targetAttr(config),
+									$author$project$Material$Button$clickHandler(config)
+								])),
+						config.j),
+					A2(
+						$elm$core$List$filterMap,
+						$elm$core$Basics$identity,
+						_List_fromArray(
+							[
+								$author$project$Material$Button$leadingIconElt(config),
+								$author$project$Material$Button$labelElt(label),
+								$author$project$Material$Button$trailingIconElt(config)
+							])))
+				]));
 	});
 var $author$project$Material$Button$outlinedButton = F2(
 	function (config, label) {
@@ -7267,7 +7312,7 @@ var $elm$core$List$concat = function (lists) {
 	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
 };
 var $author$project$Material$Card$actionsElt = function (content) {
-	var _v0 = content.aE;
+	var _v0 = content.aF;
 	if (!_v0.$) {
 		var buttons = _v0.a.ca;
 		var icons = _v0.a.cr;
@@ -7328,7 +7373,7 @@ var $author$project$Material$Card$actionsElt = function (content) {
 	}
 };
 var $author$project$Material$Card$blocksElt = function (_v0) {
-	var blocks = _v0.aJ;
+	var blocks = _v0.aK;
 	return A2(
 		$elm$core$List$map,
 		function (_v1) {
@@ -7513,8 +7558,8 @@ var $author$project$Demo$Cards$exampleCard1 = A2(
 				])
 		}),
 	{
-		aE: $elm$core$Maybe$Nothing,
-		aJ: A2(
+		aF: $elm$core$Maybe$Nothing,
+		aK: A2(
 			$author$project$Material$Card$cardPrimaryAction,
 			$author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7599,7 +7644,7 @@ var $author$project$Material$Card$cardActions = function (_v0) {
 	var icons = _v0.cr;
 	return {ca: buttons, a$: false, cr: icons};
 };
-var $author$project$Material$IconButton$iconButtonConfig = {j: _List_Nil, aK: false, b: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing};
+var $author$project$Material$IconButton$iconButtonConfig = {j: _List_Nil, U: false, b: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing};
 var $author$project$Demo$Cards$demoActions = $author$project$Material$Card$cardActions(
 	{
 		ca: _List_fromArray(
@@ -7626,8 +7671,8 @@ var $author$project$Demo$Cards$exampleCard2 = A2(
 				])
 		}),
 	{
-		aE: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
-		aJ: A2(
+		aF: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
+		aK: A2(
 			$author$project$Material$Card$cardPrimaryAction,
 			$author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7646,8 +7691,8 @@ var $author$project$Demo$Cards$exampleCard3 = A2(
 				])
 		}),
 	{
-		aE: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
-		aJ: A2(
+		aF: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
+		aK: A2(
 			$author$project$Material$Card$cardPrimaryAction,
 			$author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7666,8 +7711,8 @@ var $author$project$Demo$Cards$heroCard = _List_fromArray(
 					])
 			}),
 		{
-			aE: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
-			aJ: A2(
+			aF: $elm$core$Maybe$Just($author$project$Demo$Cards$demoActions),
+			aK: A2(
 				$author$project$Material$Card$cardPrimaryAction,
 				$author$project$Material$Card$cardPrimaryActionConfig,
 				_List_fromArray(
@@ -8032,7 +8077,6 @@ var $author$project$Material$List$listConfig = {j: _List_Nil, bs: false, ce: fal
 var $author$project$Material$List$ListItem = function (a) {
 	return {$: 0, a: a};
 };
-var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Material$List$activatedCs = function (_v0) {
 	var activated = _v0.b5;
 	return activated ? $elm$core$Maybe$Just(
@@ -8045,15 +8089,9 @@ var $author$project$Material$List$ariaSelectedAttr = function (_v0) {
 		A2($elm$html$Html$Attributes$attribute, 'aria-selected', 'true')) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$List$disabledCs = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return disabled ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-list-item--disabled')) : $elm$core$Maybe$Nothing;
-};
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
 };
 var $author$project$Material$List$hrefAttr = function (_v0) {
 	var href = _v0.aL;
@@ -8066,43 +8104,26 @@ var $author$project$Material$List$selectedCs = function (_v0) {
 	return selected ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-list-item--selected')) : $elm$core$Maybe$Nothing;
 };
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
 var $author$project$Material$List$targetAttr = function (_v0) {
+	var href = _v0.aL;
 	var target = _v0.bn;
-	return A2($elm$core$Maybe$map, $elm$html$Html$Attributes$target, target);
+	return (!_Utils_eq(href, $elm$core$Maybe$Nothing)) ? A2($elm$core$Maybe$map, $elm$html$Html$Attributes$target, target) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$List$listItem = F2(
 	function (config, nodes) {
 		return $author$project$Material$List$ListItem(
 			{
 				R: config,
-				bI: (!_Utils_eq(config.aL, $elm$core$Maybe$Nothing)) ? A3(
-					$elm$html$Html$node,
-					'mdc-list-item',
-					_List_Nil,
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$a,
-							_Utils_ap(
-								A2(
-									$elm$core$List$filterMap,
-									$elm$core$Basics$identity,
-									_List_fromArray(
-										[
-											$author$project$Material$List$listItemCs,
-											$author$project$Material$List$hrefAttr(config),
-											$author$project$Material$List$targetAttr(config),
-											$author$project$Material$List$disabledCs(config),
-											$author$project$Material$List$selectedCs(config),
-											$author$project$Material$List$activatedCs(config),
-											$author$project$Material$List$ariaSelectedAttr(config)
-										])),
-								config.j),
-							nodes)
-						])) : A3(
-					$elm$html$Html$node,
-					'mdc-list-item',
+				bI: function (attributes) {
+					return (!_Utils_eq(config.aL, $elm$core$Maybe$Nothing)) ? A3(
+						$elm$html$Html$node,
+						'mdc-list-item',
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2($elm$html$Html$a, attributes, nodes)
+							])) : A3($elm$html$Html$node, 'mdc-list-item', attributes, nodes);
+				}(
 					_Utils_ap(
 						A2(
 							$elm$core$List$filterMap,
@@ -8110,16 +8131,17 @@ var $author$project$Material$List$listItem = F2(
 							_List_fromArray(
 								[
 									$author$project$Material$List$listItemCs,
+									$author$project$Material$List$hrefAttr(config),
+									$author$project$Material$List$targetAttr(config),
 									$author$project$Material$List$disabledCs(config),
 									$author$project$Material$List$selectedCs(config),
 									$author$project$Material$List$activatedCs(config),
 									$author$project$Material$List$ariaSelectedAttr(config)
 								])),
-						config.j),
-					nodes)
+						config.j))
 			});
 	});
-var $author$project$Material$List$listItemConfig = {b5: false, j: _List_Nil, aK: false, aL: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, bi: false, bn: $elm$core$Maybe$Nothing};
+var $author$project$Material$List$listItemConfig = {b5: false, j: _List_Nil, U: false, aL: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, bi: false, bn: $elm$core$Maybe$Nothing};
 var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
 var $elm$html$Html$map = $elm$virtual_dom$VirtualDom$map;
 var $author$project$Material$TopAppBar$navigationIcon = $elm$html$Html$Attributes$class('mdc-top-app-bar__navigation-icon');
@@ -8524,7 +8546,7 @@ var $author$project$Material$Checkbox$checkedProp = function (_v0) {
 			$elm$json$Json$Encode$bool(state === 1)));
 };
 var $author$project$Material$Checkbox$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -8605,7 +8627,7 @@ var $author$project$Material$Checkbox$checkbox = function (config) {
 				$author$project$Material$Checkbox$backgroundElt
 			]));
 };
-var $author$project$Material$Checkbox$checkboxConfig = {j: _List_Nil, aK: false, cA: $elm$core$Maybe$Nothing, cN: 0};
+var $author$project$Material$Checkbox$checkboxConfig = {j: _List_Nil, U: false, cA: $elm$core$Maybe$Nothing, cN: 0};
 var $author$project$Demo$Checkbox$controlledCheckbox = F3(
 	function (index, model, additionalAttributes) {
 		var state = A2(
@@ -9175,7 +9197,7 @@ var $author$project$Material$Dialog$closeHandler = function (_v0) {
 		onClose);
 };
 var $author$project$Material$Dialog$actionsElt = function (_v0) {
-	var actions = _v0.aE;
+	var actions = _v0.aF;
 	return $elm$core$List$isEmpty(actions) ? $elm$core$Maybe$Nothing : $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$div,
@@ -9268,17 +9290,19 @@ var $author$project$Material$Dialog$dialog = F2(
 		return A3(
 			$elm$html$Html$node,
 			'mdc-dialog',
-			A2(
-				$elm$core$List$filterMap,
-				$elm$core$Basics$identity,
-				_List_fromArray(
-					[
-						$author$project$Material$Dialog$rootCs,
-						$author$project$Material$Dialog$openProp(config),
-						$author$project$Material$Dialog$roleAttr,
-						$author$project$Material$Dialog$ariaModalAttr,
-						$author$project$Material$Dialog$closeHandler(config)
-					])),
+			_Utils_ap(
+				A2(
+					$elm$core$List$filterMap,
+					$elm$core$Basics$identity,
+					_List_fromArray(
+						[
+							$author$project$Material$Dialog$rootCs,
+							$author$project$Material$Dialog$openProp(config),
+							$author$project$Material$Dialog$roleAttr,
+							$author$project$Material$Dialog$ariaModalAttr,
+							$author$project$Material$Dialog$closeHandler(config)
+						])),
+				config.j),
 			_List_fromArray(
 				[
 					$author$project$Material$Dialog$containerElt(content),
@@ -9298,7 +9322,7 @@ var $author$project$Demo$Dialog$alertDialog = function (model) {
 					$elm$core$Maybe$Just('dialog-alert-dialog'))
 			}),
 		{
-			aE: _List_fromArray(
+			aF: _List_fromArray(
 				[
 					A2(
 					$author$project$Material$Button$textButton,
@@ -9365,7 +9389,7 @@ var $author$project$Material$Radio$checkedProp = function (_v0) {
 			$elm$json$Json$Encode$bool(checked)));
 };
 var $author$project$Material$Radio$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -9436,7 +9460,7 @@ var $author$project$Material$Radio$radio = function (config) {
 				$author$project$Material$Radio$backgroundElt
 			]));
 };
-var $author$project$Material$Radio$radioConfig = {j: _List_Nil, cc: false, aK: false, cA: $elm$core$Maybe$Nothing};
+var $author$project$Material$Radio$radioConfig = {j: _List_Nil, cc: false, U: false, cA: $elm$core$Maybe$Nothing};
 var $author$project$Demo$Dialog$confirmationDialog = function (model) {
 	return A2(
 		$author$project$Material$Dialog$dialog,
@@ -9449,7 +9473,7 @@ var $author$project$Demo$Dialog$confirmationDialog = function (model) {
 					$elm$core$Maybe$Just('dialog-confirmation-dialog'))
 			}),
 		{
-			aE: _List_fromArray(
+			aF: _List_fromArray(
 				[
 					A2(
 					$author$project$Material$Button$textButton,
@@ -9610,7 +9634,7 @@ var $author$project$Demo$Dialog$scrollableDialog = function (model) {
 					$elm$core$Maybe$Just('dialog-scrollable-dialog'))
 			}),
 		{
-			aE: _List_fromArray(
+			aF: _List_fromArray(
 				[
 					A2(
 					$author$project$Material$Button$textButton,
@@ -9710,7 +9734,7 @@ var $author$project$Demo$Dialog$simpleDialog = function (model) {
 					$elm$core$Maybe$Just('dialog-simple-dialog'))
 			}),
 		{
-			aE: _List_Nil,
+			aF: _List_Nil,
 			cd: _List_fromArray(
 				[
 					A2(
@@ -10776,7 +10800,7 @@ var $author$project$Material$Fab$clickHandler = function (_v0) {
 	return A2($elm$core$Maybe$map, $elm$html$Html$Events$onClick, onClick);
 };
 var $author$project$Material$Fab$exitedCs = function (_v0) {
-	var exited = _v0.W;
+	var exited = _v0.X;
 	return exited ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-fab--exited')) : $elm$core$Maybe$Nothing;
 };
@@ -10868,7 +10892,7 @@ var $author$project$Material$Fab$extendedFab = F2(
 						$author$project$Material$Fab$trailingIconElt(config)
 					])));
 	});
-var $author$project$Material$Fab$extendedFabConfig = {j: _List_Nil, W: false, cq: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, cR: false};
+var $author$project$Material$Fab$extendedFabConfig = {j: _List_Nil, X: false, cq: $elm$core$Maybe$Nothing, cB: $elm$core$Maybe$Nothing, cR: false};
 var $author$project$Material$Fab$iconElt = function (iconName) {
 	return A2(
 		$elm$html$Html$span,
@@ -10909,7 +10933,7 @@ var $author$project$Material$Fab$fab = F2(
 					$author$project$Material$Fab$iconElt(iconName)
 				]));
 	});
-var $author$project$Material$Fab$fabConfig = {j: _List_Nil, W: false, bG: false, cB: $elm$core$Maybe$Nothing};
+var $author$project$Material$Fab$fabConfig = {j: _List_Nil, X: false, bG: false, cB: $elm$core$Maybe$Nothing};
 var $author$project$Demo$Fabs$view = function (model) {
 	return {
 		cd: _List_fromArray(
@@ -11147,16 +11171,8 @@ var $author$project$Material$IconToggle$changeHandler = function (config) {
 			$elm$json$Json$Decode$succeed),
 		config.cA);
 };
-var $elm$html$Html$Attributes$boolProperty = F2(
-	function (key, bool) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$bool(bool));
-	});
-var $elm$html$Html$Attributes$disabled = $elm$html$Html$Attributes$boolProperty('disabled');
 var $author$project$Material$IconToggle$disabledAttr = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$disabled(disabled));
 };
@@ -11227,13 +11243,13 @@ var $author$project$Material$IconToggle$iconToggle = F2(
 						]))
 				]));
 	});
-var $author$project$Material$IconToggle$iconToggleConfig = {j: _List_Nil, aK: false, b: $elm$core$Maybe$Nothing, bL: false, cA: $elm$core$Maybe$Nothing};
+var $author$project$Material$IconToggle$iconToggleConfig = {j: _List_Nil, U: false, b: $elm$core$Maybe$Nothing, bL: false, cA: $elm$core$Maybe$Nothing};
 var $author$project$Demo$IconButton$isOn = F2(
 	function (index, model) {
 		return A2(
 			$elm$core$Maybe$withDefault,
 			false,
-			A2($elm$core$Dict$get, index, model._));
+			A2($elm$core$Dict$get, index, model.aa));
 	});
 var $author$project$Demo$IconButton$view = function (model) {
 	return {
@@ -12057,7 +12073,7 @@ var $author$project$Demo$Lists$activatedItemList = function (model) {
 		return _Utils_update(
 			$author$project$Material$List$listItemConfig,
 			{
-				b5: _Utils_eq(model.aF, index),
+				b5: _Utils_eq(model.aG, index),
 				cB: $elm$core$Maybe$Just(
 					$author$project$Demo$Lists$SetActivated(index))
 			});
@@ -12508,7 +12524,7 @@ var $author$project$Demo$Lists$listWithTrailingRadioButton = function (model) {
 				$author$project$Material$Radio$radioConfig,
 				{
 					cc: _Utils_eq(
-						model.al,
+						model.am,
 						$elm$core$Maybe$Just(index)),
 					cA: $elm$core$Maybe$Just(
 						$author$project$Demo$Lists$SetRadio(index))
@@ -12519,7 +12535,7 @@ var $author$project$Demo$Lists$listWithTrailingRadioButton = function (model) {
 			$author$project$Material$List$listItemConfig,
 			{
 				bi: _Utils_eq(
-					model.al,
+					model.am,
 					$elm$core$Maybe$Just(index))
 			});
 	};
@@ -13264,7 +13280,7 @@ var $author$project$Demo$RadioButtons$isSelected = F3(
 			A2(
 				$elm$core$Maybe$map,
 				$elm$core$Basics$eq(index),
-				A2($elm$core$Dict$get, group, model.am)));
+				A2($elm$core$Dict$get, group, model.an)));
 	});
 var $author$project$Demo$RadioButtons$radio_ = F4(
 	function (model, group, index, label) {
@@ -13546,7 +13562,7 @@ var $author$project$Demo$Ripple$view = function (model) {
 var $author$project$Material$Select$Filled = 0;
 var $author$project$Material$Select$Outlined = 1;
 var $author$project$Material$Select$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -13741,7 +13757,7 @@ var $author$project$Material$Select$filledSelect = F2(
 	});
 var $author$project$Material$Select$SelectOption = $elm$core$Basics$identity;
 var $author$project$Material$Select$disabledAttr = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$html$Html$Attributes$disabled(disabled);
 };
 var $elm$html$Html$option = _VirtualDom_node('option');
@@ -13774,7 +13790,7 @@ var $author$project$Material$Select$selectOption = F2(
 				nodes);
 		};
 	});
-var $author$project$Material$Select$selectOptionConfig = {j: _List_Nil, aK: false, m: ''};
+var $author$project$Material$Select$selectOptionConfig = {j: _List_Nil, U: false, m: ''};
 var $author$project$Demo$Selects$items = _List_fromArray(
 	[
 		A2(
@@ -13818,7 +13834,7 @@ var $author$project$Demo$Selects$marginRight = _List_fromArray(
 	[
 		A2($elm$html$Html$Attributes$style, 'margin-right', '5rem')
 	]);
-var $author$project$Material$Select$selectConfig = {j: _List_Nil, aK: false, b: '', cA: $elm$core$Maybe$Nothing, bg: false, bq: false, m: $elm$core$Maybe$Nothing};
+var $author$project$Material$Select$selectConfig = {j: _List_Nil, U: false, b: '', cA: $elm$core$Maybe$Nothing, bg: false, bq: false, m: $elm$core$Maybe$Nothing};
 var $author$project$Demo$Selects$filledSelects = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -14134,7 +14150,7 @@ var $author$project$Material$Slider$changeHandler = function (config) {
 		config.cA);
 };
 var $author$project$Material$Slider$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -14308,7 +14324,7 @@ var $author$project$Material$Slider$slider = function (config) {
 				$author$project$Material$Slider$thumbContainerElt(config)
 			]));
 };
-var $author$project$Material$Slider$sliderConfig = {j: _List_Nil, aK: false, by: false, cf: false, a1: 100, a4: 0, cA: $elm$core$Maybe$Nothing, b_: 0, m: 0};
+var $author$project$Material$Slider$sliderConfig = {j: _List_Nil, U: false, by: false, cf: false, a1: 100, a4: 0, cA: $elm$core$Maybe$Nothing, b_: 0, m: 0};
 var $author$project$Demo$Slider$continuousSlider = function (model) {
 	var id = 'continuous-slider';
 	return $author$project$Material$Slider$slider(
@@ -14428,7 +14444,6 @@ var $author$project$Demo$Snackbar$buttonMargin = _List_fromArray(
 	[
 		A2($elm$html$Html$Attributes$style, 'margin', '14px')
 	]);
-var $elm$html$Html$button = _VirtualDom_node('button');
 var $author$project$Demo$Snackbar$heroMessage = A2(
 	$elm$html$Html$div,
 	_List_fromArray(
@@ -14711,7 +14726,7 @@ var $author$project$Demo$Snackbar$view = function (model) {
 						cB: $elm$core$Maybe$Just($author$project$Demo$Snackbar$ShowStacked)
 					}),
 				'Stacked'),
-				A3($author$project$Material$Snackbar$snackbar, $author$project$Demo$Snackbar$SnackbarMsg, $author$project$Material$Snackbar$snackbarConfig, model.aj)
+				A3($author$project$Material$Snackbar$snackbar, $author$project$Demo$Snackbar$SnackbarMsg, $author$project$Material$Snackbar$snackbarConfig, model.ak)
 			]),
 		co: _List_fromArray(
 			[$author$project$Demo$Snackbar$heroMessage]),
@@ -14941,7 +14956,7 @@ var $author$project$Demo$Switch$isChecked = F2(
 		return A2(
 			$elm$core$Maybe$withDefault,
 			false,
-			A2($elm$core$Dict$get, id, model.av));
+			A2($elm$core$Dict$get, id, model.aw));
 	});
 var $author$project$Material$Switch$checkedProp = function (_v0) {
 	var checked = _v0.cc;
@@ -14952,7 +14967,7 @@ var $author$project$Material$Switch$checkedProp = function (_v0) {
 			$elm$json$Json$Encode$bool(checked)));
 };
 var $author$project$Material$Switch$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -15044,7 +15059,7 @@ var $author$project$Material$Switch$switch = function (config) {
 				$author$project$Material$Switch$thumbUnderlayElt(config)
 			]));
 };
-var $author$project$Material$Switch$switchConfig = {j: _List_Nil, cc: false, aK: false, cA: $elm$core$Maybe$Nothing};
+var $author$project$Material$Switch$switchConfig = {j: _List_Nil, cc: false, U: false, cA: $elm$core$Maybe$Nothing};
 var $author$project$Demo$Switch$demoSwitch = function (model) {
 	var id = 'demo-switch';
 	return A2(
@@ -15433,7 +15448,7 @@ var $author$project$Demo$TabBar$scrollingTabs = function (model) {
 		return _Utils_update(
 			$author$project$Material$TabBar$tabConfig,
 			{
-				B: _Utils_eq(model.aH, index),
+				B: _Utils_eq(model.aI, index),
 				cB: $elm$core$Maybe$Just(
 					$author$project$Demo$TabBar$SetActiveScrollingTab(index))
 			});
@@ -15461,7 +15476,7 @@ var $author$project$Demo$TabBar$tabsWithIcons = function (model) {
 		return _Utils_update(
 			$author$project$Material$TabBar$tabConfig,
 			{
-				B: _Utils_eq(model.aG, index),
+				B: _Utils_eq(model.aH, index),
 				cB: $elm$core$Maybe$Just(
 					$author$project$Demo$TabBar$SetActiveIconTab(index))
 			});
@@ -15502,7 +15517,7 @@ var $author$project$Demo$TabBar$tabsWithStackedIcons = function (model) {
 		return _Utils_update(
 			$author$project$Material$TabBar$tabConfig,
 			{
-				B: _Utils_eq(model.aI, index),
+				B: _Utils_eq(model.aJ, index),
 				cB: $elm$core$Maybe$Just(
 					$author$project$Demo$TabBar$SetActiveStackedTab(index))
 			});
@@ -15632,12 +15647,12 @@ var $author$project$Demo$TextFields$demoHelperText = A2(
 			'Helper Text')
 		]));
 var $author$project$Material$TextField$disabledCs = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return disabled ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-text-field--disabled')) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$TextField$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -16000,7 +16015,7 @@ var $author$project$Material$TextField$textField = function (config) {
 					$author$project$Material$TextField$trailingIconElt(config)
 				])));
 };
-var $author$project$Material$TextField$textFieldConfig = {j: _List_Nil, aK: false, bC: false, b: $elm$core$Maybe$Nothing, F: $author$project$Material$TextField$NoIcon, a1: $elm$core$Maybe$Nothing, a2: $elm$core$Maybe$Nothing, a4: $elm$core$Maybe$Nothing, aM: $elm$core$Maybe$Nothing, cA: $elm$core$Maybe$Nothing, ba: $elm$core$Maybe$Nothing, g: false, bd: $elm$core$Maybe$Nothing, cG: $elm$core$Maybe$Nothing, bg: false, b_: $elm$core$Maybe$Nothing, cR: $author$project$Material$TextField$NoIcon, bp: 'text', bq: true, m: ''};
+var $author$project$Material$TextField$textFieldConfig = {j: _List_Nil, U: false, bC: false, b: $elm$core$Maybe$Nothing, F: $author$project$Material$TextField$NoIcon, a1: $elm$core$Maybe$Nothing, a2: $elm$core$Maybe$Nothing, a4: $elm$core$Maybe$Nothing, aM: $elm$core$Maybe$Nothing, cA: $elm$core$Maybe$Nothing, ba: $elm$core$Maybe$Nothing, g: false, bd: $elm$core$Maybe$Nothing, cG: $elm$core$Maybe$Nothing, bg: false, b_: $elm$core$Maybe$Nothing, cR: $author$project$Material$TextField$NoIcon, bp: 'text', bq: true, m: ''};
 var $author$project$Demo$TextFields$textFieldContainer = _List_fromArray(
 	[
 		$elm$html$Html$Attributes$class('text-field-container'),
@@ -16098,12 +16113,12 @@ var $author$project$Demo$TextFields$fullwidthTextField = function (model) {
 			]));
 };
 var $author$project$Material$TextArea$disabledCs = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return disabled ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-text-field--disabled')) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$TextArea$disabledProp = function (_v0) {
-	var disabled = _v0.aK;
+	var disabled = _v0.U;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -16342,7 +16357,7 @@ var $author$project$Material$TextArea$textArea = function (config) {
 					])
 				])));
 };
-var $author$project$Material$TextArea$textAreaConfig = {j: _List_Nil, aZ: $elm$core$Maybe$Nothing, aK: false, bC: false, b: $elm$core$Maybe$Nothing, a2: $elm$core$Maybe$Nothing, aM: $elm$core$Maybe$Nothing, cA: $elm$core$Maybe$Nothing, ba: $elm$core$Maybe$Nothing, g: false, cG: $elm$core$Maybe$Nothing, bg: false, bh: $elm$core$Maybe$Nothing, bq: true, m: ''};
+var $author$project$Material$TextArea$textAreaConfig = {j: _List_Nil, aZ: $elm$core$Maybe$Nothing, U: false, bC: false, b: $elm$core$Maybe$Nothing, a2: $elm$core$Maybe$Nothing, aM: $elm$core$Maybe$Nothing, cA: $elm$core$Maybe$Nothing, ba: $elm$core$Maybe$Nothing, g: false, cG: $elm$core$Maybe$Nothing, bg: false, bh: $elm$core$Maybe$Nothing, bq: true, m: ''};
 var $author$project$Demo$TextFields$textFieldRowFullwidth = _List_fromArray(
 	[
 		$elm$html$Html$Attributes$class('text-field-row text-field-row--fullwidth'),
@@ -17665,107 +17680,107 @@ var $author$project$Main$body = function (model) {
 			return A2(
 				$author$project$Demo$DrawerPage$view,
 				$author$project$Main$DismissibleDrawerMsg,
-				$author$project$Demo$DismissibleDrawer$view(model.U));
+				$author$project$Demo$DismissibleDrawer$view(model.V));
 		case 8:
 			return A2(
 				$author$project$Demo$DrawerPage$view,
 				$author$project$Main$ModalDrawerMsg,
-				$author$project$Demo$ModalDrawer$view(model.ag));
+				$author$project$Demo$ModalDrawer$view(model.ah));
 		case 9:
 			return A2(
 				$author$project$Demo$DrawerPage$view,
 				$author$project$Main$PermanentDrawerMsg,
-				$author$project$Demo$PermanentDrawer$view(model.ah));
+				$author$project$Demo$PermanentDrawer$view(model.ai));
 		case 10:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$ElevationMsg,
 				catalogPageConfig,
-				$author$project$Demo$Elevation$view(model.V));
+				$author$project$Demo$Elevation$view(model.W));
 		case 11:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$FabsMsg,
 				catalogPageConfig,
-				$author$project$Demo$Fabs$view(model.X));
+				$author$project$Demo$Fabs$view(model.Y));
 		case 12:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$IconButtonMsg,
 				catalogPageConfig,
-				$author$project$Demo$IconButton$view(model.Z));
+				$author$project$Demo$IconButton$view(model._));
 		case 13:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$ImageListMsg,
 				catalogPageConfig,
-				$author$project$Demo$ImageList$view(model.aa));
+				$author$project$Demo$ImageList$view(model.ab));
 		case 15:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$LinearProgressMsg,
 				catalogPageConfig,
-				$author$project$Demo$LinearProgress$view(model.ad));
+				$author$project$Demo$LinearProgress$view(model.ae));
 		case 16:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$ListsMsg,
 				catalogPageConfig,
-				$author$project$Demo$Lists$view(model.ae));
+				$author$project$Demo$Lists$view(model.af));
 		case 17:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$RadioButtonsMsg,
 				catalogPageConfig,
-				$author$project$Demo$RadioButtons$view(model.ak));
+				$author$project$Demo$RadioButtons$view(model.al));
 		case 19:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$SelectMsg,
 				catalogPageConfig,
-				$author$project$Demo$Selects$view(model.ao));
+				$author$project$Demo$Selects$view(model.ap));
 		case 20:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$MenuMsg,
 				catalogPageConfig,
-				$author$project$Demo$Menus$view(model.af));
+				$author$project$Demo$Menus$view(model.ag));
 		case 21:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$SliderMsg,
 				catalogPageConfig,
-				$author$project$Demo$Slider$view(model.ar));
+				$author$project$Demo$Slider$view(model.as));
 		case 22:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$SnackbarMsg,
 				catalogPageConfig,
-				$author$project$Demo$Snackbar$view(model.as));
+				$author$project$Demo$Snackbar$view(model.at));
 		case 23:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$SwitchMsg,
 				catalogPageConfig,
-				$author$project$Demo$Switch$view(model.au));
+				$author$project$Demo$Switch$view(model.av));
 		case 24:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$TabBarMsg,
 				catalogPageConfig,
-				$author$project$Demo$TabBar$view(model.aw));
+				$author$project$Demo$TabBar$view(model.ax));
 		case 25:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$TextFieldMsg,
 				catalogPageConfig,
-				$author$project$Demo$TextFields$view(model.ay));
+				$author$project$Demo$TextFields$view(model.az));
 		case 26:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$ThemeMsg,
 				catalogPageConfig,
-				$author$project$Demo$Theme$view(model.az));
+				$author$project$Demo$Theme$view(model.aA));
 		case 27:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
@@ -17776,22 +17791,22 @@ var $author$project$Main$body = function (model) {
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
 				$author$project$Main$StandardTopAppBarMsg,
-				$author$project$Demo$StandardTopAppBar$view(model.at));
+				$author$project$Demo$StandardTopAppBar$view(model.au));
 		case 29:
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
 				$author$project$Main$FixedTopAppBarMsg,
-				$author$project$Demo$FixedTopAppBar$view(model.Y));
+				$author$project$Demo$FixedTopAppBar$view(model.Z));
 		case 31:
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
 				$author$project$Main$ProminentTopAppBarMsg,
-				$author$project$Demo$ProminentTopAppBar$view(model.ai));
+				$author$project$Demo$ProminentTopAppBar$view(model.aj));
 		case 32:
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
 				$author$project$Main$ShortTopAppBarMsg,
-				$author$project$Demo$ShortTopAppBar$view(model.aq));
+				$author$project$Demo$ShortTopAppBar$view(model.ar));
 		case 30:
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
@@ -17801,25 +17816,25 @@ var $author$project$Main$body = function (model) {
 			return A2(
 				$author$project$Demo$TopAppBarPage$view,
 				$author$project$Main$ShortCollapsedTopAppBarMsg,
-				$author$project$Demo$ShortCollapsedTopAppBar$view(model.ap));
+				$author$project$Demo$ShortCollapsedTopAppBar$view(model.aq));
 		case 14:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$LayoutGridMsg,
 				catalogPageConfig,
-				$author$project$Demo$LayoutGrid$view(model.ab));
+				$author$project$Demo$LayoutGrid$view(model.ac));
 		case 18:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$RippleMsg,
 				catalogPageConfig,
-				$author$project$Demo$Ripple$view(model.an));
+				$author$project$Demo$Ripple$view(model.ao));
 		case 34:
 			return A3(
 				$author$project$Demo$CatalogPage$view,
 				$author$project$Main$TypographyMsg,
 				catalogPageConfig,
-				$author$project$Demo$Typography$view(model.aC));
+				$author$project$Demo$Typography$view(model.aD));
 		default:
 			var requestedHash = _v0.a;
 			return A2(
