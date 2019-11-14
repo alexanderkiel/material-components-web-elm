@@ -8599,6 +8599,7 @@ var $author$project$Material$Checkbox$nativeControlElt = function (config) {
 					$elm$core$Maybe$Just(
 					$elm$html$Html$Attributes$class('mdc-checkbox__native-control')),
 					$author$project$Material$Checkbox$checkedProp(config),
+					$author$project$Material$Checkbox$indeterminateProp(config),
 					$author$project$Material$Checkbox$changeHandler(config)
 				])),
 		_List_Nil);
