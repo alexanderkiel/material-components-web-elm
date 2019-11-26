@@ -11843,19 +11843,6 @@ var $author$project$Material$LinearProgress$Buffered = F2(
 	function (a, b) {
 		return {$: 2, a: a, b: b};
 	});
-var $elm$core$String$fromFloat = _String_fromNumber;
-var $author$project$Material$LinearProgress$bufferAttr = function (variant) {
-	if (variant.$ === 2) {
-		var buffer = variant.b;
-		return $elm$core$Maybe$Just(
-			A2(
-				$elm$html$Html$Attributes$attribute,
-				'buffer',
-				$elm$core$String$fromFloat(buffer)));
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
-};
 var $author$project$Material$LinearProgress$bufferElt = A2(
 	$elm$html$Html$div,
 	_List_fromArray(
@@ -11863,6 +11850,22 @@ var $author$project$Material$LinearProgress$bufferElt = A2(
 			$elm$html$Html$Attributes$class('mdc-linear-progress__buffer')
 		]),
 	_List_Nil);
+var $elm$json$Json$Encode$float = _Json_wrap;
+var $author$project$Material$LinearProgress$bufferProp = function (variant) {
+	return $elm$core$Maybe$Just(
+		A2(
+			$elm$html$Html$Attributes$property,
+			'buffer',
+			$elm$json$Json$Encode$float(
+				function () {
+					if (variant.$ === 2) {
+						var buffer = variant.b;
+						return buffer;
+					} else {
+						return 0;
+					}
+				}())));
+};
 var $author$project$Material$LinearProgress$bufferingDotsElt = A2(
 	$elm$html$Html$div,
 	_List_fromArray(
@@ -11870,15 +11873,22 @@ var $author$project$Material$LinearProgress$bufferingDotsElt = A2(
 			$elm$html$Html$Attributes$class('mdc-linear-progress__buffering-dots')
 		]),
 	_List_Nil);
-var $author$project$Material$LinearProgress$closedAttr = function (_v0) {
+var $author$project$Material$LinearProgress$closedProp = function (_v0) {
 	var closed = _v0.aY;
-	return closed ? $elm$core$Maybe$Just(
-		A2($elm$html$Html$Attributes$attribute, 'closed', '')) : $elm$core$Maybe$Nothing;
+	return $elm$core$Maybe$Just(
+		A2(
+			$elm$html$Html$Attributes$property,
+			'closed',
+			$elm$json$Json$Encode$bool(closed)));
 };
 var $author$project$Material$LinearProgress$Indeterminate = {$: 0};
-var $author$project$Material$LinearProgress$determinateAttr = function (variant) {
-	return (!_Utils_eq(variant, $author$project$Material$LinearProgress$Indeterminate)) ? $elm$core$Maybe$Just(
-		A2($elm$html$Html$Attributes$attribute, 'determinate', '')) : $elm$core$Maybe$Nothing;
+var $author$project$Material$LinearProgress$determinateProp = function (variant) {
+	return $elm$core$Maybe$Just(
+		A2(
+			$elm$html$Html$Attributes$property,
+			'determinate',
+			$elm$json$Json$Encode$bool(
+				!_Utils_eq(variant, $author$project$Material$LinearProgress$Indeterminate))));
 };
 var $author$project$Material$LinearProgress$displayCss = $elm$core$Maybe$Just(
 	A2($elm$html$Html$Attributes$style, 'display', 'block'));
@@ -11897,30 +11907,32 @@ var $author$project$Material$LinearProgress$primaryBarElt = A2(
 		]),
 	_List_fromArray(
 		[$author$project$Material$LinearProgress$barInnerElt]));
-var $author$project$Material$LinearProgress$progressAttr = function (variant) {
-	switch (variant.$) {
-		case 1:
-			var progress = variant.a;
-			return $elm$core$Maybe$Just(
-				A2(
-					$elm$html$Html$Attributes$attribute,
-					'progress',
-					$elm$core$String$fromFloat(progress)));
-		case 2:
-			var progress = variant.a;
-			return $elm$core$Maybe$Just(
-				A2(
-					$elm$html$Html$Attributes$attribute,
-					'progress',
-					$elm$core$String$fromFloat(progress)));
-		default:
-			return $elm$core$Maybe$Nothing;
-	}
+var $author$project$Material$LinearProgress$progressProp = function (variant) {
+	return $elm$core$Maybe$Just(
+		A2(
+			$elm$html$Html$Attributes$property,
+			'progress',
+			$elm$json$Json$Encode$float(
+				function () {
+					switch (variant.$) {
+						case 1:
+							var progress = variant.a;
+							return progress;
+						case 2:
+							var progress = variant.a;
+							return progress;
+						default:
+							return 0;
+					}
+				}())));
 };
-var $author$project$Material$LinearProgress$reverseAttr = function (_v0) {
+var $author$project$Material$LinearProgress$reverseProp = function (_v0) {
 	var reverse = _v0.bY;
-	return reverse ? $elm$core$Maybe$Just(
-		A2($elm$html$Html$Attributes$attribute, 'reverse', '')) : $elm$core$Maybe$Nothing;
+	return $elm$core$Maybe$Just(
+		A2(
+			$elm$html$Html$Attributes$property,
+			'reverse',
+			$elm$json$Json$Encode$bool(reverse)));
 };
 var $author$project$Material$LinearProgress$roleAttr = $elm$core$Maybe$Just(
 	A2($elm$html$Html$Attributes$attribute, 'role', 'progressbar'));
@@ -11957,11 +11969,11 @@ var $author$project$Material$LinearProgress$linearProgress = F2(
 							$author$project$Material$LinearProgress$displayCss,
 							$author$project$Material$LinearProgress$roleAttr,
 							$author$project$Material$LinearProgress$variantCs(variant),
-							$author$project$Material$LinearProgress$determinateAttr(variant),
-							$author$project$Material$LinearProgress$progressAttr(variant),
-							$author$project$Material$LinearProgress$bufferAttr(variant),
-							$author$project$Material$LinearProgress$reverseAttr(config),
-							$author$project$Material$LinearProgress$closedAttr(config)
+							$author$project$Material$LinearProgress$determinateProp(variant),
+							$author$project$Material$LinearProgress$progressProp(variant),
+							$author$project$Material$LinearProgress$bufferProp(variant),
+							$author$project$Material$LinearProgress$reverseProp(config),
+							$author$project$Material$LinearProgress$closedProp(config)
 						])),
 				config.j),
 			_List_fromArray(
@@ -14107,6 +14119,7 @@ var $author$project$Demo$Slider$Change = F2(
 	function (a, b) {
 		return {$: 0, a: a, b: b};
 	});
+var $elm$core$String$fromFloat = _String_fromNumber;
 var $author$project$Material$Slider$ariaValueMaxAttr = function (_v0) {
 	var max = _v0.a1;
 	return $elm$core$Maybe$Just(
@@ -14171,7 +14184,6 @@ var $author$project$Material$Slider$displayMarkersCs = function (_v0) {
 	return (discrete && displayMarkers) ? $elm$core$Maybe$Just(
 		$elm$html$Html$Attributes$class('mdc-slider--display-markers')) : $elm$core$Maybe$Nothing;
 };
-var $elm$json$Json$Encode$float = _Json_wrap;
 var $author$project$Material$Slider$maxProp = function (_v0) {
 	var max = _v0.a1;
 	return $elm$core$Maybe$Just(
