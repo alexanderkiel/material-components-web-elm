@@ -600,11 +600,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.bm.ae === region.bB.ae)
+	if (region.bm.af === region.bB.af)
 	{
-		return 'on line ' + region.bm.ae;
+		return 'on line ' + region.bm.af;
 	}
-	return 'on lines ' + region.bm.ae + ' through ' + region.bB.ae;
+	return 'on lines ' + region.bm.af + ' through ' + region.bB.af;
 }
 
 
@@ -1858,8 +1858,8 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 		flagDecoder,
 		args,
 		impl.cz,
-		impl.cX,
-		impl.cT,
+		impl.cY,
+		impl.cU,
 		function() { return function() {} }
 	);
 });
@@ -3884,10 +3884,10 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 		flagDecoder,
 		args,
 		impl.cz,
-		impl.cX,
-		impl.cT,
+		impl.cY,
+		impl.cU,
 		function(sendToApp, initialModel) {
-			var view = impl.cY;
+			var view = impl.cZ;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3920,11 +3920,11 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 		flagDecoder,
 		args,
 		impl.cz,
-		impl.cX,
-		impl.cT,
+		impl.cY,
+		impl.cU,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.ar && impl.ar(sendToApp)
-			var view = impl.cY;
+			var divertHrefToApp = impl.as && impl.as(sendToApp)
+			var view = impl.cZ;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3937,7 +3937,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.cU) && (_VirtualDom_doc.title = title = doc.cU);
+				(title !== doc.cV) && (_VirtualDom_doc.title = title = doc.cV);
 			});
 		}
 	);
@@ -3993,12 +3993,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.cI;
-	var onUrlRequest = impl.cJ;
+	var onUrlChange = impl.cJ;
+	var onUrlRequest = impl.cK;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		ar: function(sendToApp)
+		as: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4028,9 +4028,9 @@ function _Browser_application(impl)
 		{
 			return A3(impl.cz, flags, _Browser_getUrl(), key);
 		},
+		cZ: impl.cZ,
 		cY: impl.cY,
-		cX: impl.cX,
-		cT: impl.cT
+		cU: impl.cU
 	});
 }
 
@@ -4189,8 +4189,8 @@ function _Browser_getViewport()
 	return {
 		b$: _Browser_getScene(),
 		b7: {
-			aU: _Browser_window.pageXOffset,
-			aV: _Browser_window.pageYOffset,
+			aV: _Browser_window.pageXOffset,
+			aW: _Browser_window.pageYOffset,
 			L: _Browser_doc.documentElement.clientWidth,
 			F: _Browser_doc.documentElement.clientHeight
 		}
@@ -4231,8 +4231,8 @@ function _Browser_getViewportOf(id)
 				F: node.scrollHeight
 			},
 			b7: {
-				aU: node.scrollLeft,
-				aV: node.scrollTop,
+				aV: node.scrollLeft,
+				aW: node.scrollTop,
 				L: node.clientWidth,
 				F: node.clientHeight
 			}
@@ -4266,14 +4266,14 @@ function _Browser_getElement(id)
 		return {
 			b$: _Browser_getScene(),
 			b7: {
-				aU: x,
-				aV: y,
+				aV: x,
+				aW: y,
 				L: _Browser_doc.documentElement.clientWidth,
 				F: _Browser_doc.documentElement.clientHeight
 			},
 			cm: {
-				aU: x + rect.left,
-				aV: y + rect.top,
+				aV: x + rect.left,
+				aW: y + rect.top,
 				L: rect.width,
 				F: rect.height
 			}
@@ -4700,6 +4700,9 @@ var elm$core$Set$fromList = function (list) {
 };
 var author$project$Demo$Chips$defaultModel = {
 	Q: elm$core$Maybe$Just('chips-choice-medium'),
+	ad: elm$core$Set$fromList(
+		_List_fromArray(
+			['1', '2', '3'])),
 	A: elm$core$Set$fromList(
 		_List_fromArray(
 			['chips-choice-medium', 'chips-filter-chips-tops', 'chips-filter-chips-bottoms', 'chips-filter-chips-alice']))
@@ -4709,7 +4712,7 @@ var author$project$Demo$DenseTopAppBar$defaultModel = {};
 var elm$core$Maybe$Nothing = {$: 1};
 var author$project$Demo$Dialog$defaultModel = {t: elm$core$Maybe$Nothing};
 var elm$core$Basics$False = 1;
-var author$project$Demo$DismissibleDrawer$defaultModel = {a1: false, aS: 0};
+var author$project$Demo$DismissibleDrawer$defaultModel = {a2: false, aT: 0};
 var author$project$Demo$Drawer$defaultModel = {};
 var author$project$Demo$Elevation$defaultModel = {};
 var author$project$Demo$Fabs$defaultModel = {};
@@ -4718,13 +4721,13 @@ var author$project$Demo$IconButton$defaultModel = {ab: elm$core$Dict$empty};
 var author$project$Demo$ImageList$defaultModel = {};
 var author$project$Demo$LayoutGrid$defaultModel = {};
 var author$project$Demo$LinearProgress$defaultModel = {};
-var author$project$Demo$Lists$defaultModel = {aI: 1, p: elm$core$Set$empty, an: elm$core$Maybe$Nothing, aT: 1};
-var author$project$Demo$Menus$defaultModel = {cK: false};
-var author$project$Demo$ModalDrawer$defaultModel = {a1: false, aS: 0};
-var author$project$Demo$PermanentDrawer$defaultModel = {aS: 0};
+var author$project$Demo$Lists$defaultModel = {aJ: 1, p: elm$core$Set$empty, ao: elm$core$Maybe$Nothing, aU: 1};
+var author$project$Demo$Menus$defaultModel = {cL: false};
+var author$project$Demo$ModalDrawer$defaultModel = {a2: false, aT: 0};
+var author$project$Demo$PermanentDrawer$defaultModel = {aT: 0};
 var author$project$Demo$ProminentTopAppBar$defaultModel = {};
 var author$project$Demo$RadioButtons$defaultModel = {
-	ao: elm$core$Dict$fromList(
+	ap: elm$core$Dict$fromList(
 		_List_fromArray(
 			[
 				_Utils_Tuple2('hero', 'radio-buttons-hero-radio-1'),
@@ -4746,23 +4749,23 @@ var author$project$Demo$Slider$defaultModel = {
 			]))
 };
 var author$project$Material$Snackbar$initialQueue = {m: 0, r: _List_Nil};
-var author$project$Demo$Snackbar$defaultModel = {al: author$project$Material$Snackbar$initialQueue};
+var author$project$Demo$Snackbar$defaultModel = {am: author$project$Material$Snackbar$initialQueue};
 var author$project$Demo$StandardTopAppBar$defaultModel = {};
 var elm$core$Basics$True = 0;
 var author$project$Demo$Switch$defaultModel = {
-	ay: elm$core$Dict$fromList(
+	az: elm$core$Dict$fromList(
 		_List_fromArray(
 			[
 				_Utils_Tuple2('hero-switch', true)
 			]))
 };
-var author$project$Demo$TabBar$defaultModel = {D: 0, aJ: 0, aK: 0, aL: 0};
+var author$project$Demo$TabBar$defaultModel = {D: 0, aK: 0, aL: 0, aM: 0};
 var author$project$Demo$TextFields$defaultModel = {n: ''};
 var author$project$Demo$Theme$defaultModel = {};
 var author$project$Demo$TopAppBar$defaultModel = {};
 var author$project$Demo$Typography$defaultModel = {};
 var author$project$Main$defaultModel = function (key) {
-	return {ce: author$project$Demo$Buttons$defaultModel, N: author$project$Demo$Cards$defaultModel, w: false, aN: author$project$Demo$Checkbox$defaultModel, P: author$project$Demo$Chips$defaultModel, S: author$project$Demo$DataTable$defaultModel, T: author$project$Demo$DenseTopAppBar$defaultModel, U: author$project$Demo$Dialog$defaultModel, W: author$project$Demo$DismissibleDrawer$defaultModel, cl: author$project$Demo$Drawer$defaultModel, X: author$project$Demo$Elevation$defaultModel, Z: author$project$Demo$Fabs$defaultModel, _: author$project$Demo$FixedTopAppBar$defaultModel, aa: author$project$Demo$IconButton$defaultModel, ac: author$project$Demo$ImageList$defaultModel, bH: key, ad: author$project$Demo$LayoutGrid$defaultModel, af: author$project$Demo$LinearProgress$defaultModel, ag: author$project$Demo$Lists$defaultModel, ah: author$project$Demo$Menus$defaultModel, ai: author$project$Demo$ModalDrawer$defaultModel, aj: author$project$Demo$PermanentDrawer$defaultModel, ak: author$project$Demo$ProminentTopAppBar$defaultModel, am: author$project$Demo$RadioButtons$defaultModel, ap: author$project$Demo$Ripple$defaultModel, aq: author$project$Demo$Selects$defaultModel, as: author$project$Demo$ShortCollapsedTopAppBar$defaultModel, at: author$project$Demo$ShortTopAppBar$defaultModel, au: author$project$Demo$Slider$defaultModel, av: author$project$Demo$Snackbar$defaultModel, aw: author$project$Demo$StandardTopAppBar$defaultModel, ax: author$project$Demo$Switch$defaultModel, az: author$project$Demo$TabBar$defaultModel, aB: author$project$Demo$TextFields$defaultModel, aC: author$project$Demo$Theme$defaultModel, cV: author$project$Demo$TopAppBar$defaultModel, aF: author$project$Demo$Typography$defaultModel, a: author$project$Demo$Url$Button};
+	return {ce: author$project$Demo$Buttons$defaultModel, N: author$project$Demo$Cards$defaultModel, w: false, aO: author$project$Demo$Checkbox$defaultModel, P: author$project$Demo$Chips$defaultModel, S: author$project$Demo$DataTable$defaultModel, T: author$project$Demo$DenseTopAppBar$defaultModel, U: author$project$Demo$Dialog$defaultModel, W: author$project$Demo$DismissibleDrawer$defaultModel, cl: author$project$Demo$Drawer$defaultModel, X: author$project$Demo$Elevation$defaultModel, Z: author$project$Demo$Fabs$defaultModel, _: author$project$Demo$FixedTopAppBar$defaultModel, aa: author$project$Demo$IconButton$defaultModel, ac: author$project$Demo$ImageList$defaultModel, bH: key, ae: author$project$Demo$LayoutGrid$defaultModel, ag: author$project$Demo$LinearProgress$defaultModel, ah: author$project$Demo$Lists$defaultModel, ai: author$project$Demo$Menus$defaultModel, aj: author$project$Demo$ModalDrawer$defaultModel, ak: author$project$Demo$PermanentDrawer$defaultModel, al: author$project$Demo$ProminentTopAppBar$defaultModel, an: author$project$Demo$RadioButtons$defaultModel, aq: author$project$Demo$Ripple$defaultModel, ar: author$project$Demo$Selects$defaultModel, at: author$project$Demo$ShortCollapsedTopAppBar$defaultModel, au: author$project$Demo$ShortTopAppBar$defaultModel, av: author$project$Demo$Slider$defaultModel, aw: author$project$Demo$Snackbar$defaultModel, ax: author$project$Demo$StandardTopAppBar$defaultModel, ay: author$project$Demo$Switch$defaultModel, aA: author$project$Demo$TabBar$defaultModel, aC: author$project$Demo$TextFields$defaultModel, aD: author$project$Demo$Theme$defaultModel, cW: author$project$Demo$TopAppBar$defaultModel, aG: author$project$Demo$Typography$defaultModel, a: author$project$Demo$Url$Button};
 };
 var elm$core$Result$isOk = function (result) {
 	if (!result.$) {
@@ -5603,20 +5606,27 @@ var author$project$Demo$Chips$update = F2(
 	function (msg, model) {
 		var chipType = msg.a;
 		var index = msg.b;
-		if (!chipType) {
-			return _Utils_update(
-				model,
-				{
-					Q: _Utils_eq(
-						model.Q,
-						elm$core$Maybe$Just(index)) ? elm$core$Maybe$Nothing : elm$core$Maybe$Just(index)
-				});
-		} else {
-			return _Utils_update(
-				model,
-				{
-					A: (A2(elm$core$Set$member, index, model.A) ? elm$core$Set$remove(index) : elm$core$Set$insert(index))(model.A)
-				});
+		switch (chipType) {
+			case 0:
+				return _Utils_update(
+					model,
+					{
+						Q: _Utils_eq(
+							model.Q,
+							elm$core$Maybe$Just(index)) ? elm$core$Maybe$Nothing : elm$core$Maybe$Just(index)
+					});
+			case 3:
+				return _Utils_update(
+					model,
+					{
+						ad: A2(elm$core$Set$remove, index, model.ad)
+					});
+			default:
+				return _Utils_update(
+					model,
+					{
+						A: (A2(elm$core$Set$member, index, model.A) ? elm$core$Set$remove(index) : elm$core$Set$insert(index))(model.A)
+					});
 		}
 	});
 var author$project$Demo$DataTable$update = F2(
@@ -5671,16 +5681,16 @@ var author$project$Demo$DismissibleDrawer$update = F2(
 			case 0:
 				return _Utils_update(
 					model,
-					{a1: !model.a1});
+					{a2: !model.a2});
 			case 1:
 				return _Utils_update(
 					model,
-					{a1: false});
+					{a2: false});
 			default:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aS: index});
+					{aT: index});
 		}
 	});
 var author$project$Demo$Drawer$update = F2(
@@ -5742,18 +5752,18 @@ var author$project$Demo$Lists$update = F2(
 				return _Utils_update(
 					model,
 					{
-						an: elm$core$Maybe$Just(index)
+						ao: elm$core$Maybe$Just(index)
 					});
 			case 2:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aI: index});
+					{aJ: index});
 			default:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aT: index});
+					{aU: index});
 		}
 	});
 var author$project$Demo$Menus$update = F2(
@@ -5761,11 +5771,11 @@ var author$project$Demo$Menus$update = F2(
 		if (!msg) {
 			return _Utils_update(
 				model,
-				{cK: true});
+				{cL: true});
 		} else {
 			return _Utils_update(
 				model,
-				{cK: false});
+				{cL: false});
 		}
 	});
 var author$project$Demo$ModalDrawer$update = F2(
@@ -5774,16 +5784,16 @@ var author$project$Demo$ModalDrawer$update = F2(
 			case 0:
 				return _Utils_update(
 					model,
-					{a1: true});
+					{a2: true});
 			case 1:
 				return _Utils_update(
 					model,
-					{a1: false});
+					{a2: false});
 			default:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aS: index});
+					{aT: index});
 		}
 	});
 var author$project$Demo$PermanentDrawer$update = F2(
@@ -5791,7 +5801,7 @@ var author$project$Demo$PermanentDrawer$update = F2(
 		var index = msg;
 		return _Utils_update(
 			model,
-			{aS: index});
+			{aT: index});
 	});
 var author$project$Demo$ProminentTopAppBar$update = F2(
 	function (msg, model) {
@@ -5804,7 +5814,7 @@ var author$project$Demo$RadioButtons$update = F2(
 		return _Utils_update(
 			model,
 			{
-				ao: A3(elm$core$Dict$insert, group, index, model.ao)
+				ap: A3(elm$core$Dict$insert, group, index, model.ap)
 			});
 	});
 var author$project$Demo$Ripple$update = F2(
@@ -5995,7 +6005,7 @@ var author$project$Material$Snackbar$addMessage = F2(
 			elm$core$Task$succeed(
 				author$project$Material$Snackbar$AddMessage(message)));
 	});
-var author$project$Material$Snackbar$snackbarMessage = {aW: elm$core$Maybe$Nothing, aX: elm$core$Maybe$Nothing, b: '', cA: false, bb: elm$core$Maybe$Nothing, bc: elm$core$Maybe$Nothing, cR: false, bq: 5000};
+var author$project$Material$Snackbar$snackbarMessage = {aX: elm$core$Maybe$Nothing, aY: elm$core$Maybe$Nothing, b: '', cA: false, bc: elm$core$Maybe$Nothing, bd: elm$core$Maybe$Nothing, cS: false, bq: 5000};
 var elm$core$List$drop = F2(
 	function (n, list) {
 		drop:
@@ -6063,31 +6073,31 @@ var author$project$Demo$Snackbar$update = F2(
 		var stackedMessage = _Utils_update(
 			author$project$Material$Snackbar$snackbarMessage,
 			{
-				aW: elm$core$Maybe$Just('Add a new label'),
-				aX: elm$core$Maybe$Just('close'),
+				aX: elm$core$Maybe$Just('Add a new label'),
+				aY: elm$core$Maybe$Just('close'),
 				b: 'This item already has the label \"travel\". You can add a new label.',
-				bb: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
 				bc: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
-				cR: true
+				bd: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
+				cS: true
 			});
 		var leadingMessage = _Utils_update(
 			author$project$Material$Snackbar$snackbarMessage,
 			{
-				aW: elm$core$Maybe$Just('Undo'),
-				aX: elm$core$Maybe$Just('close'),
+				aX: elm$core$Maybe$Just('Undo'),
+				aY: elm$core$Maybe$Just('close'),
 				b: 'Your photo has been archived.',
 				cA: true,
-				bb: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
-				bc: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click)
+				bc: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
+				bd: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click)
 			});
 		var baselineMessage = _Utils_update(
 			author$project$Material$Snackbar$snackbarMessage,
 			{
-				aW: elm$core$Maybe$Just('Retry'),
-				aX: elm$core$Maybe$Just('close'),
+				aX: elm$core$Maybe$Just('Retry'),
+				aY: elm$core$Maybe$Just('close'),
 				b: 'Can\'t send photo. Retry in 5 seconds.',
-				bb: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
-				bc: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click)
+				bc: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click),
+				bd: elm$core$Maybe$Just(author$project$Demo$Snackbar$Click)
 			});
 		switch (msg.$) {
 			case 0:
@@ -6109,9 +6119,9 @@ var author$project$Demo$Snackbar$update = F2(
 					function (queue) {
 						return _Utils_update(
 							model,
-							{al: queue});
+							{am: queue});
 					},
-					A3(author$project$Material$Snackbar$update, author$project$Demo$Snackbar$SnackbarMsg, snackbarMsg, model.al));
+					A3(author$project$Material$Snackbar$update, author$project$Demo$Snackbar$SnackbarMsg, snackbarMsg, model.am));
 			default:
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 		}
@@ -6126,14 +6136,14 @@ var author$project$Demo$Switch$update = F2(
 		return _Utils_update(
 			model,
 			{
-				ay: A3(
+				az: A3(
 					elm$core$Dict$update,
 					id,
 					function (state) {
 						return elm$core$Maybe$Just(
 							!A2(elm$core$Maybe$withDefault, false, state));
 					},
-					model.ay)
+					model.az)
 			});
 	});
 var author$project$Demo$TabBar$update = F2(
@@ -6148,17 +6158,17 @@ var author$project$Demo$TabBar$update = F2(
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aJ: index});
+					{aK: index});
 			case 2:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aL: index});
+					{aM: index});
 			default:
 				var index = msg.a;
 				return _Utils_update(
 					model,
-					{aK: index});
+					{aL: index});
 		}
 	});
 var author$project$Demo$TextFields$update = F2(
@@ -6527,7 +6537,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aN: A2(author$project$Demo$Checkbox$update, msg_, model.aN)
+							aO: A2(author$project$Demo$Checkbox$update, msg_, model.aO)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 8:
@@ -6581,7 +6591,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ai: A2(author$project$Demo$ModalDrawer$update, msg_, model.ai)
+							aj: A2(author$project$Demo$ModalDrawer$update, msg_, model.aj)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 21:
@@ -6590,7 +6600,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aj: A2(author$project$Demo$PermanentDrawer$update, msg_, model.aj)
+							ak: A2(author$project$Demo$PermanentDrawer$update, msg_, model.ak)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 13:
@@ -6626,7 +6636,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ah: A2(author$project$Demo$Menus$update, msg_, model.ah)
+							ai: A2(author$project$Demo$Menus$update, msg_, model.ai)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 22:
@@ -6635,7 +6645,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							am: A2(author$project$Demo$RadioButtons$update, msg_, model.am)
+							an: A2(author$project$Demo$RadioButtons$update, msg_, model.an)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 23:
@@ -6644,7 +6654,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ap: A2(author$project$Demo$Ripple$update, msg_, model.ap)
+							aq: A2(author$project$Demo$Ripple$update, msg_, model.aq)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 24:
@@ -6653,7 +6663,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aq: A2(author$project$Demo$Selects$update, msg_, model.aq)
+							ar: A2(author$project$Demo$Selects$update, msg_, model.ar)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 25:
@@ -6662,7 +6672,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							au: A2(author$project$Demo$Slider$update, msg_, model.au)
+							av: A2(author$project$Demo$Slider$update, msg_, model.av)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 26:
@@ -6675,16 +6685,16 @@ var author$project$Main$update = F2(
 						function (snackbar) {
 							return _Utils_update(
 								model,
-								{av: snackbar});
+								{aw: snackbar});
 						},
-						A2(author$project$Demo$Snackbar$update, msg_, model.av)));
+						A2(author$project$Demo$Snackbar$update, msg_, model.aw)));
 			case 28:
 				var msg_ = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{
-							ax: A2(author$project$Demo$Switch$update, msg_, model.ax)
+							ay: A2(author$project$Demo$Switch$update, msg_, model.ay)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 30:
@@ -6693,7 +6703,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aB: A2(author$project$Demo$TextFields$update, msg_, model.aB)
+							aC: A2(author$project$Demo$TextFields$update, msg_, model.aC)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 29:
@@ -6702,7 +6712,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							az: A2(author$project$Demo$TabBar$update, msg_, model.az)
+							aA: A2(author$project$Demo$TabBar$update, msg_, model.aA)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 16:
@@ -6711,7 +6721,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ad: A2(author$project$Demo$LayoutGrid$update, msg_, model.ad)
+							ae: A2(author$project$Demo$LayoutGrid$update, msg_, model.ae)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 18:
@@ -6720,7 +6730,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ag: A2(author$project$Demo$Lists$update, msg_, model.ag)
+							ah: A2(author$project$Demo$Lists$update, msg_, model.ah)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 31:
@@ -6729,7 +6739,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aC: A2(author$project$Demo$Theme$update, msg_, model.aC)
+							aD: A2(author$project$Demo$Theme$update, msg_, model.aD)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 32:
@@ -6738,7 +6748,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							cV: A2(author$project$Demo$TopAppBar$update, msg_, model.cV)
+							cW: A2(author$project$Demo$TopAppBar$update, msg_, model.cW)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 17:
@@ -6747,7 +6757,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							af: A2(author$project$Demo$LinearProgress$update, msg_, model.af)
+							ag: A2(author$project$Demo$LinearProgress$update, msg_, model.ag)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 33:
@@ -6756,7 +6766,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aF: A2(author$project$Demo$Typography$update, msg_, model.aF)
+							aG: A2(author$project$Demo$Typography$update, msg_, model.aG)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 39:
@@ -6774,7 +6784,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							aw: A2(author$project$Demo$StandardTopAppBar$update, msg_, model.aw)
+							ax: A2(author$project$Demo$StandardTopAppBar$update, msg_, model.ax)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 38:
@@ -6801,7 +6811,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							ak: A2(author$project$Demo$ProminentTopAppBar$update, msg_, model.ak)
+							al: A2(author$project$Demo$ProminentTopAppBar$update, msg_, model.al)
 						}),
 					elm$core$Platform$Cmd$none);
 			case 34:
@@ -6810,7 +6820,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							as: A2(author$project$Demo$ShortCollapsedTopAppBar$update, msg_, model.as)
+							at: A2(author$project$Demo$ShortCollapsedTopAppBar$update, msg_, model.at)
 						}),
 					elm$core$Platform$Cmd$none);
 			default:
@@ -6819,7 +6829,7 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							at: A2(author$project$Demo$ShortTopAppBar$update, msg_, model.at)
+							au: A2(author$project$Demo$ShortTopAppBar$update, msg_, model.au)
 						}),
 					elm$core$Platform$Cmd$none);
 		}
@@ -6830,7 +6840,7 @@ var author$project$Demo$Buttons$heroMargin = _List_fromArray(
 	[
 		A2(elm$html$Html$Attributes$style, 'margin', '16px 32px')
 	]);
-var author$project$Material$Button$buttonConfig = {k: _List_Nil, ci: false, V: false, aO: elm$core$Maybe$Nothing, cv: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, bp: elm$core$Maybe$Nothing, cW: false};
+var author$project$Material$Button$buttonConfig = {k: _List_Nil, ci: false, V: false, aP: elm$core$Maybe$Nothing, cv: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, bp: elm$core$Maybe$Nothing, cX: false};
 var author$project$Material$Button$Outlined = 3;
 var elm$core$Maybe$map = F2(
 	function (f, maybe) {
@@ -6914,7 +6924,7 @@ var elm$html$Html$Attributes$href = function (url) {
 		_VirtualDom_noJavaScriptUri(url));
 };
 var author$project$Material$Button$hrefAttr = function (_n0) {
-	var href = _n0.aO;
+	var href = _n0.aP;
 	return A2(elm$core$Maybe$map, elm$html$Html$Attributes$href, href);
 };
 var elm$html$Html$span = _VirtualDom_node('span');
@@ -6962,7 +6972,7 @@ var author$project$Material$Button$iconElt = function (_n0) {
 		icon);
 };
 var author$project$Material$Button$leadingIconElt = function (config) {
-	return (!config.cW) ? author$project$Material$Button$iconElt(config) : elm$core$Maybe$Nothing;
+	return (!config.cX) ? author$project$Material$Button$iconElt(config) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$Button$rootCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-button'));
@@ -6984,12 +6994,12 @@ var author$project$Material$Button$tabIndexProp = function (_n0) {
 };
 var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
 var author$project$Material$Button$targetAttr = function (_n0) {
-	var href = _n0.aO;
+	var href = _n0.aP;
 	var target = _n0.bp;
 	return (!_Utils_eq(href, elm$core$Maybe$Nothing)) ? A2(elm$core$Maybe$map, elm$html$Html$Attributes$target, target) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$Button$trailingIconElt = function (config) {
-	return config.cW ? author$project$Material$Button$iconElt(config) : elm$core$Maybe$Nothing;
+	return config.cX ? author$project$Material$Button$iconElt(config) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$Button$variantCs = function (variant) {
 	switch (variant) {
@@ -7046,7 +7056,7 @@ var author$project$Material$Button$button = F3(
 			_List_fromArray(
 				[
 					A2(
-					(!_Utils_eq(config.aO, elm$core$Maybe$Nothing)) ? elm$html$Html$a : elm$html$Html$button,
+					(!_Utils_eq(config.aP, elm$core$Maybe$Nothing)) ? elm$html$Html$a : elm$html$Html$button,
 					_Utils_ap(
 						A2(
 							elm$core$List$filterMap,
@@ -7228,13 +7238,13 @@ var author$project$Demo$Buttons$view = function (model) {
 				author$project$Demo$Buttons$shapedButtons
 			]),
 		ct: author$project$Demo$Buttons$heroButtons,
-		cM: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
-		cN: {
+		cN: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Button'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-buttons'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-button')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-button')
 		},
-		cU: 'Button'
+		cV: 'Button'
 	};
 };
 var author$project$Material$Card$Block = elm$core$Basics$identity;
@@ -7351,11 +7361,11 @@ var elm$core$List$concat = function (lists) {
 	return A3(elm$core$List$foldr, elm$core$List$append, _List_Nil, lists);
 };
 var author$project$Material$Card$actionsElt = function (content) {
-	var _n0 = content.aH;
+	var _n0 = content.aI;
 	if (!_n0.$) {
 		var buttons = _n0.a.ce;
 		var icons = _n0.a.cw;
-		var fullBleed = _n0.a.a2;
+		var fullBleed = _n0.a.a3;
 		return _List_fromArray(
 			[
 				A2(
@@ -7412,7 +7422,7 @@ var author$project$Material$Card$actionsElt = function (content) {
 	}
 };
 var author$project$Material$Card$blocksElt = function (_n0) {
-	var blocks = _n0.aM;
+	var blocks = _n0.aN;
 	return A2(
 		elm$core$List$map,
 		function (_n1) {
@@ -7495,8 +7505,8 @@ var author$project$Demo$Cards$exampleCard1 = A2(
 				])
 		}),
 	{
-		aH: elm$core$Maybe$Nothing,
-		aM: A2(
+		aI: elm$core$Maybe$Nothing,
+		aN: A2(
 			author$project$Material$Card$cardPrimaryAction,
 			author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7579,7 +7589,7 @@ var author$project$Material$Card$Actions = elm$core$Basics$identity;
 var author$project$Material$Card$cardActions = function (_n0) {
 	var buttons = _n0.ce;
 	var icons = _n0.cw;
-	return {ce: buttons, a2: false, cw: icons};
+	return {ce: buttons, a3: false, cw: icons};
 };
 var author$project$Material$IconButton$iconButtonConfig = {k: _List_Nil, V: false, b: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing};
 var author$project$Demo$Cards$demoActions = author$project$Material$Card$cardActions(
@@ -7608,8 +7618,8 @@ var author$project$Demo$Cards$exampleCard2 = A2(
 				])
 		}),
 	{
-		aH: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
-		aM: A2(
+		aI: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
+		aN: A2(
 			author$project$Material$Card$cardPrimaryAction,
 			author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7628,8 +7638,8 @@ var author$project$Demo$Cards$exampleCard3 = A2(
 				])
 		}),
 	{
-		aH: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
-		aM: A2(
+		aI: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
+		aN: A2(
 			author$project$Material$Card$cardPrimaryAction,
 			author$project$Material$Card$cardPrimaryActionConfig,
 			_List_fromArray(
@@ -7648,8 +7658,8 @@ var author$project$Demo$Cards$heroCard = _List_fromArray(
 					])
 			}),
 		{
-			aH: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
-			aM: A2(
+			aI: elm$core$Maybe$Just(author$project$Demo$Cards$demoActions),
+			aN: A2(
 				author$project$Material$Card$cardPrimaryAction,
 				author$project$Material$Card$cardPrimaryActionConfig,
 				_List_fromArray(
@@ -7661,13 +7671,13 @@ var author$project$Demo$Cards$view = function (model) {
 		ch: _List_fromArray(
 			[author$project$Demo$Cards$exampleCard1, author$project$Demo$Cards$exampleCard2, author$project$Demo$Cards$exampleCard3]),
 		ct: author$project$Demo$Cards$heroCard,
-		cM: 'Cards contain content and actions about a single subject.',
-		cN: {
+		cN: 'Cards contain content and actions about a single subject.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Card'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-cards'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-card')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-card')
 		},
-		cU: 'Card'
+		cV: 'Card'
 	};
 };
 var author$project$Demo$CatalogPage$catalogDrawerItems = _List_fromArray(
@@ -7845,7 +7855,7 @@ var author$project$Material$List$denseCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-list--dense')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$List$nonInteractiveCs = function (_n0) {
-	var nonInteractive = _n0.a9;
+	var nonInteractive = _n0.ba;
 	return nonInteractive ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-list--non-interactive')) : elm$core$Maybe$Nothing;
 };
@@ -7914,7 +7924,7 @@ var author$project$Material$List$twoLineCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-list--two-line')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$List$wrapFocusProp = function (_n0) {
-	var wrapFocus = _n0.c$;
+	var wrapFocus = _n0.c0;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -7959,7 +7969,7 @@ var author$project$Material$List$list = F2(
 				},
 				listItems));
 	});
-var author$project$Material$List$listConfig = {k: _List_Nil, bu: false, ci: false, a9: false, b5: false, b6: false, c$: false};
+var author$project$Material$List$listConfig = {k: _List_Nil, bu: false, ci: false, ba: false, b5: false, b6: false, c0: false};
 var author$project$Material$List$ListItem = function (a) {
 	return {$: 0, a: a};
 };
@@ -7980,7 +7990,7 @@ var author$project$Material$List$disabledCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-list-item--disabled')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$List$hrefAttr = function (_n0) {
-	var href = _n0.aO;
+	var href = _n0.aP;
 	return A2(elm$core$Maybe$map, elm$html$Html$Attributes$href, href);
 };
 var author$project$Material$List$listItemCs = elm$core$Maybe$Just(
@@ -7991,7 +8001,7 @@ var author$project$Material$List$selectedCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-list-item--selected')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$List$targetAttr = function (_n0) {
-	var href = _n0.aO;
+	var href = _n0.aP;
 	var target = _n0.bp;
 	return (!_Utils_eq(href, elm$core$Maybe$Nothing)) ? A2(elm$core$Maybe$map, elm$html$Html$Attributes$target, target) : elm$core$Maybe$Nothing;
 };
@@ -8001,7 +8011,7 @@ var author$project$Material$List$listItem = F2(
 			{
 				R: config,
 				bK: function (attributes) {
-					return (!_Utils_eq(config.aO, elm$core$Maybe$Nothing)) ? A3(
+					return (!_Utils_eq(config.aP, elm$core$Maybe$Nothing)) ? A3(
 						elm$html$Html$node,
 						'mdc-list-item',
 						_List_Nil,
@@ -8027,7 +8037,7 @@ var author$project$Material$List$listItem = F2(
 						config.k))
 			});
 	});
-var author$project$Material$List$listItemConfig = {b9: false, k: _List_Nil, V: false, aO: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, bl: false, bp: elm$core$Maybe$Nothing};
+var author$project$Material$List$listItemConfig = {b9: false, k: _List_Nil, V: false, aP: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, bl: false, bp: elm$core$Maybe$Nothing};
 var author$project$Material$List$listItemGraphic = F2(
 	function (additionalAttributes, nodes) {
 		return A2(
@@ -8048,7 +8058,7 @@ var elm$html$Html$Attributes$src = function (url) {
 var author$project$Demo$CatalogPage$resourcesList = function (_n0) {
 	var materialDesignGuidelines = _n0.cD;
 	var documentation = _n0.ck;
-	var sourceCode = _n0.cQ;
+	var sourceCode = _n0.cR;
 	return A2(
 		author$project$Material$List$list,
 		author$project$Material$List$listConfig,
@@ -8059,7 +8069,7 @@ var author$project$Demo$CatalogPage$resourcesList = function (_n0) {
 				_Utils_update(
 					author$project$Material$List$listItemConfig,
 					{
-						aO: materialDesignGuidelines,
+						aP: materialDesignGuidelines,
 						bp: elm$core$Maybe$Just('_blank')
 					}),
 				_List_fromArray(
@@ -8084,7 +8094,7 @@ var author$project$Demo$CatalogPage$resourcesList = function (_n0) {
 				_Utils_update(
 					author$project$Material$List$listItemConfig,
 					{
-						aO: documentation,
+						aP: documentation,
 						bp: elm$core$Maybe$Just('_blank')
 					}),
 				_List_fromArray(
@@ -8109,7 +8119,7 @@ var author$project$Demo$CatalogPage$resourcesList = function (_n0) {
 				_Utils_update(
 					author$project$Material$List$listItemConfig,
 					{
-						aO: sourceCode,
+						aP: sourceCode,
 						bp: elm$core$Maybe$Just('_blank')
 					}),
 				_List_fromArray(
@@ -8133,7 +8143,7 @@ var author$project$Demo$CatalogPage$resourcesList = function (_n0) {
 };
 var author$project$Material$Drawer$appContent = elm$html$Html$Attributes$class('mdc-drawer-app-content');
 var author$project$Material$Drawer$closeHandler = function (_n0) {
-	var onClose = _n0.aQ;
+	var onClose = _n0.aR;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -8145,7 +8155,7 @@ var author$project$Material$Drawer$closeHandler = function (_n0) {
 var author$project$Material$Drawer$dismissibleCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-drawer--dismissible'));
 var author$project$Material$Drawer$openProp = function (_n0) {
-	var open = _n0.cK;
+	var open = _n0.cL;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -8173,7 +8183,7 @@ var author$project$Material$Drawer$dismissibleDrawer = F2(
 				config.k),
 			nodes);
 	});
-var author$project$Material$Drawer$dismissibleDrawerConfig = {k: _List_Nil, aQ: elm$core$Maybe$Nothing, cK: false};
+var author$project$Material$Drawer$dismissibleDrawerConfig = {k: _List_Nil, aR: elm$core$Maybe$Nothing, cL: false};
 var author$project$Material$Drawer$drawerContent = F2(
 	function (attributes, nodes) {
 		return A2(
@@ -8273,7 +8283,7 @@ var elm$html$Html$map = elm$virtual_dom$VirtualDom$map;
 var elm$html$Html$p = _VirtualDom_node('p');
 var author$project$Demo$CatalogPage$view = F3(
 	function (lift, catalogPageConfig, catalogPage) {
-		var toggleCatalogDrawer = catalogPageConfig.a1 ? catalogPageConfig.bx : catalogPageConfig.bP;
+		var toggleCatalogDrawer = catalogPageConfig.a2 ? catalogPageConfig.bx : catalogPageConfig.bP;
 		return A2(
 			elm$html$Html$div,
 			author$project$Demo$CatalogPage$catalogPageContainer,
@@ -8335,7 +8345,7 @@ var author$project$Demo$CatalogPage$view = F3(
 											author$project$Material$TopAppBar$fixedAdjust,
 											A2(elm$html$Html$Attributes$style, 'z-index', '1')
 										]),
-									cK: catalogPageConfig.a1
+									cL: catalogPageConfig.a2
 								}),
 							_List_fromArray(
 								[
@@ -8358,7 +8368,7 @@ var author$project$Demo$CatalogPage$view = F3(
 															author$project$Material$List$listItemConfig,
 															{
 																b9: _Utils_eq(catalogPageConfig.a, url),
-																aO: elm$core$Maybe$Just(
+																aP: elm$core$Maybe$Just(
 																	author$project$Demo$Url$toString(url))
 															}),
 														_List_fromArray(
@@ -8391,7 +8401,7 @@ var author$project$Demo$CatalogPage$view = F3(
 													[author$project$Material$Typography$headline5]),
 												_List_fromArray(
 													[
-														elm$html$Html$text(catalogPage.cU)
+														elm$html$Html$text(catalogPage.cV)
 													])),
 											A2(
 												elm$core$List$cons,
@@ -8401,7 +8411,7 @@ var author$project$Demo$CatalogPage$view = F3(
 														[author$project$Material$Typography$body1]),
 													_List_fromArray(
 														[
-															elm$html$Html$text(catalogPage.cM)
+															elm$html$Html$text(catalogPage.cN)
 														])),
 												A2(
 													elm$core$List$cons,
@@ -8417,7 +8427,7 @@ var author$project$Demo$CatalogPage$view = F3(
 																])),
 														A2(
 															elm$core$List$cons,
-															author$project$Demo$CatalogPage$resourcesList(catalogPage.cN),
+															author$project$Demo$CatalogPage$resourcesList(catalogPage.cO),
 															A2(
 																elm$core$List$cons,
 																A2(
@@ -8477,7 +8487,7 @@ var author$project$Material$Checkbox$backgroundElt = A2(
 			_List_Nil)
 		]));
 var author$project$Material$Checkbox$checkedProp = function (_n0) {
-	var state = _n0.cS;
+	var state = _n0.cT;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -8493,7 +8503,7 @@ var author$project$Material$Checkbox$disabledProp = function (_n0) {
 			elm$json$Json$Encode$bool(disabled)));
 };
 var author$project$Material$Checkbox$indeterminateProp = function (_n0) {
-	var state = _n0.cS;
+	var state = _n0.cT;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -8502,7 +8512,7 @@ var author$project$Material$Checkbox$indeterminateProp = function (_n0) {
 };
 var elm$json$Json$Decode$bool = _Json_decodeBool;
 var author$project$Material$Checkbox$changeHandler = function (_n0) {
-	var state = _n0.cS;
+	var state = _n0.cT;
 	var onChange = _n0.cF;
 	return A2(
 		elm$core$Maybe$map,
@@ -8567,7 +8577,7 @@ var author$project$Material$Checkbox$checkbox = function (config) {
 				author$project$Material$Checkbox$backgroundElt
 			]));
 };
-var author$project$Material$Checkbox$checkboxConfig = {k: _List_Nil, V: false, cF: elm$core$Maybe$Nothing, cS: 0};
+var author$project$Material$Checkbox$checkboxConfig = {k: _List_Nil, V: false, cF: elm$core$Maybe$Nothing, cT: 0};
 var author$project$Demo$Checkbox$controlledCheckbox = F3(
 	function (index, model, additionalAttributes) {
 		var state = A2(
@@ -8580,7 +8590,7 @@ var author$project$Demo$Checkbox$controlledCheckbox = F3(
 				{
 					k: additionalAttributes,
 					cF: elm$core$Maybe$Just(index),
-					cS: state
+					cT: state
 				}));
 	});
 var author$project$Demo$Checkbox$heroMargin = _List_fromArray(
@@ -8627,13 +8637,13 @@ var author$project$Demo$Checkbox$view = function (model) {
 				A3(author$project$Demo$Checkbox$controlledCheckbox, 'checked-checkbox', model, _List_Nil)
 			]),
 		ct: author$project$Demo$Checkbox$heroCheckboxes(model),
-		cM: 'Checkboxes allow the user to select multiple options from a set.',
-		cN: {
+		cN: 'Checkboxes allow the user to select multiple options from a set.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Checkbox'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-checkboxes'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox')
 		},
-		cU: 'Checkbox'
+		cV: 'Checkbox'
 	};
 };
 var author$project$Material$Chips$ChoiceChip = elm$core$Basics$identity;
@@ -9031,13 +9041,13 @@ var author$project$Demo$Chips$view = function (model) {
 				author$project$Demo$Chips$shapedChips(model)
 			]),
 		ct: author$project$Demo$Chips$heroChips,
-		cM: 'Chips are compact elements that allow users to enter information, select a choice, filter content, or trigger an action.',
-		cN: {
+		cN: 'Chips are compact elements that allow users to enter information, select a choice, filter content, or trigger an action.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Chips'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-chips'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips')
 		},
-		cU: 'Chips'
+		cV: 'Chips'
 	};
 };
 var author$project$Demo$DataTable$AllSelected = {$: 2};
@@ -9107,7 +9117,7 @@ var author$project$Material$DataTable$dataTable = F2(
 	});
 var author$project$Material$DataTable$DataTableCell = elm$core$Basics$identity;
 var author$project$Material$DataTable$dataTableCellCheckboxCs = function (_n0) {
-	var checkbox = _n0.aN;
+	var checkbox = _n0.aO;
 	return checkbox ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-data-table__cell--checkbox')) : elm$core$Maybe$Nothing;
 };
@@ -9136,7 +9146,7 @@ var author$project$Material$DataTable$dataTableCell = F2(
 				config.k),
 			nodes);
 	});
-var author$project$Material$DataTable$dataTableCellConfig = {k: _List_Nil, aN: false, g: false};
+var author$project$Material$DataTable$dataTableCellConfig = {k: _List_Nil, aO: false, g: false};
 var author$project$Material$DataTable$dataTableConfig = {k: _List_Nil, b: elm$core$Maybe$Nothing};
 var author$project$Material$DataTable$DataTableHeaderCell = elm$core$Basics$identity;
 var author$project$Material$DataTable$colScopeAttr = elm$core$Maybe$Just(
@@ -9144,7 +9154,7 @@ var author$project$Material$DataTable$colScopeAttr = elm$core$Maybe$Just(
 var author$project$Material$DataTable$columnHeaderRoleAttr = elm$core$Maybe$Just(
 	A2(elm$html$Html$Attributes$attribute, 'role', 'columnheader'));
 var author$project$Material$DataTable$dataTableHeaderCellCheckboxCs = function (_n0) {
-	var checkbox = _n0.aN;
+	var checkbox = _n0.aO;
 	return checkbox ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-data-table__header-cell--checkbox')) : elm$core$Maybe$Nothing;
 };
@@ -9175,7 +9185,7 @@ var author$project$Material$DataTable$dataTableHeaderCell = F2(
 				config.k),
 			nodes);
 	});
-var author$project$Material$DataTable$dataTableHeaderCellConfig = {k: _List_Nil, aN: false, g: false};
+var author$project$Material$DataTable$dataTableHeaderCellConfig = {k: _List_Nil, aO: false, g: false};
 var author$project$Material$DataTable$DataTableHeaderRow = elm$core$Basics$identity;
 var elm$html$Html$tr = _VirtualDom_node('tr');
 var author$project$Material$DataTable$dataTableHeaderRow = F2(
@@ -9303,7 +9313,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 								author$project$Material$DataTable$dataTableCell,
 								_Utils_update(
 									author$project$Material$DataTable$dataTableCellConfig,
-									{aN: true}),
+									{aO: true}),
 								_List_fromArray(
 									[
 										author$project$Material$DataTable$dataTableRowCheckbox(
@@ -9312,7 +9322,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 											{
 												cF: elm$core$Maybe$Just(
 													author$project$Demo$DataTable$ItemSelected(label)),
-												cS: selected ? 1 : 0
+												cT: selected ? 1 : 0
 											}))
 									])),
 								A2(
@@ -9363,7 +9373,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 								author$project$Material$DataTable$dataTableCell,
 								_Utils_update(
 									author$project$Material$DataTable$dataTableCellConfig,
-									{aN: true}),
+									{aO: true}),
 								_List_fromArray(
 									[
 										author$project$Material$DataTable$dataTableRowCheckbox(
@@ -9372,7 +9382,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 											{
 												cF: elm$core$Maybe$Just(
 													author$project$Demo$DataTable$ItemSelected(label)),
-												cS: selected ? 1 : 0
+												cT: selected ? 1 : 0
 											}))
 									])),
 								A2(
@@ -9423,7 +9433,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 								author$project$Material$DataTable$dataTableCell,
 								_Utils_update(
 									author$project$Material$DataTable$dataTableCellConfig,
-									{aN: true}),
+									{aO: true}),
 								_List_fromArray(
 									[
 										author$project$Material$DataTable$dataTableRowCheckbox(
@@ -9432,7 +9442,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 											{
 												cF: elm$core$Maybe$Just(
 													author$project$Demo$DataTable$ItemSelected(label)),
-												cS: selected ? 1 : 0
+												cT: selected ? 1 : 0
 											}))
 									])),
 								A2(
@@ -9481,7 +9491,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 							author$project$Material$DataTable$dataTableHeaderCell,
 							_Utils_update(
 								author$project$Material$DataTable$dataTableHeaderCellConfig,
-								{aN: true}),
+								{aO: true}),
 							_List_fromArray(
 								[
 									author$project$Material$DataTable$dataTableHeaderRowCheckbox(
@@ -9490,7 +9500,7 @@ var author$project$Demo$DataTable$dataTableWithRowSelection = function (model) {
 										{
 											cF: elm$core$Maybe$Just(
 												allSelected ? author$project$Demo$DataTable$AllUnselected : author$project$Demo$DataTable$AllSelected),
-											cS: allSelected ? 1 : (allUnselected ? 0 : 2)
+											cT: allSelected ? 1 : (allUnselected ? 0 : 2)
 										}))
 								])),
 							A2(
@@ -9718,13 +9728,13 @@ var author$project$Demo$DataTable$view = function (model) {
 				author$project$Demo$DataTable$dataTableWithRowSelection(model)
 			]),
 		ct: author$project$Demo$DataTable$heroDataTable,
-		cM: 'Data tables display information in a way that’s easy to scan, so that users can look for patterns and insights.',
-		cN: {
+		cN: 'Data tables display information in a way that’s easy to scan, so that users can look for patterns and insights.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://material.io/components/web/catalog/data-tables/'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-data-tables'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-data-table')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-data-table')
 		},
-		cU: 'Data Table'
+		cV: 'Data Table'
 	};
 };
 var author$project$Material$TopAppBar$actionItem = elm$html$Html$Attributes$class('mdc-top-app-bar__action-item');
@@ -9733,7 +9743,7 @@ var author$project$Material$TopAppBar$denseFixedAdjust = elm$html$Html$Attribute
 var author$project$Demo$DenseTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$denseFixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$topAppBar,
 			_Utils_update(
 				author$project$Material$TopAppBar$topAppBarConfig,
@@ -9814,7 +9824,7 @@ var author$project$Demo$Dialog$Close = {$: 0};
 var author$project$Material$Dialog$ariaModalAttr = elm$core$Maybe$Just(
 	A2(elm$html$Html$Attributes$attribute, 'aria-modal', 'true'));
 var author$project$Material$Dialog$closeHandler = function (_n0) {
-	var onClose = _n0.aQ;
+	var onClose = _n0.aR;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -9824,7 +9834,7 @@ var author$project$Material$Dialog$closeHandler = function (_n0) {
 		onClose);
 };
 var author$project$Material$Dialog$actionsElt = function (_n0) {
-	var actions = _n0.aH;
+	var actions = _n0.aI;
 	return elm$core$List$isEmpty(actions) ? elm$core$Maybe$Nothing : elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$div,
@@ -9846,7 +9856,7 @@ var author$project$Material$Dialog$contentElt = function (_n0) {
 			content));
 };
 var author$project$Material$Dialog$titleElt = function (_n0) {
-	var title = _n0.cU;
+	var title = _n0.cV;
 	if (!title.$) {
 		var title_ = title.a;
 		return elm$core$Maybe$Just(
@@ -9894,7 +9904,7 @@ var author$project$Material$Dialog$containerElt = function (content) {
 			]));
 };
 var author$project$Material$Dialog$openProp = function (_n0) {
-	var open = _n0.cK;
+	var open = _n0.cL;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -9936,20 +9946,20 @@ var author$project$Material$Dialog$dialog = F2(
 					author$project$Material$Dialog$scrimElt
 				]));
 	});
-var author$project$Material$Dialog$dialogConfig = {k: _List_Nil, aQ: elm$core$Maybe$Nothing, cK: false};
+var author$project$Material$Dialog$dialogConfig = {k: _List_Nil, aR: elm$core$Maybe$Nothing, cL: false};
 var author$project$Demo$Dialog$alertDialog = function (model) {
 	return A2(
 		author$project$Material$Dialog$dialog,
 		_Utils_update(
 			author$project$Material$Dialog$dialogConfig,
 			{
-				aQ: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
-				cK: _Utils_eq(
+				aR: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
+				cL: _Utils_eq(
 					model.t,
 					elm$core$Maybe$Just('dialog-alert-dialog'))
 			}),
 		{
-			aH: _List_fromArray(
+			aI: _List_fromArray(
 				[
 					A2(
 					author$project$Material$Button$textButton,
@@ -9972,7 +9982,7 @@ var author$project$Demo$Dialog$alertDialog = function (model) {
 				[
 					elm$html$Html$text('Discard draft?')
 				]),
-			cU: elm$core$Maybe$Nothing
+			cV: elm$core$Maybe$Nothing
 		});
 };
 var author$project$Material$List$listItemText = F2(
@@ -10094,13 +10104,13 @@ var author$project$Demo$Dialog$confirmationDialog = function (model) {
 		_Utils_update(
 			author$project$Material$Dialog$dialogConfig,
 			{
-				aQ: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
-				cK: _Utils_eq(
+				aR: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
+				cL: _Utils_eq(
 					model.t,
 					elm$core$Maybe$Just('dialog-confirmation-dialog'))
 			}),
 		{
-			aH: _List_fromArray(
+			aI: _List_fromArray(
 				[
 					A2(
 					author$project$Material$Button$textButton,
@@ -10193,7 +10203,7 @@ var author$project$Demo$Dialog$confirmationDialog = function (model) {
 								]))
 						]))
 				]),
-			cU: elm$core$Maybe$Just('Phone ringtone')
+			cV: elm$core$Maybe$Just('Phone ringtone')
 		});
 };
 var author$project$Demo$Dialog$heroDialog = _List_fromArray(
@@ -10255,13 +10265,13 @@ var author$project$Demo$Dialog$scrollableDialog = function (model) {
 		_Utils_update(
 			author$project$Material$Dialog$dialogConfig,
 			{
-				aQ: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
-				cK: _Utils_eq(
+				aR: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
+				cL: _Utils_eq(
 					model.t,
 					elm$core$Maybe$Just('dialog-scrollable-dialog'))
 			}),
 		{
-			aH: _List_fromArray(
+			aI: _List_fromArray(
 				[
 					A2(
 					author$project$Material$Button$textButton,
@@ -10332,7 +10342,7 @@ var author$project$Demo$Dialog$scrollableDialog = function (model) {
 							elm$html$Html$text('\n                    From the far north they heard a low wail of the wind, and\n                    Uncle Henry and Dorothy could see where the long grass\n                    bowed in waves before the coming storm.  There now came a\n                    sharp whistling in the air from the south, and as they\n                    turned their eyes that way they saw ripples in the grass\n                    coming from that direction also.\n                  ')
 						]))
 				]),
-			cU: elm$core$Maybe$Just('The Wonderful Wizard of Oz')
+			cV: elm$core$Maybe$Just('The Wonderful Wizard of Oz')
 		});
 };
 var author$project$Material$Icon$icon = F2(
@@ -10355,13 +10365,13 @@ var author$project$Demo$Dialog$simpleDialog = function (model) {
 		_Utils_update(
 			author$project$Material$Dialog$dialogConfig,
 			{
-				aQ: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
-				cK: _Utils_eq(
+				aR: elm$core$Maybe$Just(author$project$Demo$Dialog$Close),
+				cL: _Utils_eq(
 					model.t,
 					elm$core$Maybe$Just('dialog-simple-dialog'))
 			}),
 		{
-			aH: _List_Nil,
+			aI: _List_Nil,
 			ch: _List_fromArray(
 				[
 					A2(
@@ -10469,7 +10479,7 @@ var author$project$Demo$Dialog$simpleDialog = function (model) {
 								]))
 						]))
 				]),
-			cU: elm$core$Maybe$Just('Select an account')
+			cV: elm$core$Maybe$Just('Select an account')
 		});
 };
 var author$project$Demo$Dialog$view = function (model) {
@@ -10522,13 +10532,13 @@ var author$project$Demo$Dialog$view = function (model) {
 				author$project$Demo$Dialog$scrollableDialog(model)
 			]),
 		ct: author$project$Demo$Dialog$heroDialog,
-		cM: 'Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.',
-		cN: {
+		cN: 'Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Dialog'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-dialogs'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-dialog')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-dialog')
 		},
-		cU: 'Dialog'
+		cV: 'Dialog'
 	};
 };
 var author$project$Demo$DismissibleDrawer$CloseDrawer = {$: 1};
@@ -10564,7 +10574,7 @@ var author$project$Material$List$ListItemDivider = function (a) {
 	return {$: 1, a: a};
 };
 var author$project$Material$List$insetCs = function (_n0) {
-	var inset = _n0.a3;
+	var inset = _n0.a4;
 	return inset ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-list-divider--inset')) : elm$core$Maybe$Nothing;
 };
@@ -10596,7 +10606,7 @@ var author$project$Material$List$listItemDivider = function (config) {
 				config.k),
 			_List_Nil));
 };
-var author$project$Material$List$listItemDividerConfig = {k: _List_Nil, a3: false, bf: false};
+var author$project$Material$List$listItemDividerConfig = {k: _List_Nil, a4: false, bf: false};
 var elm$html$Html$h6 = _VirtualDom_node('h6');
 var author$project$Demo$DrawerPage$drawerBody = F2(
 	function (setSelectedIndex, selectedIndex) {
@@ -10789,13 +10799,13 @@ var author$project$Demo$DismissibleDrawer$view = function (model) {
 			_Utils_update(
 				author$project$Material$Drawer$dismissibleDrawerConfig,
 				{
-					aQ: elm$core$Maybe$Just(author$project$Demo$DismissibleDrawer$CloseDrawer),
-					cK: model.a1
+					aR: elm$core$Maybe$Just(author$project$Demo$DismissibleDrawer$CloseDrawer),
+					cL: model.a2
 				}),
-			A2(author$project$Demo$DrawerPage$drawerBody, author$project$Demo$DismissibleDrawer$SetSelectedIndex, model.aS)),
+			A2(author$project$Demo$DrawerPage$drawerBody, author$project$Demo$DismissibleDrawer$SetSelectedIndex, model.aT)),
 		cH: elm$core$Maybe$Just(author$project$Demo$DismissibleDrawer$ToggleDrawer),
-		cP: elm$core$Maybe$Nothing,
-		cU: 'Dismissible Drawer'
+		cQ: elm$core$Maybe$Nothing,
+		cV: 'Dismissible Drawer'
 	};
 };
 var author$project$Material$Drawer$permanentDrawer = F2(
@@ -11004,13 +11014,13 @@ var author$project$Demo$Drawer$view = function (model) {
 				A2(author$project$Demo$Drawer$iframe, 'Modal', '#modal-drawer')
 			]),
 		ct: author$project$Demo$Drawer$heroDrawer,
-		cM: 'The navigation drawer slides in from the left and contains the navigation destinations for your app.',
-		cN: {
+		cN: 'The navigation drawer slides in from the left and contains the navigation destinations for your app.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Drawer'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-navigation-drawer'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer')
 		},
-		cU: 'Drawer'
+		cV: 'Drawer'
 	};
 };
 var author$project$Demo$DrawerPage$drawerFrameRoot = _List_fromArray(
@@ -11065,9 +11075,9 @@ var author$project$Demo$DrawerPage$mainContent = A2(
 				]))));
 var author$project$Demo$DrawerPage$view = F2(
 	function (lift, _n0) {
-		var title = _n0.cU;
+		var title = _n0.cV;
 		var drawer = _n0.cl;
-		var scrim = _n0.cP;
+		var scrim = _n0.cQ;
 		var onMenuClick = _n0.cH;
 		return A2(
 			elm$html$Html$map,
@@ -11413,13 +11423,13 @@ var author$project$Demo$Elevation$view = function (model) {
 					]))
 			]),
 		ct: author$project$Demo$Elevation$heroElevation,
-		cM: 'Elevation is the relative depth, or distance, between two surfaces along the z-axis.',
-		cN: {
+		cN: 'Elevation is the relative depth, or distance, between two surfaces along the z-axis.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Elevation'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-elevation'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation')
 		},
-		cU: 'Elevation'
+		cV: 'Elevation'
 	};
 };
 var author$project$Material$Fab$clickHandler = function (_n0) {
@@ -11448,7 +11458,7 @@ var author$project$Material$Fab$labelElt = function (label) {
 };
 var author$project$Material$Fab$leadingIconElt = function (_n0) {
 	var icon = _n0.cv;
-	var trailingIcon = _n0.cW;
+	var trailingIcon = _n0.cX;
 	var _n1 = _Utils_Tuple2(icon, trailingIcon);
 	if ((!_n1.a.$) && (!_n1.b)) {
 		var iconName = _n1.a.a;
@@ -11472,7 +11482,7 @@ var author$project$Material$Fab$rootCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-fab'));
 var author$project$Material$Fab$trailingIconElt = function (_n0) {
 	var icon = _n0.cv;
-	var trailingIcon = _n0.cW;
+	var trailingIcon = _n0.cX;
 	var _n1 = _Utils_Tuple2(icon, trailingIcon);
 	if ((!_n1.a.$) && _n1.b) {
 		var iconName = _n1.a.a;
@@ -11519,7 +11529,7 @@ var author$project$Material$Fab$extendedFab = F2(
 						author$project$Material$Fab$trailingIconElt(config)
 					])));
 	});
-var author$project$Material$Fab$extendedFabConfig = {k: _List_Nil, Y: false, cv: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, cW: false};
+var author$project$Material$Fab$extendedFabConfig = {k: _List_Nil, Y: false, cv: elm$core$Maybe$Nothing, cG: elm$core$Maybe$Nothing, cX: false};
 var author$project$Material$Fab$iconElt = function (iconName) {
 	return A2(
 		elm$html$Html$span,
@@ -11618,7 +11628,7 @@ var author$project$Demo$Fabs$view = function (model) {
 					author$project$Material$Fab$extendedFabConfig,
 					{
 						cv: elm$core$Maybe$Just('add'),
-						cW: true
+						cX: true
 					}),
 				'Create'),
 				A2(
@@ -11685,19 +11695,19 @@ var author$project$Demo$Fabs$view = function (model) {
 			[
 				A2(author$project$Material$Fab$fab, author$project$Material$Fab$fabConfig, 'favorite_border')
 			]),
-		cM: 'Floating action buttons represents the primary action in an application. Only one floating action button is recommended per screen to represent the most common action.',
-		cN: {
+		cN: 'Floating action buttons represents the primary action in an application. Only one floating action button is recommended per screen to represent the most common action.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Fab'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-fab'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/')
 		},
-		cU: 'Floating Action Button'
+		cV: 'Floating Action Button'
 	};
 };
 var author$project$Demo$FixedTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$fixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$topAppBar,
 			_Utils_update(
 				author$project$Material$TopAppBar$topAppBarConfig,
@@ -11921,13 +11931,13 @@ var author$project$Demo$IconButton$view = function (model) {
 					}),
 				{bL: 'favorite_border', bO: 'favorite'})
 			]),
-		cM: 'Icons are appropriate for buttons that allow a user to take actions or make a selection, such as adding or removing a star to an item.',
-		cN: {
+		cN: 'Icons are appropriate for buttons that allow a user to take actions or make a selection, such as adding or removing a star to an item.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-IconButton'),
 			cD: elm$core$Maybe$Just('https://material.io/design/components/buttons.html#toggle-button'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-button')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-button')
 		},
-		cU: 'Icon Button'
+		cV: 'Icon Button'
 	};
 };
 var author$project$Material$ImageList$ImageListItem = elm$core$Basics$identity;
@@ -11935,7 +11945,7 @@ var author$project$Material$ImageList$imageListItem = F2(
 	function (config, image) {
 		return {R: config, bG: image};
 	});
-var author$project$Material$ImageList$imageListItemConfig = {k: _List_Nil, aO: elm$core$Maybe$Nothing, b: elm$core$Maybe$Nothing};
+var author$project$Material$ImageList$imageListItemConfig = {k: _List_Nil, aP: elm$core$Maybe$Nothing, b: elm$core$Maybe$Nothing};
 var author$project$Demo$ImageList$imageListHeroItem = A2(
 	author$project$Material$ImageList$imageListItem,
 	_Utils_update(
@@ -11978,7 +11988,7 @@ var author$project$Material$ImageList$imageElt = F2(
 					elm$html$Html$Attributes$src(image)
 				]),
 			_List_Nil);
-		return masonry ? ((!_Utils_eq(config.aO, elm$core$Maybe$Nothing)) ? A2(
+		return masonry ? ((!_Utils_eq(config.aP, elm$core$Maybe$Nothing)) ? A2(
 			elm$html$Html$div,
 			_List_fromArray(
 				[
@@ -12011,7 +12021,7 @@ var author$project$Material$ImageList$imageAspectContainerElt = F2(
 						function (_n0) {
 							return elm$html$Html$Attributes$class('mdc-ripple-surface');
 						},
-						config.aO)
+						config.aP)
 					])),
 			_List_fromArray(
 				[
@@ -12079,7 +12089,7 @@ var author$project$Material$ImageList$listItemElt = F2(
 								inner)
 							]);
 					},
-					config.aO)));
+					config.aP)));
 	});
 var author$project$Material$ImageList$masonryCs = function (_n0) {
 	var masonry = _n0.cC;
@@ -12089,7 +12099,7 @@ var author$project$Material$ImageList$masonryCs = function (_n0) {
 var author$project$Material$ImageList$rootCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-image-list'));
 var author$project$Material$ImageList$withTextProtectionCs = function (_n0) {
-	var withTextProtection = _n0.cZ;
+	var withTextProtection = _n0.c_;
 	return withTextProtection ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-image-list--with-text-protection')) : elm$core$Maybe$Nothing;
 };
@@ -12114,7 +12124,7 @@ var author$project$Material$ImageList$imageList = F2(
 				author$project$Material$ImageList$listItemElt(config),
 				listItems));
 	});
-var author$project$Material$ImageList$imageListConfig = {k: _List_Nil, cC: false, cZ: false};
+var author$project$Material$ImageList$imageListConfig = {k: _List_Nil, cC: false, c_: false};
 var author$project$Demo$ImageList$masonryImageList = A2(
 	author$project$Material$ImageList$imageList,
 	_Utils_update(
@@ -12155,7 +12165,7 @@ var author$project$Demo$ImageList$standardImageList = A2(
 				[
 					A2(elm$html$Html$Attributes$style, 'max-width', '900px')
 				]),
-			cZ: true
+			c_: true
 		}),
 	A2(elm$core$List$map, author$project$Demo$ImageList$standardItem, author$project$Demo$ImageList$standardImages));
 var author$project$Demo$ImageList$view = function (model) {
@@ -12195,13 +12205,13 @@ var author$project$Demo$ImageList$view = function (model) {
 					}),
 				A2(elm$core$List$repeat, 15, author$project$Demo$ImageList$imageListHeroItem))
 			]),
-		cM: 'Image lists display a collection of images in an organized grid.',
-		cN: {
+		cN: 'Image lists display a collection of images in an organized grid.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-ImageList'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-image-list'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-image-list')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-image-list')
 		},
-		cU: 'Image List'
+		cV: 'Image List'
 	};
 };
 var author$project$Material$LayoutGrid$layoutGridCell = F2(
@@ -12456,13 +12466,13 @@ var author$project$Demo$LayoutGrid$view = function (model) {
 				author$project$Demo$LayoutGrid$cellAlignmentGrid
 			]),
 		ct: author$project$Demo$LayoutGrid$heroGrid,
-		cM: 'Material design’s responsive UI is based on a 12-column grid layout.',
-		cN: {
+		cN: 'Material design’s responsive UI is based on a 12-column grid layout.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-LayoutGrid'),
 			cD: elm$core$Maybe$Nothing,
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid')
 		},
-		cU: 'Layout Grid'
+		cV: 'Layout Grid'
 	};
 };
 var author$project$Material$LinearProgress$Buffered = F2(
@@ -12500,7 +12510,7 @@ var author$project$Material$LinearProgress$bufferingDotsElt = A2(
 		]),
 	_List_Nil);
 var author$project$Material$LinearProgress$closedProp = function (_n0) {
-	var closed = _n0.a$;
+	var closed = _n0.a0;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -12607,7 +12617,7 @@ var author$project$Material$LinearProgress$linearProgress = F2(
 	});
 var author$project$Material$LinearProgress$bufferedLinearProgress = F2(
 	function (config, _n0) {
-		var progress = _n0.aR;
+		var progress = _n0.aS;
 		var buffered = _n0.bv;
 		return A2(
 			author$project$Material$LinearProgress$linearProgress,
@@ -12619,7 +12629,7 @@ var author$project$Material$LinearProgress$Determinate = function (a) {
 };
 var author$project$Material$LinearProgress$determinateLinearProgress = F2(
 	function (config, _n0) {
-		var progress = _n0.aR;
+		var progress = _n0.aS;
 		return A2(
 			author$project$Material$LinearProgress$linearProgress,
 			author$project$Material$LinearProgress$Determinate(progress),
@@ -12628,7 +12638,7 @@ var author$project$Material$LinearProgress$determinateLinearProgress = F2(
 var author$project$Material$LinearProgress$indeterminateLinearProgress = function (config) {
 	return A2(author$project$Material$LinearProgress$linearProgress, author$project$Material$LinearProgress$Indeterminate, config);
 };
-var author$project$Material$LinearProgress$linearProgressConfig = {k: _List_Nil, a$: false, b_: false};
+var author$project$Material$LinearProgress$linearProgressConfig = {k: _List_Nil, a0: false, b_: false};
 var author$project$Demo$LinearProgress$view = function (model) {
 	return {
 		ch: _List_fromArray(
@@ -12644,7 +12654,7 @@ var author$project$Demo$LinearProgress$view = function (model) {
 				A2(
 				author$project$Material$LinearProgress$bufferedLinearProgress,
 				author$project$Material$LinearProgress$linearProgressConfig,
-				{bv: 0.75, aR: 0.5}),
+				{bv: 0.75, aS: 0.5}),
 				A2(
 				elm$html$Html$h3,
 				_List_fromArray(
@@ -12667,7 +12677,7 @@ var author$project$Demo$LinearProgress$view = function (model) {
 				_Utils_update(
 					author$project$Material$LinearProgress$linearProgressConfig,
 					{b_: true}),
-				{aR: 0.5}),
+				{aS: 0.5}),
 				A2(
 				elm$html$Html$h3,
 				_List_fromArray(
@@ -12681,22 +12691,22 @@ var author$project$Demo$LinearProgress$view = function (model) {
 				_Utils_update(
 					author$project$Material$LinearProgress$linearProgressConfig,
 					{b_: true}),
-				{bv: 0.75, aR: 0.5})
+				{bv: 0.75, aS: 0.5})
 			]),
 		ct: _List_fromArray(
 			[
 				A2(
 				author$project$Material$LinearProgress$determinateLinearProgress,
 				author$project$Material$LinearProgress$linearProgressConfig,
-				{aR: 0.5})
+				{aS: 0.5})
 			]),
-		cM: 'Progress indicators display the length of a process or express an unspecified wait time.',
-		cN: {
+		cN: 'Progress indicators display the length of a process or express an unspecified wait time.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-LinearProgress'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-progress-indicators'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-linear-progress')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-linear-progress')
 		},
-		cU: 'Linear Progress Indicator'
+		cV: 'Linear Progress Indicator'
 	};
 };
 var author$project$Demo$Lists$SetActivated = function (a) {
@@ -12712,7 +12722,7 @@ var author$project$Demo$Lists$activatedItemList = function (model) {
 		return _Utils_update(
 			author$project$Material$List$listItemConfig,
 			{
-				b9: _Utils_eq(model.aI, index),
+				b9: _Utils_eq(model.aJ, index),
 				cG: elm$core$Maybe$Just(
 					author$project$Demo$Lists$SetActivated(index))
 			});
@@ -13078,7 +13088,7 @@ var author$project$Demo$Lists$listWithTrailingCheckbox = function (model) {
 				{
 					cF: elm$core$Maybe$Just(
 						author$project$Demo$Lists$ToggleCheckbox(index)),
-					cS: A2(elm$core$Set$member, index, model.p) ? 1 : 0
+					cT: A2(elm$core$Set$member, index, model.p) ? 1 : 0
 				}));
 	};
 	return A2(
@@ -13163,7 +13173,7 @@ var author$project$Demo$Lists$listWithTrailingRadioButton = function (model) {
 				author$project$Material$Radio$radioConfig,
 				{
 					cg: _Utils_eq(
-						model.an,
+						model.ao,
 						elm$core$Maybe$Just(index)),
 					cF: elm$core$Maybe$Just(
 						author$project$Demo$Lists$SetRadio(index))
@@ -13174,7 +13184,7 @@ var author$project$Demo$Lists$listWithTrailingRadioButton = function (model) {
 			author$project$Material$List$listItemConfig,
 			{
 				bl: _Utils_eq(
-					model.an,
+					model.ao,
 					elm$core$Maybe$Just(index))
 			});
 	};
@@ -13251,7 +13261,7 @@ var author$project$Demo$Lists$shapedActivatedItemList = function (model) {
 		return _Utils_update(
 			author$project$Material$List$listItemConfig,
 			{
-				b9: _Utils_eq(model.aT, index),
+				b9: _Utils_eq(model.aU, index),
 				k: _List_fromArray(
 					[
 						A2(elm$html$Html$Attributes$style, 'border-radius', '0 32px 32px 0')
@@ -13483,13 +13493,13 @@ var author$project$Demo$Lists$view = function (model) {
 				author$project$Demo$Lists$listWithTrailingRadioButton(model)
 			]),
 		ct: author$project$Demo$Lists$heroList,
-		cM: 'Lists present multiple line items vertically as a single continuous element.',
-		cN: {
+		cN: 'Lists present multiple line items vertically as a single continuous element.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-List'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-lists'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-list')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-list')
 		},
-		cU: 'List'
+		cV: 'List'
 	};
 };
 var author$project$Demo$Menus$Close = 1;
@@ -13536,7 +13546,7 @@ var author$project$Demo$Menus$menuItemConfig = _Utils_update(
 		cG: elm$core$Maybe$Just(1)
 	});
 var author$project$Material$Menu$closeHandler = function (_n0) {
-	var onClose = _n0.aQ;
+	var onClose = _n0.aR;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -13546,7 +13556,7 @@ var author$project$Material$Menu$closeHandler = function (_n0) {
 		onClose);
 };
 var author$project$Material$Menu$openProp = function (_n0) {
-	var open = _n0.cK;
+	var open = _n0.cL;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -13582,7 +13592,7 @@ var author$project$Material$Menu$menu = F2(
 				config.k),
 			nodes);
 	});
-var author$project$Material$Menu$menuConfig = {k: _List_Nil, aQ: elm$core$Maybe$Nothing, cK: false, bi: false};
+var author$project$Material$Menu$menuConfig = {k: _List_Nil, aR: elm$core$Maybe$Nothing, cL: false, bi: false};
 var author$project$Material$Menu$menuSurfaceAnchor = elm$html$Html$Attributes$class('mdc-menu-surface--anchor');
 var author$project$Demo$Menus$view = function (model) {
 	return {
@@ -13615,8 +13625,8 @@ var author$project$Demo$Menus$view = function (model) {
 						_Utils_update(
 							author$project$Material$Menu$menuConfig,
 							{
-								aQ: elm$core$Maybe$Just(1),
-								cK: model.cK
+								aR: elm$core$Maybe$Just(1),
+								cL: model.cL
 							}),
 						_List_fromArray(
 							[
@@ -13624,7 +13634,7 @@ var author$project$Demo$Menus$view = function (model) {
 								author$project$Material$List$list,
 								_Utils_update(
 									author$project$Material$List$listConfig,
-									{c$: true}),
+									{c0: true}),
 								_List_fromArray(
 									[
 										A2(
@@ -13692,13 +13702,13 @@ var author$project$Demo$Menus$view = function (model) {
 			[
 				author$project$Demo$Menus$heroMenu(model)
 			]),
-		cM: 'Menus display a list of choices on a transient sheet of material.',
-		cN: {
+		cN: 'Menus display a list of choices on a transient sheet of material.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Menu'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-menus'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-menu')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-menu')
 		},
-		cU: 'Menu'
+		cV: 'Menu'
 	};
 };
 var author$project$Demo$ModalDrawer$CloseDrawer = {$: 1};
@@ -13739,7 +13749,7 @@ var author$project$Material$Drawer$modalDrawer = F2(
 				config.k),
 			nodes);
 	});
-var author$project$Material$Drawer$modalDrawerConfig = {k: _List_Nil, aQ: elm$core$Maybe$Nothing, cK: false};
+var author$project$Material$Drawer$modalDrawerConfig = {k: _List_Nil, aR: elm$core$Maybe$Nothing, cL: false};
 var author$project$Demo$ModalDrawer$view = function (model) {
 	return {
 		cl: A2(
@@ -13747,14 +13757,14 @@ var author$project$Demo$ModalDrawer$view = function (model) {
 			_Utils_update(
 				author$project$Material$Drawer$modalDrawerConfig,
 				{
-					aQ: elm$core$Maybe$Just(author$project$Demo$ModalDrawer$CloseDrawer),
-					cK: model.a1
+					aR: elm$core$Maybe$Just(author$project$Demo$ModalDrawer$CloseDrawer),
+					cL: model.a2
 				}),
-			A2(author$project$Demo$DrawerPage$drawerBody, author$project$Demo$ModalDrawer$SetSelectedIndex, model.aS)),
+			A2(author$project$Demo$DrawerPage$drawerBody, author$project$Demo$ModalDrawer$SetSelectedIndex, model.aT)),
 		cH: elm$core$Maybe$Just(author$project$Demo$ModalDrawer$OpenDrawer),
-		cP: elm$core$Maybe$Just(
+		cQ: elm$core$Maybe$Just(
 			A2(author$project$Material$Drawer$drawerScrim, _List_Nil, _List_Nil)),
-		cU: 'Modal Drawer'
+		cV: 'Modal Drawer'
 	};
 };
 var author$project$Demo$PermanentDrawer$SetSelectedIndex = elm$core$Basics$identity;
@@ -13763,10 +13773,10 @@ var author$project$Demo$PermanentDrawer$view = function (model) {
 		cl: A2(
 			author$project$Material$Drawer$permanentDrawer,
 			author$project$Material$Drawer$permanentDrawerConfig,
-			A2(author$project$Demo$DrawerPage$drawerBody, elm$core$Basics$identity, model.aS)),
+			A2(author$project$Demo$DrawerPage$drawerBody, elm$core$Basics$identity, model.aT)),
 		cH: elm$core$Maybe$Nothing,
-		cP: elm$core$Maybe$Nothing,
-		cU: 'Permanent Drawer'
+		cQ: elm$core$Maybe$Nothing,
+		cV: 'Permanent Drawer'
 	};
 };
 var author$project$Material$TopAppBar$prominentFixedAdjust = elm$html$Html$Attributes$class('mdc-top-app-bar--prominent-fixed-adjust');
@@ -13778,7 +13788,7 @@ var author$project$Material$TopAppBar$prominentTopAppBar = F2(
 var author$project$Demo$ProminentTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$prominentFixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$prominentTopAppBar,
 			author$project$Material$TopAppBar$topAppBarConfig,
 			_List_fromArray(
@@ -13862,10 +13872,10 @@ var author$project$Demo$RadioButtons$isSelected = F3(
 			A2(
 				elm$core$Maybe$map,
 				elm$core$Basics$eq(index),
-				A2(elm$core$Dict$get, group, model.ao)));
+				A2(elm$core$Dict$get, group, model.ap)));
 	});
 var author$project$Material$FormField$alignEndCs = function (_n0) {
-	var alignEnd = _n0.aZ;
+	var alignEnd = _n0.a_;
 	return alignEnd ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-form-field--align-end')) : elm$core$Maybe$Nothing;
 };
@@ -13920,7 +13930,7 @@ var author$project$Material$FormField$formField = F2(
 						author$project$Material$FormField$labelElt(config)
 					])));
 	});
-var author$project$Material$FormField$formFieldConfig = {k: _List_Nil, aZ: false, cr: elm$core$Maybe$Nothing, b: '', cG: elm$core$Maybe$Nothing};
+var author$project$Material$FormField$formFieldConfig = {k: _List_Nil, a_: false, cr: elm$core$Maybe$Nothing, b: '', cG: elm$core$Maybe$Nothing};
 var author$project$Demo$RadioButtons$radio_ = F4(
 	function (model, group, index, label) {
 		return A2(
@@ -14002,13 +14012,13 @@ var author$project$Demo$RadioButtons$view = function (model) {
 			[
 				author$project$Demo$RadioButtons$heroRadioGroup(model)
 			]),
-		cM: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
-		cN: {
+		cN: 'Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Radio'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-radio-buttons'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-radio')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-radio')
 		},
-		cU: 'Radio Button'
+		cV: 'Radio Button'
 	};
 };
 var author$project$Demo$Ripple$demoBox = _List_fromArray(
@@ -14189,13 +14199,13 @@ var author$project$Demo$Ripple$view = function (model) {
 						author$project$Material$Ripple$boundedRipple(author$project$Material$Ripple$rippleConfig)
 					]))
 			]),
-		cM: 'Ripples are visual representations used to communicate the status of a component or interactive element.',
-		cN: {
+		cN: 'Ripples are visual representations used to communicate the status of a component or interactive element.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Ripple'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-states'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple')
 		},
-		cU: 'Ripple'
+		cV: 'Ripple'
 	};
 };
 var author$project$Material$Select$SelectOption = elm$core$Basics$identity;
@@ -14297,11 +14307,21 @@ var author$project$Material$Select$dropdownIconElt = A2(
 var author$project$Material$Select$floatingLabelElt = function (_n0) {
 	var label = _n0.b;
 	var value = _n0.n;
+	var floatingLabelFloatAboveCs = 'mdc-floating-label--float-above';
+	var floatingLabelCs = 'mdc-floating-label';
 	return A2(
-		elm$html$Html$label,
+		elm$html$Html$div,
 		_List_fromArray(
 			[
-				(A2(elm$core$Maybe$withDefault, '', value) !== '') ? elm$html$Html$Attributes$class('mdc-floating-label mdc-floating-label--float-above') : elm$html$Html$Attributes$class('mdc-floating-label')
+				(A2(elm$core$Maybe$withDefault, '', value) !== '') ? elm$html$Html$Attributes$class(floatingLabelCs + (' ' + floatingLabelFloatAboveCs)) : elm$html$Html$Attributes$class(floatingLabelCs),
+				A2(
+				elm$html$Html$Attributes$property,
+				'foucClassNames',
+				A2(
+					elm$json$Json$Encode$list,
+					elm$json$Json$Encode$string,
+					_List_fromArray(
+						[floatingLabelFloatAboveCs])))
 			]),
 		_List_fromArray(
 			[
@@ -14615,13 +14635,13 @@ var author$project$Demo$Selects$view = function (model) {
 			[
 				author$project$Demo$Selects$heroSelects(model)
 			]),
-		cM: 'Selects allow users to select from a single-option menu. It functions as a wrapper around the browser\'s native <select> element.',
-		cN: {
+		cN: 'Selects allow users to select from a single-option menu. It functions as a wrapper around the browser\'s native <select> element.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Select'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-text-fields'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-select')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-select')
 		},
-		cU: 'Select'
+		cV: 'Select'
 	};
 };
 var author$project$Material$TopAppBar$ShortCollapsed = 2;
@@ -14633,7 +14653,7 @@ var author$project$Material$TopAppBar$shortFixedAdjust = elm$html$Html$Attribute
 var author$project$Demo$ShortCollapsedTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$shortFixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$shortCollapsedTopAppBar,
 			author$project$Material$TopAppBar$topAppBarConfig,
 			_List_fromArray(
@@ -14687,7 +14707,7 @@ var author$project$Material$TopAppBar$shortTopAppBar = F2(
 var author$project$Demo$ShortTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$shortFixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$shortTopAppBar,
 			author$project$Material$TopAppBar$topAppBarConfig,
 			_List_fromArray(
@@ -14747,7 +14767,7 @@ var author$project$Demo$Slider$Change = F2(
 	});
 var elm$core$String$fromFloat = _String_fromNumber;
 var author$project$Material$Slider$ariaValueMaxAttr = function (_n0) {
-	var max = _n0.a4;
+	var max = _n0.a5;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$attribute,
@@ -14755,7 +14775,7 @@ var author$project$Material$Slider$ariaValueMaxAttr = function (_n0) {
 			elm$core$String$fromFloat(max)));
 };
 var author$project$Material$Slider$ariaValueMinAttr = function (_n0) {
-	var min = _n0.a7;
+	var min = _n0.a8;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$attribute,
@@ -14811,7 +14831,7 @@ var author$project$Material$Slider$displayMarkersCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-slider--display-markers')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$Slider$maxProp = function (_n0) {
-	var max = _n0.a4;
+	var max = _n0.a5;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -14819,7 +14839,7 @@ var author$project$Material$Slider$maxProp = function (_n0) {
 			elm$json$Json$Encode$float(max)));
 };
 var author$project$Material$Slider$minProp = function (_n0) {
-	var min = _n0.a7;
+	var min = _n0.a8;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -14963,15 +14983,15 @@ var author$project$Material$Slider$slider = function (config) {
 				author$project$Material$Slider$thumbContainerElt(config)
 			]));
 };
-var author$project$Material$Slider$sliderConfig = {k: _List_Nil, V: false, bA: false, cj: false, a4: 100, a7: 0, cF: elm$core$Maybe$Nothing, b0: 0, n: 0};
+var author$project$Material$Slider$sliderConfig = {k: _List_Nil, V: false, bA: false, cj: false, a5: 100, a8: 0, cF: elm$core$Maybe$Nothing, b0: 0, n: 0};
 var author$project$Demo$Slider$continuousSlider = function (model) {
 	var id = 'continuous-slider';
 	return author$project$Material$Slider$slider(
 		_Utils_update(
 			author$project$Material$Slider$sliderConfig,
 			{
-				a4: 50,
-				a7: 0,
+				a5: 50,
+				a8: 0,
 				cF: elm$core$Maybe$Just(
 					author$project$Demo$Slider$Change(id)),
 				n: A2(
@@ -14987,8 +15007,8 @@ var author$project$Demo$Slider$discreteSlider = function (model) {
 			author$project$Material$Slider$sliderConfig,
 			{
 				bA: true,
-				a4: 50,
-				a7: 0,
+				a5: 50,
+				a8: 0,
 				cF: elm$core$Maybe$Just(
 					author$project$Demo$Slider$Change(id)),
 				b0: 1,
@@ -15006,8 +15026,8 @@ var author$project$Demo$Slider$discreteSliderWithTickMarks = function (model) {
 			{
 				bA: true,
 				cj: true,
-				a4: 50,
-				a7: 0,
+				a5: 50,
+				a8: 0,
 				cF: elm$core$Maybe$Just(
 					author$project$Demo$Slider$Change(id)),
 				b0: 1,
@@ -15067,13 +15087,13 @@ var author$project$Demo$Slider$view = function (model) {
 			[
 				author$project$Demo$Slider$heroSlider(model)
 			]),
-		cM: 'Sliders let users select from a range of values by moving the slider thumb.',
-		cN: {
+		cN: 'Sliders let users select from a range of values by moving the slider thumb.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Slider'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-sliders'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-slider')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-slider')
 		},
-		cU: 'Slider'
+		cV: 'Slider'
 	};
 };
 var author$project$Demo$Snackbar$ShowBaseline = {$: 0};
@@ -15151,7 +15171,7 @@ var author$project$Demo$Snackbar$heroMessage = A2(
 				]))
 		]));
 var author$project$Material$Snackbar$closeOnEscapeProp = function (_n0) {
-	var closeOnEscape = _n0.a_;
+	var closeOnEscape = _n0.a$;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -15183,18 +15203,18 @@ var author$project$Material$Snackbar$messageIdProp = function (_n0) {
 var author$project$Material$Snackbar$rootCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-snackbar'));
 var author$project$Material$Snackbar$stackedCs = function (_n0) {
-	var stacked = _n0.cR;
+	var stacked = _n0.cS;
 	return stacked ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-snackbar--stacked')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$Snackbar$actionButtonClickHandler = function (_n0) {
-	var onActionButtonClick = _n0.bb;
+	var onActionButtonClick = _n0.bc;
 	return A2(elm$core$Maybe$map, elm$html$Html$Events$onClick, onActionButtonClick);
 };
 var author$project$Material$Snackbar$actionButtonCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-button mdc-snackbar__action'));
 var author$project$Material$Snackbar$actionButtonElt = function (message) {
-	var actionButton = message.aW;
+	var actionButton = message.aX;
 	return A2(
 		elm$core$Maybe$map,
 		function (actionButtonLabel) {
@@ -15216,13 +15236,13 @@ var author$project$Material$Snackbar$actionButtonElt = function (message) {
 		actionButton);
 };
 var author$project$Material$Snackbar$actionIconClickHandler = function (_n0) {
-	var onActionIconClick = _n0.bc;
+	var onActionIconClick = _n0.bd;
 	return A2(elm$core$Maybe$map, elm$html$Html$Events$onClick, onActionIconClick);
 };
 var author$project$Material$Snackbar$actionIconCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-icon-button mdc-snackbar__dismiss material-icons'));
 var author$project$Material$Snackbar$actionIconElt = function (message) {
-	var actionIcon = message.aX;
+	var actionIcon = message.aY;
 	return A2(
 		elm$core$Maybe$map,
 		function (actionIconLabel) {
@@ -15331,7 +15351,7 @@ var author$project$Material$Snackbar$snackbar = F3(
 					author$project$Material$Snackbar$surfaceElt(message)
 				]));
 	});
-var author$project$Material$Snackbar$snackbarConfig = {k: _List_Nil, a_: false};
+var author$project$Material$Snackbar$snackbarConfig = {k: _List_Nil, a$: false};
 var author$project$Demo$Snackbar$view = function (model) {
 	return {
 		ch: _List_fromArray(
@@ -15365,23 +15385,23 @@ var author$project$Demo$Snackbar$view = function (model) {
 						cG: elm$core$Maybe$Just(author$project$Demo$Snackbar$ShowStacked)
 					}),
 				'Stacked'),
-				A3(author$project$Material$Snackbar$snackbar, author$project$Demo$Snackbar$SnackbarMsg, author$project$Material$Snackbar$snackbarConfig, model.al)
+				A3(author$project$Material$Snackbar$snackbar, author$project$Demo$Snackbar$SnackbarMsg, author$project$Material$Snackbar$snackbarConfig, model.am)
 			]),
 		ct: _List_fromArray(
 			[author$project$Demo$Snackbar$heroMessage]),
-		cM: 'Snackbars provide brief feedback about an operation through a message at the bottom of the screen.',
-		cN: {
+		cN: 'Snackbars provide brief feedback about an operation through a message at the bottom of the screen.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Snackbar'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-snackbar'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar')
 		},
-		cU: 'Snackbar'
+		cV: 'Snackbar'
 	};
 };
 var author$project$Demo$StandardTopAppBar$view = function (model) {
 	return {
 		cp: author$project$Material$TopAppBar$fixedAdjust,
-		cV: A2(
+		cW: A2(
 			author$project$Material$TopAppBar$topAppBar,
 			author$project$Material$TopAppBar$topAppBarConfig,
 			_List_fromArray(
@@ -15455,32 +15475,32 @@ var author$project$Demo$StandardTopAppBar$view = function (model) {
 };
 var author$project$Demo$Startpage$imageListItems = _List_fromArray(
 	[
-		{cv: 'images/buttons_180px.svg', c: 'Raised and flat buttons', cU: 'Button', a: author$project$Demo$Url$Button},
-		{cv: 'images/cards_180px.svg', c: 'Various card layout styles', cU: 'Card', a: author$project$Demo$Url$Card},
-		{cv: 'images/checkbox_180px.svg', c: 'Multi-selection controls', cU: 'Checkbox', a: author$project$Demo$Url$Checkbox},
-		{cv: 'images/chips_180px.svg', c: 'Chips', cU: 'Chips', a: author$project$Demo$Url$Chips},
-		{cv: 'images/data_table_180px.svg', c: 'Data Table', cU: 'Data Table', a: author$project$Demo$Url$DataTable},
-		{cv: 'images/dialog_180px.svg', c: 'Secondary text', cU: 'Dialog', a: author$project$Demo$Url$Dialog},
-		{cv: 'images/drawer_180px.svg', c: 'Various drawer styles', cU: 'Drawer', a: author$project$Demo$Url$Drawer},
-		{cv: 'images/elevation_180px.svg', c: 'Shadow for different elevations', cU: 'Elevation', a: author$project$Demo$Url$Elevation},
-		{cv: 'images/floating_action_button_180px.svg', c: 'The primary action in an application', cU: 'FAB', a: author$project$Demo$Url$Fab},
-		{cv: 'images/icon_button_180px.svg', c: 'Toggling icon states', cU: 'Icon Button', a: author$project$Demo$Url$IconButton},
-		{cv: 'images/image_list_180px.svg', c: 'An Image List consists of several items, each containing an image and optionally supporting content (i.e. a text label)', cU: 'Image List', a: author$project$Demo$Url$ImageList},
-		{cv: 'images/layout_grid_180px.svg', c: 'Grid and gutter support', cU: 'Layout Grid', a: author$project$Demo$Url$LayoutGrid},
-		{cv: 'images/list_180px.svg', c: 'Item layouts in lists', cU: 'List', a: author$project$Demo$Url$List},
-		{cv: 'images/linear_progress_180px.svg', c: 'Fills from 0% to 100%, represented by bars', cU: 'Linear progress', a: author$project$Demo$Url$LinearProgress},
-		{cv: 'images/menu_180px.svg', c: 'Pop over menus', cU: 'Menu', a: author$project$Demo$Url$Menu},
-		{cv: 'images/radio_180px.svg', c: 'Single selection controls', cU: 'Radio', a: author$project$Demo$Url$RadioButton},
-		{cv: 'images/ripple_180px.svg', c: 'Touch ripple', cU: 'Ripple', a: author$project$Demo$Url$Ripple},
-		{cv: 'images/form_field_180px.svg', c: 'Popover selection menus', cU: 'Select', a: author$project$Demo$Url$Select},
-		{cv: 'images/slider_180px.svg', c: 'Range Controls', cU: 'Slider', a: author$project$Demo$Url$Slider},
-		{cv: 'images/snackbar_180px.svg', c: 'Transient messages', cU: 'Snackbar', a: author$project$Demo$Url$Snackbar},
-		{cv: 'images/switch_180px.svg', c: 'On off switches', cU: 'Switch', a: author$project$Demo$Url$Switch},
-		{cv: 'images/tabs_180px.svg', c: 'Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy', cU: 'Tab Bar', a: author$project$Demo$Url$TabBar},
-		{cv: 'images/form_field_180px.svg', c: 'Single and multiline text fields', cU: 'Text field', a: author$project$Demo$Url$TextField},
-		{cv: 'images/ic_theme_24px.svg', c: 'Using primary and accent colors', cU: 'Theme', a: author$project$Demo$Url$Theme},
-		{cv: 'images/top_app_bar_180px.svg', c: 'Container for items such as application title, navigation icon, and action items.', cU: 'Top App Bar', a: author$project$Demo$Url$TopAppBar},
-		{cv: 'images/fonts_180px.svg', c: 'Type hierarchy', cU: 'Typography', a: author$project$Demo$Url$Typography}
+		{cv: 'images/buttons_180px.svg', c: 'Raised and flat buttons', cV: 'Button', a: author$project$Demo$Url$Button},
+		{cv: 'images/cards_180px.svg', c: 'Various card layout styles', cV: 'Card', a: author$project$Demo$Url$Card},
+		{cv: 'images/checkbox_180px.svg', c: 'Multi-selection controls', cV: 'Checkbox', a: author$project$Demo$Url$Checkbox},
+		{cv: 'images/chips_180px.svg', c: 'Chips', cV: 'Chips', a: author$project$Demo$Url$Chips},
+		{cv: 'images/data_table_180px.svg', c: 'Data Table', cV: 'Data Table', a: author$project$Demo$Url$DataTable},
+		{cv: 'images/dialog_180px.svg', c: 'Secondary text', cV: 'Dialog', a: author$project$Demo$Url$Dialog},
+		{cv: 'images/drawer_180px.svg', c: 'Various drawer styles', cV: 'Drawer', a: author$project$Demo$Url$Drawer},
+		{cv: 'images/elevation_180px.svg', c: 'Shadow for different elevations', cV: 'Elevation', a: author$project$Demo$Url$Elevation},
+		{cv: 'images/floating_action_button_180px.svg', c: 'The primary action in an application', cV: 'FAB', a: author$project$Demo$Url$Fab},
+		{cv: 'images/icon_button_180px.svg', c: 'Toggling icon states', cV: 'Icon Button', a: author$project$Demo$Url$IconButton},
+		{cv: 'images/image_list_180px.svg', c: 'An Image List consists of several items, each containing an image and optionally supporting content (i.e. a text label)', cV: 'Image List', a: author$project$Demo$Url$ImageList},
+		{cv: 'images/layout_grid_180px.svg', c: 'Grid and gutter support', cV: 'Layout Grid', a: author$project$Demo$Url$LayoutGrid},
+		{cv: 'images/list_180px.svg', c: 'Item layouts in lists', cV: 'List', a: author$project$Demo$Url$List},
+		{cv: 'images/linear_progress_180px.svg', c: 'Fills from 0% to 100%, represented by bars', cV: 'Linear progress', a: author$project$Demo$Url$LinearProgress},
+		{cv: 'images/menu_180px.svg', c: 'Pop over menus', cV: 'Menu', a: author$project$Demo$Url$Menu},
+		{cv: 'images/radio_180px.svg', c: 'Single selection controls', cV: 'Radio', a: author$project$Demo$Url$RadioButton},
+		{cv: 'images/ripple_180px.svg', c: 'Touch ripple', cV: 'Ripple', a: author$project$Demo$Url$Ripple},
+		{cv: 'images/form_field_180px.svg', c: 'Popover selection menus', cV: 'Select', a: author$project$Demo$Url$Select},
+		{cv: 'images/slider_180px.svg', c: 'Range Controls', cV: 'Slider', a: author$project$Demo$Url$Slider},
+		{cv: 'images/snackbar_180px.svg', c: 'Transient messages', cV: 'Snackbar', a: author$project$Demo$Url$Snackbar},
+		{cv: 'images/switch_180px.svg', c: 'On off switches', cV: 'Switch', a: author$project$Demo$Url$Switch},
+		{cv: 'images/tabs_180px.svg', c: 'Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy', cV: 'Tab Bar', a: author$project$Demo$Url$TabBar},
+		{cv: 'images/form_field_180px.svg', c: 'Single and multiline text fields', cV: 'Text field', a: author$project$Demo$Url$TextField},
+		{cv: 'images/ic_theme_24px.svg', c: 'Using primary and accent colors', cV: 'Theme', a: author$project$Demo$Url$Theme},
+		{cv: 'images/top_app_bar_180px.svg', c: 'Container for items such as application title, navigation icon, and action items.', cV: 'Top App Bar', a: author$project$Demo$Url$TopAppBar},
+		{cv: 'images/fonts_180px.svg', c: 'Type hierarchy', cV: 'Typography', a: author$project$Demo$Url$Typography}
 	]);
 var author$project$Material$IconButton$customIconButton = F2(
 	function (config, nodes) {
@@ -15570,7 +15590,7 @@ var author$project$Demo$Startpage$view = A2(
 				elm$core$List$map,
 				function (_n0) {
 					var url = _n0.a;
-					var title = _n0.cU;
+					var title = _n0.cV;
 					var icon = _n0.cv;
 					return A2(
 						author$project$Material$ImageList$imageListItem,
@@ -15582,7 +15602,7 @@ var author$project$Demo$Startpage$view = A2(
 										A2(elm$html$Html$Attributes$style, 'width', 'calc(100% / 4 - 8.25px)'),
 										A2(elm$html$Html$Attributes$style, 'margin', '4px')
 									]),
-								aO: elm$core$Maybe$Just(
+								aP: elm$core$Maybe$Just(
 									author$project$Demo$Url$toString(url)),
 								b: elm$core$Maybe$Just(title)
 							}),
@@ -15596,7 +15616,7 @@ var author$project$Demo$Switch$isChecked = F2(
 		return A2(
 			elm$core$Maybe$withDefault,
 			false,
-			A2(elm$core$Dict$get, id, model.ay));
+			A2(elm$core$Dict$get, id, model.az));
 	});
 var author$project$Material$Switch$checkedProp = function (_n0) {
 	var checked = _n0.cg;
@@ -15762,13 +15782,13 @@ var author$project$Demo$Switch$view = function (model) {
 				author$project$Demo$Switch$demoSwitch(model)
 			]),
 		ct: author$project$Demo$Switch$heroSwitch(model),
-		cM: 'Switches communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
-		cN: {
+		cN: 'Switches communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Switch'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-switches'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch')
 		},
-		cU: 'Switch'
+		cV: 'Switch'
 	};
 };
 var author$project$Demo$TabBar$SetActiveHeroTab = function (a) {
@@ -15806,7 +15826,7 @@ var author$project$Material$TabBar$activeTabIndexProp = function (tabs) {
 var author$project$Material$TabBar$rootCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-tab-bar'));
 var author$project$Material$TabBar$tabScrollerAlignCs = function (_n0) {
-	var align = _n0.aY;
+	var align = _n0.aZ;
 	if (!align.$) {
 		switch (align.a) {
 			case 0:
@@ -15918,7 +15938,7 @@ var author$project$Material$TabBar$tabContentElt = F3(
 var author$project$Material$TabBar$tabCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-tab'));
 var author$project$Material$TabBar$tabMinWidthCs = function (_n0) {
-	var minWidth = _n0.a8;
+	var minWidth = _n0.a9;
 	return minWidth ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-tab--min-width')) : elm$core$Maybe$Nothing;
 };
@@ -15933,7 +15953,7 @@ var author$project$Material$TabBar$tabRippleElt = elm$core$Maybe$Just(
 var author$project$Material$TabBar$tabRoleAttr = elm$core$Maybe$Just(
 	A2(elm$html$Html$Attributes$attribute, 'role', 'tab'));
 var author$project$Material$TabBar$tabStackedCs = function (_n0) {
-	var stacked = _n0.cR;
+	var stacked = _n0.cS;
 	return stacked ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-tab--stacked')) : elm$core$Maybe$Nothing;
 };
@@ -16038,8 +16058,8 @@ var author$project$Material$TabBar$tabBar = F2(
 					A3(author$project$Material$TabBar$tabScroller, config, config.bo, tabs)
 				]));
 	});
-var author$project$Material$TabBar$tabScrollerConfig = {k: _List_Nil, aY: elm$core$Maybe$Nothing};
-var author$project$Material$TabBar$tabBarConfig = {k: _List_Nil, cy: false, a8: false, cR: false, bo: author$project$Material$TabBar$tabScrollerConfig};
+var author$project$Material$TabBar$tabScrollerConfig = {k: _List_Nil, aZ: elm$core$Maybe$Nothing};
+var author$project$Material$TabBar$tabBarConfig = {k: _List_Nil, cy: false, a9: false, cS: false, bo: author$project$Material$TabBar$tabScrollerConfig};
 var author$project$Material$TabBar$tabConfig = {C: false, k: _List_Nil, cG: elm$core$Maybe$Nothing};
 var author$project$Demo$TabBar$heroTabs = F2(
 	function (model, index) {
@@ -16088,7 +16108,7 @@ var author$project$Demo$TabBar$scrollingTabs = function (model) {
 		return _Utils_update(
 			author$project$Material$TabBar$tabConfig,
 			{
-				C: _Utils_eq(model.aK, index),
+				C: _Utils_eq(model.aL, index),
 				cG: elm$core$Maybe$Just(
 					author$project$Demo$TabBar$SetActiveScrollingTab(index))
 			});
@@ -16116,7 +16136,7 @@ var author$project$Demo$TabBar$tabsWithIcons = function (model) {
 		return _Utils_update(
 			author$project$Material$TabBar$tabConfig,
 			{
-				C: _Utils_eq(model.aJ, index),
+				C: _Utils_eq(model.aK, index),
 				cG: elm$core$Maybe$Just(
 					author$project$Demo$TabBar$SetActiveIconTab(index))
 			});
@@ -16157,7 +16177,7 @@ var author$project$Demo$TabBar$tabsWithStackedIcons = function (model) {
 		return _Utils_update(
 			author$project$Material$TabBar$tabConfig,
 			{
-				C: _Utils_eq(model.aL, index),
+				C: _Utils_eq(model.aM, index),
 				cG: elm$core$Maybe$Just(
 					author$project$Demo$TabBar$SetActiveStackedTab(index))
 			});
@@ -16166,7 +16186,7 @@ var author$project$Demo$TabBar$tabsWithStackedIcons = function (model) {
 		author$project$Material$TabBar$tabBar,
 		_Utils_update(
 			author$project$Material$TabBar$tabBarConfig,
-			{cy: true, cR: true}),
+			{cy: true, cS: true}),
 		_List_fromArray(
 			[
 				A2(
@@ -16228,13 +16248,13 @@ var author$project$Demo$TabBar$view = function (model) {
 			[
 				A2(author$project$Demo$TabBar$heroTabs, model, 'tabs-hero-tabs')
 			]),
-		cM: 'Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy. The Tab Bar contains the Tab Scroller and Tab components.',
-		cN: {
+		cN: 'Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy. The Tab Bar contains the Tab Scroller and Tab components.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TabBar'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-tabs'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-bar')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-bar')
 		},
-		cU: 'Tab Bar'
+		cV: 'Tab Bar'
 	};
 };
 var author$project$Material$HelperText$helperLineCs = elm$html$Html$Attributes$class('mdc-text-field-helper-line');
@@ -16319,7 +16339,7 @@ var author$project$Material$TextField$fullwidthCs = function (_n0) {
 };
 var author$project$Material$TextField$ariaLabelAttr = function (_n0) {
 	var fullwidth = _n0.bE;
-	var placeholder = _n0.cL;
+	var placeholder = _n0.cM;
 	var label = _n0.b;
 	return fullwidth ? A2(
 		elm$core$Maybe$map,
@@ -16363,11 +16383,11 @@ var elm$html$Html$Events$onInput = function (tagger) {
 			A2(elm$json$Json$Decode$map, tagger, elm$html$Html$Events$targetValue)));
 };
 var author$project$Material$TextField$inputHandler = function (_n0) {
-	var onInput = _n0.bd;
+	var onInput = _n0.be;
 	return A2(elm$core$Maybe$map, elm$html$Html$Events$onInput, onInput);
 };
 var author$project$Material$TextField$maxLengthAttr = function (_n0) {
-	var maxLength = _n0.a5;
+	var maxLength = _n0.a6;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -16377,7 +16397,7 @@ var author$project$Material$TextField$maxLengthAttr = function (_n0) {
 		maxLength);
 };
 var author$project$Material$TextField$minLengthAttr = function (_n0) {
-	var minLength = _n0.aP;
+	var minLength = _n0.aQ;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -16388,7 +16408,7 @@ var author$project$Material$TextField$minLengthAttr = function (_n0) {
 };
 var elm$html$Html$Attributes$placeholder = elm$html$Html$Attributes$stringProperty('placeholder');
 var author$project$Material$TextField$placeholderAttr = function (_n0) {
-	var placeholder = _n0.cL;
+	var placeholder = _n0.cM;
 	return A2(elm$core$Maybe$map, elm$html$Html$Attributes$placeholder, placeholder);
 };
 var author$project$Material$TextField$typeAttr = function (_n0) {
@@ -16418,16 +16438,23 @@ var author$project$Material$TextField$inputElt = function (config) {
 var author$project$Material$TextField$labelElt = function (_n0) {
 	var label = _n0.b;
 	var value = _n0.n;
+	var floatingLabelFloatAboveCs = 'mdc-floating-label--float-above';
+	var floatingLabelCs = 'mdc-floating-label';
 	if (!label.$) {
 		var str = label.a;
 		return A2(
 			elm$html$Html$div,
-			(value !== '') ? _List_fromArray(
+			_List_fromArray(
 				[
-					elm$html$Html$Attributes$class('mdc-floating-label mdc-floating-label--float-above')
-				]) : _List_fromArray(
-				[
-					elm$html$Html$Attributes$class('mdc-floating-label')
+					(value !== '') ? elm$html$Html$Attributes$class(floatingLabelCs + (' ' + floatingLabelFloatAboveCs)) : elm$html$Html$Attributes$class(floatingLabelCs),
+					A2(
+					elm$html$Html$Attributes$property,
+					'foucClassNames',
+					A2(
+						elm$json$Json$Encode$list,
+						elm$json$Json$Encode$string,
+						_List_fromArray(
+							[floatingLabelFloatAboveCs])))
 				]),
 			_List_fromArray(
 				[
@@ -16455,7 +16482,7 @@ var author$project$Material$TextField$lineRippleElt = A2(
 		]),
 	_List_Nil);
 var author$project$Material$TextField$maxLengthProp = function (_n0) {
-	var maxLength = _n0.a5;
+	var maxLength = _n0.a6;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -16464,7 +16491,7 @@ var author$project$Material$TextField$maxLengthProp = function (_n0) {
 				A2(elm$core$Maybe$withDefault, -1, maxLength))));
 };
 var author$project$Material$TextField$maxProp = function (_n0) {
-	var max = _n0.a4;
+	var max = _n0.a5;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -16476,7 +16503,7 @@ var author$project$Material$TextField$maxProp = function (_n0) {
 					A2(elm$core$Maybe$map, elm$core$String$fromInt, max)))));
 };
 var author$project$Material$TextField$minLengthProp = function (_n0) {
-	var minLength = _n0.aP;
+	var minLength = _n0.aQ;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -16485,7 +16512,7 @@ var author$project$Material$TextField$minLengthProp = function (_n0) {
 				A2(elm$core$Maybe$withDefault, -1, minLength))));
 };
 var author$project$Material$TextField$minProp = function (_n0) {
-	var min = _n0.a7;
+	var min = _n0.a8;
 	return elm$core$Maybe$Just(
 		A2(
 			elm$html$Html$Attributes$property,
@@ -16578,7 +16605,7 @@ var author$project$Material$TextField$stepProp = function (_n0) {
 					A2(elm$core$Maybe$map, elm$core$String$fromInt, step)))));
 };
 var author$project$Material$TextField$trailingIconElt = function (_n0) {
-	var trailingIcon = _n0.cW;
+	var trailingIcon = _n0.cX;
 	if (!trailingIcon.$) {
 		return _List_Nil;
 	} else {
@@ -16610,7 +16637,7 @@ var author$project$Material$TextField$withLeadingIconCs = function (_n0) {
 		elm$html$Html$Attributes$class('mdc-text-field--with-leading-icon')) : elm$core$Maybe$Nothing;
 };
 var author$project$Material$TextField$withTrailingIconCs = function (_n0) {
-	var trailingIcon = _n0.cW;
+	var trailingIcon = _n0.cX;
 	return (!_Utils_eq(trailingIcon, author$project$Material$TextField$NoIcon)) ? elm$core$Maybe$Just(
 		elm$html$Html$Attributes$class('mdc-text-field--with-trailing-icon')) : elm$core$Maybe$Nothing;
 };
@@ -16668,7 +16695,7 @@ var author$project$Material$TextField$textField = function (config) {
 					author$project$Material$TextField$trailingIconElt(config)
 				])));
 };
-var author$project$Material$TextField$textFieldConfig = {k: _List_Nil, V: false, bE: false, b: elm$core$Maybe$Nothing, G: author$project$Material$TextField$NoIcon, a4: elm$core$Maybe$Nothing, a5: elm$core$Maybe$Nothing, a7: elm$core$Maybe$Nothing, aP: elm$core$Maybe$Nothing, cF: elm$core$Maybe$Nothing, bd: elm$core$Maybe$Nothing, h: false, bg: elm$core$Maybe$Nothing, cL: elm$core$Maybe$Nothing, bj: false, b0: elm$core$Maybe$Nothing, cW: author$project$Material$TextField$NoIcon, br: 'text', bs: true, n: ''};
+var author$project$Material$TextField$textFieldConfig = {k: _List_Nil, V: false, bE: false, b: elm$core$Maybe$Nothing, G: author$project$Material$TextField$NoIcon, a5: elm$core$Maybe$Nothing, a6: elm$core$Maybe$Nothing, a8: elm$core$Maybe$Nothing, aQ: elm$core$Maybe$Nothing, cF: elm$core$Maybe$Nothing, be: elm$core$Maybe$Nothing, h: false, bg: elm$core$Maybe$Nothing, cM: elm$core$Maybe$Nothing, bj: false, b0: elm$core$Maybe$Nothing, cX: author$project$Material$TextField$NoIcon, br: 'text', bs: true, n: ''};
 var author$project$Material$TextField$Icon = function (a) {
 	return {$: 1, a: a};
 };
@@ -16730,7 +16757,7 @@ var author$project$Demo$TextFields$filledTextFields = function (model) {
 							author$project$Material$TextField$textFieldConfig,
 							{
 								b: elm$core$Maybe$Just('Standard'),
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperText
 					]))
@@ -16747,7 +16774,7 @@ var author$project$Demo$TextFields$fullwidthTextField = function (model) {
 					author$project$Material$TextField$textFieldConfig,
 					{
 						bE: true,
-						cL: elm$core$Maybe$Just('Standard')
+						cM: elm$core$Maybe$Just('Standard')
 					})),
 				author$project$Demo$TextFields$demoHelperText
 			]));
@@ -16777,7 +16804,7 @@ var author$project$Material$TextArea$fullwidthCs = function (_n0) {
 };
 var author$project$Material$TextArea$ariaLabelAttr = function (_n0) {
 	var fullwidth = _n0.bE;
-	var placeholder = _n0.cL;
+	var placeholder = _n0.cM;
 	var label = _n0.b;
 	return fullwidth ? A2(
 		elm$core$Maybe$map,
@@ -16803,17 +16830,17 @@ var elm$html$Html$Attributes$cols = function (n) {
 		elm$core$String$fromInt(n));
 };
 var author$project$Material$TextArea$colsAttr = function (_n0) {
-	var cols = _n0.a0;
+	var cols = _n0.a1;
 	return A2(elm$core$Maybe$map, elm$html$Html$Attributes$cols, cols);
 };
 var author$project$Material$TextArea$inputCs = elm$core$Maybe$Just(
 	elm$html$Html$Attributes$class('mdc-text-field__input'));
 var author$project$Material$TextArea$inputHandler = function (_n0) {
-	var onInput = _n0.bd;
+	var onInput = _n0.be;
 	return A2(elm$core$Maybe$map, elm$html$Html$Events$onInput, onInput);
 };
 var author$project$Material$TextArea$maxLengthAttr = function (_n0) {
-	var maxLength = _n0.a5;
+	var maxLength = _n0.a6;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -16823,7 +16850,7 @@ var author$project$Material$TextArea$maxLengthAttr = function (_n0) {
 		maxLength);
 };
 var author$project$Material$TextArea$minLengthAttr = function (_n0) {
-	var minLength = _n0.aP;
+	var minLength = _n0.aQ;
 	return A2(
 		elm$core$Maybe$map,
 		A2(
@@ -16833,7 +16860,7 @@ var author$project$Material$TextArea$minLengthAttr = function (_n0) {
 		minLength);
 };
 var author$project$Material$TextArea$placeholderAttr = function (_n0) {
-	var placeholder = _n0.cL;
+	var placeholder = _n0.cM;
 	return A2(elm$core$Maybe$map, elm$html$Html$Attributes$placeholder, placeholder);
 };
 var elm$html$Html$Attributes$rows = function (n) {
@@ -16882,16 +16909,23 @@ var author$project$Material$TextArea$notchedOutlineLeadingElt = A2(
 var author$project$Material$TextArea$labelElt = function (_n0) {
 	var label = _n0.b;
 	var value = _n0.n;
+	var floatingLabelFloatAboveCs = 'mdc-floating-label--float-above';
+	var floatingLabelCs = 'mdc-floating-label';
 	if (!label.$) {
 		var str = label.a;
 		return A2(
 			elm$html$Html$div,
-			(value !== '') ? _List_fromArray(
+			_List_fromArray(
 				[
-					elm$html$Html$Attributes$class('mdc-floating-label mdc-floating-label--float-above')
-				]) : _List_fromArray(
-				[
-					elm$html$Html$Attributes$class('mdc-floating-label')
+					(value !== '') ? elm$html$Html$Attributes$class(floatingLabelCs + (' ' + floatingLabelFloatAboveCs)) : elm$html$Html$Attributes$class(floatingLabelCs),
+					A2(
+					elm$html$Html$Attributes$property,
+					'foucClassNames',
+					A2(
+						elm$json$Json$Encode$list,
+						elm$json$Json$Encode$string,
+						_List_fromArray(
+							[floatingLabelFloatAboveCs])))
 				]),
 			_List_fromArray(
 				[
@@ -17002,7 +17036,7 @@ var author$project$Material$TextArea$textArea = function (config) {
 					])
 				])));
 };
-var author$project$Material$TextArea$textAreaConfig = {k: _List_Nil, a0: elm$core$Maybe$Nothing, V: false, bE: false, b: elm$core$Maybe$Nothing, a5: elm$core$Maybe$Nothing, aP: elm$core$Maybe$Nothing, cF: elm$core$Maybe$Nothing, bd: elm$core$Maybe$Nothing, h: false, cL: elm$core$Maybe$Nothing, bj: false, bk: elm$core$Maybe$Nothing, bs: true, n: ''};
+var author$project$Material$TextArea$textAreaConfig = {k: _List_Nil, a1: elm$core$Maybe$Nothing, V: false, bE: false, b: elm$core$Maybe$Nothing, a6: elm$core$Maybe$Nothing, aQ: elm$core$Maybe$Nothing, cF: elm$core$Maybe$Nothing, be: elm$core$Maybe$Nothing, h: false, cM: elm$core$Maybe$Nothing, bj: false, bk: elm$core$Maybe$Nothing, bs: true, n: ''};
 var author$project$Demo$TextFields$fullwidthTextareaTextField = function (model) {
 	return A2(
 		elm$html$Html$div,
@@ -17121,7 +17155,7 @@ var author$project$Demo$TextFields$outlinedTextFields = function (model) {
 							{
 								b: elm$core$Maybe$Just('Standard'),
 								h: true,
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperText
 					]))
@@ -17182,7 +17216,7 @@ var author$project$Demo$TextFields$shapedFilledTextFields = function (model) {
 										A2(elm$html$Html$Attributes$style, 'border-radius', '16px 16px 0 0')
 									]),
 								b: elm$core$Maybe$Just('Standard'),
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperText
 					]))
@@ -17234,7 +17268,7 @@ var author$project$Demo$TextFields$shapedOutlinedTextFields = function (model) {
 							{
 								b: elm$core$Maybe$Just('Standard'),
 								h: true,
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperText
 					]))
@@ -17275,7 +17309,7 @@ var author$project$Demo$TextFields$textFieldsWithCharacterCounter = function (mo
 						_Utils_update(
 							author$project$Material$TextField$textFieldConfig,
 							{
-								a5: elm$core$Maybe$Just(18),
+								a6: elm$core$Maybe$Just(18),
 								h: true
 							})),
 						author$project$Demo$TextFields$demoHelperTextWithCharacterCounter
@@ -17290,7 +17324,7 @@ var author$project$Demo$TextFields$textFieldsWithCharacterCounter = function (mo
 							author$project$Material$TextField$textFieldConfig,
 							{
 								G: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'event'),
-								a5: elm$core$Maybe$Just(18),
+								a6: elm$core$Maybe$Just(18),
 								h: true
 							})),
 						author$project$Demo$TextFields$demoHelperTextWithCharacterCounter
@@ -17304,9 +17338,9 @@ var author$project$Demo$TextFields$textFieldsWithCharacterCounter = function (mo
 						_Utils_update(
 							author$project$Material$TextField$textFieldConfig,
 							{
-								a5: elm$core$Maybe$Just(18),
+								a6: elm$core$Maybe$Just(18),
 								h: true,
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperTextWithCharacterCounter
 					]))
@@ -17353,7 +17387,7 @@ var author$project$Demo$TextFields$textFieldsWithoutLabel = function (model) {
 							author$project$Material$TextField$textFieldConfig,
 							{
 								h: true,
-								cW: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
+								cX: A2(author$project$Material$TextField$textFieldIcon, author$project$Material$Icon$iconConfig, 'delete')
 							})),
 						author$project$Demo$TextFields$demoHelperText
 					]))
@@ -17465,13 +17499,13 @@ var author$project$Demo$TextFields$view = function (model) {
 			[
 				author$project$Demo$TextFields$heroTextFields(model)
 			]),
-		cM: 'Text fields allow users to input, edit, and select text. Text fields typically reside in forms but can appear in other places, like dialog boxes and search.',
-		cN: {
+		cN: 'Text fields allow users to input, edit, and select text. Text fields typically reside in forms but can appear in other places, like dialog boxes and search.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TextField'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-text-fields'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield')
 		},
-		cU: 'Text Field'
+		cV: 'Text Field'
 	};
 };
 var author$project$Demo$Theme$heroMargin = _List_fromArray(
@@ -17922,13 +17956,13 @@ var author$project$Demo$Theme$view = function (model) {
 					{k: author$project$Demo$Theme$heroMargin}),
 				'Outlined')
 			]),
-		cM: 'Color in Material Design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.',
-		cN: {
+		cN: 'Color in Material Design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Theme'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-color-theming'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme')
 		},
-		cU: 'Theme'
+		cV: 'Theme'
 	};
 };
 var author$project$Demo$TopAppBar$iframe = F2(
@@ -18092,19 +18126,19 @@ var author$project$Demo$TopAppBar$view = function (model) {
 							]))
 					]))
 			]),
-		cM: 'Top App Bars are a container for items such as application title, navigation icon, and action items.',
-		cN: {
+		cN: 'Top App Bars are a container for items such as application title, navigation icon, and action items.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-TopAppBar'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-app-bar-top'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar')
 		},
-		cU: 'Top App Bar'
+		cV: 'Top App Bar'
 	};
 };
 var author$project$Demo$TopAppBarPage$demoParagraph = '\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n    commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate\n    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id\n    est laborum.\n    ';
 var author$project$Demo$TopAppBarPage$view = F2(
 	function (lift, _n0) {
-		var topAppBar = _n0.cV;
+		var topAppBar = _n0.cW;
 		var fixedAdjust = _n0.cp;
 		return A2(
 			elm$html$Html$map,
@@ -18266,13 +18300,13 @@ var author$project$Demo$Typography$view = function (model) {
 						elm$html$Html$text('Typography')
 					]))
 			]),
-		cM: 'Roboto is the standard typeface on Android and Chrome.',
-		cN: {
+		cN: 'Roboto is the standard typeface on Android and Chrome.',
+		cO: {
 			ck: elm$core$Maybe$Just('https://package.elm-lang.org/packages/aforemny/material-components-web-elm/latest/Material-Typography'),
 			cD: elm$core$Maybe$Just('https://material.io/go/design-typography'),
-			cQ: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-typography')
+			cR: elm$core$Maybe$Just('https://github.com/material-components/material-components-web/tree/master/packages/mdc-typography')
 		},
-		cU: 'Typography'
+		cV: 'Typography'
 	};
 };
 var author$project$Main$ButtonsMsg = function (a) {
@@ -18380,7 +18414,7 @@ var author$project$Main$TypographyMsg = function (a) {
 	return {$: 33, a: a};
 };
 var author$project$Main$body = function (model) {
-	var catalogPageConfig = {bx: author$project$Main$CloseCatalogDrawer, a1: model.w, bP: author$project$Main$OpenCatalogDrawer, a: model.a};
+	var catalogPageConfig = {bx: author$project$Main$CloseCatalogDrawer, a2: model.w, bP: author$project$Main$OpenCatalogDrawer, a: model.a};
 	var _n0 = model.a;
 	switch (_n0.$) {
 		case 0:
@@ -18402,7 +18436,7 @@ var author$project$Main$body = function (model) {
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$CheckboxMsg,
 				catalogPageConfig,
-				author$project$Demo$Checkbox$view(model.aN));
+				author$project$Demo$Checkbox$view(model.aO));
 		case 4:
 			return A3(
 				author$project$Demo$CatalogPage$view,
@@ -18430,12 +18464,12 @@ var author$project$Main$body = function (model) {
 			return A2(
 				author$project$Demo$DrawerPage$view,
 				author$project$Main$ModalDrawerMsg,
-				author$project$Demo$ModalDrawer$view(model.ai));
+				author$project$Demo$ModalDrawer$view(model.aj));
 		case 9:
 			return A2(
 				author$project$Demo$DrawerPage$view,
 				author$project$Main$PermanentDrawerMsg,
-				author$project$Demo$PermanentDrawer$view(model.aj));
+				author$project$Demo$PermanentDrawer$view(model.ak));
 		case 10:
 			return A3(
 				author$project$Demo$CatalogPage$view,
@@ -18465,78 +18499,78 @@ var author$project$Main$body = function (model) {
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$LinearProgressMsg,
 				catalogPageConfig,
-				author$project$Demo$LinearProgress$view(model.af));
+				author$project$Demo$LinearProgress$view(model.ag));
 		case 16:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$ListsMsg,
 				catalogPageConfig,
-				author$project$Demo$Lists$view(model.ag));
+				author$project$Demo$Lists$view(model.ah));
 		case 17:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$RadioButtonsMsg,
 				catalogPageConfig,
-				author$project$Demo$RadioButtons$view(model.am));
+				author$project$Demo$RadioButtons$view(model.an));
 		case 19:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$SelectMsg,
 				catalogPageConfig,
-				author$project$Demo$Selects$view(model.aq));
+				author$project$Demo$Selects$view(model.ar));
 		case 20:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$MenuMsg,
 				catalogPageConfig,
-				author$project$Demo$Menus$view(model.ah));
+				author$project$Demo$Menus$view(model.ai));
 		case 21:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$SliderMsg,
 				catalogPageConfig,
-				author$project$Demo$Slider$view(model.au));
+				author$project$Demo$Slider$view(model.av));
 		case 22:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$SnackbarMsg,
 				catalogPageConfig,
-				author$project$Demo$Snackbar$view(model.av));
+				author$project$Demo$Snackbar$view(model.aw));
 		case 23:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$SwitchMsg,
 				catalogPageConfig,
-				author$project$Demo$Switch$view(model.ax));
+				author$project$Demo$Switch$view(model.ay));
 		case 24:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$TabBarMsg,
 				catalogPageConfig,
-				author$project$Demo$TabBar$view(model.az));
+				author$project$Demo$TabBar$view(model.aA));
 		case 25:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$TextFieldMsg,
 				catalogPageConfig,
-				author$project$Demo$TextFields$view(model.aB));
+				author$project$Demo$TextFields$view(model.aC));
 		case 26:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$ThemeMsg,
 				catalogPageConfig,
-				author$project$Demo$Theme$view(model.aC));
+				author$project$Demo$Theme$view(model.aD));
 		case 27:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$TopAppBarMsg,
 				catalogPageConfig,
-				author$project$Demo$TopAppBar$view(model.cV));
+				author$project$Demo$TopAppBar$view(model.cW));
 		case 28:
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
 				author$project$Main$StandardTopAppBarMsg,
-				author$project$Demo$StandardTopAppBar$view(model.aw));
+				author$project$Demo$StandardTopAppBar$view(model.ax));
 		case 29:
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
@@ -18546,12 +18580,12 @@ var author$project$Main$body = function (model) {
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
 				author$project$Main$ProminentTopAppBarMsg,
-				author$project$Demo$ProminentTopAppBar$view(model.ak));
+				author$project$Demo$ProminentTopAppBar$view(model.al));
 		case 32:
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
 				author$project$Main$ShortTopAppBarMsg,
-				author$project$Demo$ShortTopAppBar$view(model.at));
+				author$project$Demo$ShortTopAppBar$view(model.au));
 		case 30:
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
@@ -18561,25 +18595,25 @@ var author$project$Main$body = function (model) {
 			return A2(
 				author$project$Demo$TopAppBarPage$view,
 				author$project$Main$ShortCollapsedTopAppBarMsg,
-				author$project$Demo$ShortCollapsedTopAppBar$view(model.as));
+				author$project$Demo$ShortCollapsedTopAppBar$view(model.at));
 		case 14:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$LayoutGridMsg,
 				catalogPageConfig,
-				author$project$Demo$LayoutGrid$view(model.ad));
+				author$project$Demo$LayoutGrid$view(model.ae));
 		case 18:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$RippleMsg,
 				catalogPageConfig,
-				author$project$Demo$Ripple$view(model.ap));
+				author$project$Demo$Ripple$view(model.aq));
 		case 34:
 			return A3(
 				author$project$Demo$CatalogPage$view,
 				author$project$Main$TypographyMsg,
 				catalogPageConfig,
-				author$project$Demo$Typography$view(model.aF));
+				author$project$Demo$Typography$view(model.aG));
 		case 35:
 			return A3(
 				author$project$Demo$CatalogPage$view,
@@ -18611,11 +18645,11 @@ var author$project$Main$view = function (model) {
 			[
 				author$project$Main$body(model)
 			]),
-		cU: 'Material Components for Elm'
+		cV: 'Material Components for Elm'
 	};
 };
 var elm$browser$Browser$application = _Browser_application;
 var author$project$Main$main = elm$browser$Browser$application(
-	{cz: author$project$Main$init, cI: author$project$Main$UrlChanged, cJ: author$project$Main$UrlRequested, cT: author$project$Main$subscriptions, cX: author$project$Main$update, cY: author$project$Main$view});
+	{cz: author$project$Main$init, cJ: author$project$Main$UrlChanged, cK: author$project$Main$UrlRequested, cU: author$project$Main$subscriptions, cY: author$project$Main$update, cZ: author$project$Main$view});
 _Platform_export({'Main':{'init':author$project$Main$main(
 	elm$json$Json$Decode$succeed(0))(0)}});}(this));
