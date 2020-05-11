@@ -2659,7 +2659,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		o: func(record.o),
+		n: func(record.n),
 		bP: record.bP,
 		bG: record.bG
 	}
@@ -2929,7 +2929,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.o;
+		var message = !tag ? value : tag < 3 ? value.a : value.n;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.bP;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -5260,19 +5260,19 @@ var $author$project$Demo$Chips$defaultModel = {
 };
 var $author$project$Demo$DataTable$defaultModel = {h: $elm$core$Set$empty};
 var $author$project$Demo$DenseTopAppBar$defaultModel = {};
-var $author$project$Demo$Dialog$defaultModel = {s: $elm$core$Maybe$Nothing};
-var $author$project$Demo$DismissibleDrawer$defaultModel = {s: false, a1: 0};
+var $author$project$Demo$Dialog$defaultModel = {r: $elm$core$Maybe$Nothing};
+var $author$project$Demo$DismissibleDrawer$defaultModel = {r: false, a1: 0};
 var $author$project$Demo$Drawer$defaultModel = {};
 var $author$project$Demo$Elevation$defaultModel = {};
 var $author$project$Demo$Fabs$defaultModel = {};
 var $author$project$Demo$FixedTopAppBar$defaultModel = {};
-var $author$project$Demo$IconButton$defaultModel = {r: $elm$core$Set$empty};
+var $author$project$Demo$IconButton$defaultModel = {q: $elm$core$Set$empty};
 var $author$project$Demo$ImageList$defaultModel = {};
 var $author$project$Demo$LayoutGrid$defaultModel = {};
 var $author$project$Demo$LinearProgress$defaultModel = {};
 var $author$project$Demo$Lists$defaultModel = {aL: 'Star', S: $elm$core$Set$empty, ar: $elm$core$Maybe$Nothing, a2: 'Star'};
-var $author$project$Demo$Menus$defaultModel = {s: false};
-var $author$project$Demo$ModalDrawer$defaultModel = {s: false, a1: 0};
+var $author$project$Demo$Menus$defaultModel = {r: false};
+var $author$project$Demo$ModalDrawer$defaultModel = {r: false, a1: 0};
 var $author$project$Demo$PermanentDrawer$defaultModel = {a1: 0};
 var $author$project$Demo$ProminentTopAppBar$defaultModel = {};
 var $author$project$Demo$RadioButtons$defaultModel = {
@@ -5288,7 +5288,7 @@ var $author$project$Demo$Selects$defaultModel = {a4: ''};
 var $author$project$Demo$ShortCollapsedTopAppBar$defaultModel = {};
 var $author$project$Demo$ShortTopAppBar$defaultModel = {};
 var $author$project$Demo$Slider$defaultModel = {
-	t: $elm$core$Dict$fromList(
+	s: $elm$core$Dict$fromList(
 		_List_fromArray(
 			[
 				_Utils_Tuple2('hero-slider', 25),
@@ -5297,7 +5297,8 @@ var $author$project$Demo$Slider$defaultModel = {
 				_Utils_Tuple2('discrete-slider-with-tick-marks', 25)
 			]))
 };
-var $author$project$Material$Snackbar$initialQueue = {l: 0, p: _List_Nil};
+var $author$project$Material$Snackbar$Queue = $elm$core$Basics$identity;
+var $author$project$Material$Snackbar$initialQueue = {o: 0, y: _List_Nil};
 var $author$project$Demo$Snackbar$defaultModel = {aq: $author$project$Material$Snackbar$initialQueue};
 var $author$project$Demo$StandardTopAppBar$defaultModel = {};
 var $author$project$Demo$Switch$defaultModel = {
@@ -5313,7 +5314,7 @@ var $author$project$Demo$Theme$defaultModel = {};
 var $author$project$Demo$TopAppBar$defaultModel = {};
 var $author$project$Demo$Typography$defaultModel = {};
 var $author$project$Main$defaultModel = function (key) {
-	return {cv: $author$project$Demo$Buttons$defaultModel, Q: $author$project$Demo$Cards$defaultModel, w: false, R: $author$project$Demo$Checkbox$defaultModel, T: $author$project$Demo$Chips$defaultModel, V: $author$project$Demo$DataTable$defaultModel, W: $author$project$Demo$DenseTopAppBar$defaultModel, X: $author$project$Demo$Dialog$defaultModel, _: $author$project$Demo$DismissibleDrawer$defaultModel, cz: $author$project$Demo$Drawer$defaultModel, aa: $author$project$Demo$Elevation$defaultModel, ab: $author$project$Demo$Fabs$defaultModel, ac: $author$project$Demo$FixedTopAppBar$defaultModel, af: $author$project$Demo$IconButton$defaultModel, ag: $author$project$Demo$ImageList$defaultModel, b4: key, ai: $author$project$Demo$LayoutGrid$defaultModel, ak: $author$project$Demo$LinearProgress$defaultModel, al: $author$project$Demo$Lists$defaultModel, am: $author$project$Demo$Menus$defaultModel, an: $author$project$Demo$ModalDrawer$defaultModel, ao: $author$project$Demo$PermanentDrawer$defaultModel, ap: $author$project$Demo$ProminentTopAppBar$defaultModel, ar: $author$project$Demo$RadioButtons$defaultModel, at: $author$project$Demo$Ripple$defaultModel, au: $author$project$Demo$Selects$defaultModel, av: $author$project$Demo$ShortCollapsedTopAppBar$defaultModel, aw: $author$project$Demo$ShortTopAppBar$defaultModel, ax: $author$project$Demo$Slider$defaultModel, ay: $author$project$Demo$Snackbar$defaultModel, az: $author$project$Demo$StandardTopAppBar$defaultModel, aA: $author$project$Demo$Switch$defaultModel, aC: $author$project$Demo$TabBar$defaultModel, aE: $author$project$Demo$TextFields$defaultModel, aF: $author$project$Demo$Theme$defaultModel, c_: $author$project$Demo$TopAppBar$defaultModel, aI: $author$project$Demo$Typography$defaultModel, a: $author$project$Demo$Url$Button};
+	return {cv: $author$project$Demo$Buttons$defaultModel, Q: $author$project$Demo$Cards$defaultModel, v: false, R: $author$project$Demo$Checkbox$defaultModel, T: $author$project$Demo$Chips$defaultModel, V: $author$project$Demo$DataTable$defaultModel, W: $author$project$Demo$DenseTopAppBar$defaultModel, X: $author$project$Demo$Dialog$defaultModel, _: $author$project$Demo$DismissibleDrawer$defaultModel, cz: $author$project$Demo$Drawer$defaultModel, aa: $author$project$Demo$Elevation$defaultModel, ab: $author$project$Demo$Fabs$defaultModel, ac: $author$project$Demo$FixedTopAppBar$defaultModel, af: $author$project$Demo$IconButton$defaultModel, ag: $author$project$Demo$ImageList$defaultModel, b4: key, ai: $author$project$Demo$LayoutGrid$defaultModel, ak: $author$project$Demo$LinearProgress$defaultModel, al: $author$project$Demo$Lists$defaultModel, am: $author$project$Demo$Menus$defaultModel, an: $author$project$Demo$ModalDrawer$defaultModel, ao: $author$project$Demo$PermanentDrawer$defaultModel, ap: $author$project$Demo$ProminentTopAppBar$defaultModel, ar: $author$project$Demo$RadioButtons$defaultModel, at: $author$project$Demo$Ripple$defaultModel, au: $author$project$Demo$Selects$defaultModel, av: $author$project$Demo$ShortCollapsedTopAppBar$defaultModel, aw: $author$project$Demo$ShortTopAppBar$defaultModel, ax: $author$project$Demo$Slider$defaultModel, ay: $author$project$Demo$Snackbar$defaultModel, az: $author$project$Demo$StandardTopAppBar$defaultModel, aA: $author$project$Demo$Switch$defaultModel, aC: $author$project$Demo$TabBar$defaultModel, aE: $author$project$Demo$TextFields$defaultModel, aF: $author$project$Demo$Theme$defaultModel, c_: $author$project$Demo$TopAppBar$defaultModel, aI: $author$project$Demo$Typography$defaultModel, a: $author$project$Demo$Url$Button};
 };
 var $author$project$Demo$Url$Card = {$: 2};
 var $author$project$Demo$Url$Checkbox = {$: 3};
@@ -6098,13 +6099,13 @@ var $author$project$Demo$Dialog$update = F2(
 		if (!msg.$) {
 			return _Utils_update(
 				model,
-				{s: $elm$core$Maybe$Nothing});
+				{r: $elm$core$Maybe$Nothing});
 		} else {
 			var id = msg.a;
 			return _Utils_update(
 				model,
 				{
-					s: $elm$core$Maybe$Just(id)
+					r: $elm$core$Maybe$Just(id)
 				});
 		}
 	});
@@ -6115,11 +6116,11 @@ var $author$project$Demo$DismissibleDrawer$update = F2(
 			case 0:
 				return _Utils_update(
 					model,
-					{s: !model.s});
+					{r: !model.r});
 			case 1:
 				return _Utils_update(
 					model,
-					{s: false});
+					{r: false});
 			default:
 				var index = msg.a;
 				return _Utils_update(
@@ -6149,7 +6150,7 @@ var $author$project$Demo$IconButton$update = F2(
 		return _Utils_update(
 			model,
 			{
-				r: A2($elm$core$Set$member, id, model.r) ? A2($elm$core$Set$remove, id, model.r) : A2($elm$core$Set$insert, id, model.r)
+				q: A2($elm$core$Set$member, id, model.q) ? A2($elm$core$Set$remove, id, model.q) : A2($elm$core$Set$insert, id, model.q)
 			});
 	});
 var $author$project$Demo$ImageList$update = F2(
@@ -6198,11 +6199,11 @@ var $author$project$Demo$Menus$update = F2(
 		if (!msg) {
 			return _Utils_update(
 				model,
-				{s: true});
+				{r: true});
 		} else {
 			return _Utils_update(
 				model,
-				{s: false});
+				{r: false});
 		}
 	});
 var $author$project$Demo$ModalDrawer$update = F2(
@@ -6211,11 +6212,11 @@ var $author$project$Demo$ModalDrawer$update = F2(
 			case 0:
 				return _Utils_update(
 					model,
-					{s: true});
+					{r: true});
 			case 1:
 				return _Utils_update(
 					model,
-					{s: false});
+					{r: false});
 			default:
 				var index = msg.a;
 				return _Utils_update(
@@ -6270,7 +6271,7 @@ var $author$project$Demo$Slider$update = F2(
 		return _Utils_update(
 			model,
 			{
-				t: A3($elm$core$Dict$insert, id, value, model.t)
+				s: A3($elm$core$Dict$insert, id, value, model.s)
 			});
 	});
 var $author$project$Demo$Snackbar$Click = {$: 4};
@@ -6372,28 +6373,29 @@ var $elm$core$List$isEmpty = function (xs) {
 	}
 };
 var $author$project$Material$Snackbar$update = F3(
-	function (lift, msg, queue) {
+	function (lift, msg, _v0) {
+		var queue = _v0;
 		if (!msg.$) {
 			var message_ = msg.a;
-			var nextMessageId = $elm$core$List$isEmpty(queue.p) ? (queue.l + 1) : queue.l;
+			var nextMessageId = $elm$core$List$isEmpty(queue.y) ? (queue.o + 1) : queue.o;
 			return _Utils_Tuple2(
 				_Utils_update(
 					queue,
 					{
-						l: nextMessageId,
-						p: _Utils_ap(
-							queue.p,
+						o: nextMessageId,
+						y: _Utils_ap(
+							queue.y,
 							_List_fromArray(
 								[message_]))
 					}),
 				$elm$core$Platform$Cmd$none);
 		} else {
-			var messages = A2($elm$core$List$drop, 1, queue.p);
-			var nextMessageId = (!$elm$core$List$isEmpty(messages)) ? (queue.l + 1) : queue.l;
+			var messages = A2($elm$core$List$drop, 1, queue.y);
+			var nextMessageId = (!$elm$core$List$isEmpty(messages)) ? (queue.o + 1) : queue.o;
 			return _Utils_Tuple2(
 				_Utils_update(
 					queue,
-					{l: nextMessageId, p: messages}),
+					{o: nextMessageId, y: messages}),
 				$elm$core$Platform$Cmd$none);
 		}
 	});
@@ -6564,9 +6566,9 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							w: (!_Utils_eq(
+							v: (!_Utils_eq(
 								$author$project$Demo$Url$fromUrl(url),
-								$author$project$Demo$Url$StartPage)) ? model.w : false,
+								$author$project$Demo$Url$StartPage)) ? model.v : false,
 							a: $author$project$Demo$Url$fromUrl(url)
 						}),
 					(!_Utils_eq(
@@ -6581,13 +6583,13 @@ var $author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{w: true}),
+						{v: true}),
 					$elm$core$Platform$Cmd$none);
 			case 4:
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{w: false}),
+						{v: false}),
 					$elm$core$Platform$Cmd$none);
 			case 5:
 				var msg_ = msg.a;
@@ -7898,7 +7900,7 @@ var $author$project$Demo$CatalogPage$catalogPageContainer = _List_fromArray(
 		$author$project$Material$Typography$typography
 	]);
 var $author$project$Material$Drawer$Dismissible$Config = $elm$core$Basics$identity;
-var $author$project$Material$Drawer$Dismissible$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, s: false};
+var $author$project$Material$Drawer$Dismissible$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, r: false};
 var $author$project$Material$List$Config = $elm$core$Basics$identity;
 var $author$project$Material$List$config = {a9: _List_Nil, bc: false, bi: false, bu: false, bS: false, cp: false, bW: false};
 var $author$project$Material$List$Item$Internal$Config = $elm$core$Basics$identity;
@@ -7975,7 +7977,7 @@ var $author$project$Material$Drawer$Dismissible$closeHandler = function (_v0) {
 var $author$project$Material$Drawer$Dismissible$dismissibleCs = $elm$core$Maybe$Just(
 	$elm$html$Html$Attributes$class('mdc-drawer--dismissible'));
 var $author$project$Material$Drawer$Dismissible$openProp = function (_v0) {
-	var open = _v0.s;
+	var open = _v0.r;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -8522,7 +8524,7 @@ var $author$project$Material$Drawer$Dismissible$setOpen = F2(
 		var config_ = _v0;
 		return _Utils_update(
 			config_,
-			{s: open});
+			{r: open});
 	});
 var $author$project$Material$List$Item$setSelected = F2(
 	function (selection, _v0) {
@@ -9433,9 +9435,9 @@ var $author$project$Material$DataTable$Config = $elm$core$Basics$identity;
 var $author$project$Material$DataTable$config = {a9: _List_Nil, b: $elm$core$Maybe$Nothing};
 var $author$project$Demo$DataTable$data = _List_fromArray(
 	[
-		{v: '24', x: 'Super tasty', n: 'Frozen yogurt', D: '4.0'},
-		{v: '37', x: 'I like ice cream more', n: 'Ice cream sandwich', D: '4.33333333333'},
-		{v: '24', x: 'New filing flavor', n: 'Eclair', D: '6.0'}
+		{u: '24', w: 'Super tasty', m: 'Frozen yogurt', D: '4.0'},
+		{u: '37', w: 'I like ice cream more', m: 'Ice cream sandwich', D: '4.33333333333'},
+		{u: '24', w: 'New filing flavor', m: 'Eclair', D: '6.0'}
 	]);
 var $author$project$Material$DataTable$ariaLabelAttr = function (_v0) {
 	var label = _v0.b;
@@ -9623,7 +9625,7 @@ var $author$project$Material$DataTable$dataTable = F2(
 						]))
 				]));
 	});
-var $author$project$Demo$DataTable$label = {v: 'Carbs (g)', x: 'Comments', n: 'Desert', D: 'Protein (g)'};
+var $author$project$Demo$DataTable$label = {u: 'Carbs (g)', w: 'Comments', m: 'Desert', D: 'Protein (g)'};
 var $author$project$Material$DataTable$numericCell = F2(
 	function (attributes, nodes) {
 		return $author$project$Material$DataTable$Cell(
@@ -9669,10 +9671,10 @@ var $author$project$Demo$DataTable$dataTableWithRowSelection = function (model) 
 		function (_v2, _v3) {
 			var onChange = _v2.a_;
 			var selected = _v2.h;
-			var desert = _v3.n;
-			var carbs = _v3.v;
+			var desert = _v3.m;
+			var carbs = _v3.u;
 			var protein = _v3.D;
-			var comments = _v3.x;
+			var comments = _v3.w;
 			return A2(
 				$author$project$Material$DataTable$row,
 				selected ? $author$project$Material$DataTable$selected : _List_Nil,
@@ -9723,10 +9725,10 @@ var $author$project$Demo$DataTable$dataTableWithRowSelection = function (model) 
 		function (_v0, _v1) {
 			var onChange = _v0.a_;
 			var state = _v0.ck;
-			var desert = _v1.n;
-			var carbs = _v1.v;
+			var desert = _v1.m;
+			var carbs = _v1.u;
 			var protein = _v1.D;
-			var comments = _v1.x;
+			var comments = _v1.w;
 			return _List_fromArray(
 				[
 					A2(
@@ -9784,7 +9786,7 @@ var $author$project$Demo$DataTable$dataTableWithRowSelection = function (model) 
 			cn: A2(
 				$elm$core$List$map,
 				function (data_) {
-					var desert = data_.n;
+					var desert = data_.m;
 					return A2(
 						row,
 						{
@@ -9805,10 +9807,10 @@ var $author$project$Demo$DataTable$dataTableWithRowSelection = function (model) 
 };
 var $author$project$Demo$DataTable$standardDataTable = function () {
 	var row = function (_v0) {
-		var desert = _v0.n;
-		var carbs = _v0.v;
+		var desert = _v0.m;
+		var carbs = _v0.u;
 		var protein = _v0.D;
-		var comments = _v0.x;
+		var comments = _v0.w;
 		return A2(
 			$author$project$Material$DataTable$row,
 			_List_Nil,
@@ -9980,7 +9982,7 @@ var $author$project$Demo$Dialog$Show = function (a) {
 var $author$project$Demo$Dialog$SimpleDialog = 3;
 var $author$project$Demo$Dialog$Close = {$: 0};
 var $author$project$Material$Dialog$Config = $elm$core$Basics$identity;
-var $author$project$Material$Dialog$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, s: false};
+var $author$project$Material$Dialog$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, r: false};
 var $author$project$Material$Dialog$ariaModalAttr = $elm$core$Maybe$Just(
 	A2($elm$html$Html$Attributes$attribute, 'aria-modal', 'true'));
 var $author$project$Material$Dialog$closeHandler = function (_v0) {
@@ -10064,7 +10066,7 @@ var $author$project$Material$Dialog$containerElt = function (content) {
 			]));
 };
 var $author$project$Material$Dialog$openProp = function (_v0) {
-	var open = _v0.s;
+	var open = _v0.r;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -10130,7 +10132,7 @@ var $author$project$Material$Dialog$setOpen = F2(
 		var config_ = _v0;
 		return _Utils_update(
 			config_,
-			{s: open});
+			{r: open});
 	});
 var $author$project$Demo$Dialog$alertDialog = function (model) {
 	return A2(
@@ -10141,7 +10143,7 @@ var $author$project$Demo$Dialog$alertDialog = function (model) {
 			A2(
 				$author$project$Material$Dialog$setOpen,
 				_Utils_eq(
-					model.s,
+					model.r,
 					$elm$core$Maybe$Just(0)),
 				$author$project$Material$Dialog$config)),
 		{
@@ -10310,7 +10312,7 @@ var $author$project$Demo$Dialog$confirmationDialog = function (model) {
 			A2(
 				$author$project$Material$Dialog$setOpen,
 				_Utils_eq(
-					model.s,
+					model.r,
 					$elm$core$Maybe$Just(1)),
 				$author$project$Material$Dialog$config)),
 		{
@@ -10405,7 +10407,7 @@ var $author$project$Demo$Dialog$scrollableDialog = function (model) {
 			A2(
 				$author$project$Material$Dialog$setOpen,
 				_Utils_eq(
-					model.s,
+					model.r,
 					$elm$core$Maybe$Just(2)),
 				$author$project$Material$Dialog$config)),
 		{
@@ -10528,7 +10530,7 @@ var $author$project$Demo$Dialog$simpleDialog = function (model) {
 			A2(
 				$author$project$Material$Dialog$setOpen,
 				_Utils_eq(
-					model.s,
+					model.r,
 					$elm$core$Maybe$Just(3)),
 				$author$project$Material$Dialog$config)),
 		{
@@ -10910,7 +10912,7 @@ var $author$project$Demo$DismissibleDrawer$view = function (model) {
 			A2(
 				$author$project$Material$Drawer$Dismissible$setOnClose,
 				$author$project$Demo$DismissibleDrawer$CloseDrawer,
-				A2($author$project$Material$Drawer$Dismissible$setOpen, model.s, $author$project$Material$Drawer$Dismissible$config)),
+				A2($author$project$Material$Drawer$Dismissible$setOpen, model.r, $author$project$Material$Drawer$Dismissible$config)),
 			A2($author$project$Demo$DrawerPage$drawerBody, $author$project$Demo$DismissibleDrawer$SetSelectedIndex, model.a1)),
 		cP: $elm$core$Maybe$Just($author$project$Demo$DismissibleDrawer$ToggleDrawer),
 		cV: $elm$core$Maybe$Nothing,
@@ -12033,7 +12035,7 @@ var $author$project$Demo$IconButton$view = function (model) {
 					'icon-button-toggle',
 					A2(
 						$author$project$Material$IconToggle$setOn,
-						A2($elm$core$Set$member, 'icon-button-toggle', model.r),
+						A2($elm$core$Set$member, 'icon-button-toggle', model.q),
 						$author$project$Material$IconToggle$config)),
 				{b6: 'favorite_border', b8: 'favorite'})
 			]),
@@ -12046,7 +12048,7 @@ var $author$project$Demo$IconButton$view = function (model) {
 					'icon-button-hero',
 					A2(
 						$author$project$Material$IconToggle$setOn,
-						A2($elm$core$Set$member, 'icon-button-hero', model.r),
+						A2($elm$core$Set$member, 'icon-button-hero', model.q),
 						$author$project$Material$IconToggle$config)),
 				{b6: 'favorite_border', b8: 'favorite'})
 			]),
@@ -13389,7 +13391,7 @@ var $author$project$Demo$Lists$view = function (model) {
 var $author$project$Demo$Menus$Close = 1;
 var $author$project$Demo$Menus$Open = 0;
 var $author$project$Material$Menu$Config = $elm$core$Basics$identity;
-var $author$project$Material$Menu$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, s: false, bH: false};
+var $author$project$Material$Menu$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, r: false, bH: false};
 var $author$project$Demo$Menus$heroMenu = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -13446,7 +13448,7 @@ var $author$project$Material$Menu$closeHandler = function (_v0) {
 		onClose);
 };
 var $author$project$Material$Menu$openProp = function (_v0) {
-	var open = _v0.s;
+	var open = _v0.r;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -13497,7 +13499,7 @@ var $author$project$Material$Menu$setOpen = F2(
 		var config_ = _v0;
 		return _Utils_update(
 			config_,
-			{s: open});
+			{r: open});
 	});
 var $author$project$Material$List$setWrapFocus = F2(
 	function (wrapFocus, _v0) {
@@ -13534,7 +13536,7 @@ var $author$project$Demo$Menus$view = function (model) {
 						A2(
 							$author$project$Material$Menu$setOnClose,
 							1,
-							A2($author$project$Material$Menu$setOpen, model.s, $author$project$Material$Menu$config)),
+							A2($author$project$Material$Menu$setOpen, model.r, $author$project$Material$Menu$config)),
 						_List_fromArray(
 							[
 								A2(
@@ -13580,7 +13582,7 @@ var $author$project$Demo$ModalDrawer$SetSelectedIndex = function (a) {
 	return {$: 2, a: a};
 };
 var $author$project$Material$Drawer$Modal$Config = $elm$core$Basics$identity;
-var $author$project$Material$Drawer$Modal$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, s: false};
+var $author$project$Material$Drawer$Modal$config = {a9: _List_Nil, bz: $elm$core$Maybe$Nothing, r: false};
 var $author$project$Material$Drawer$Modal$closeHandler = function (_v0) {
 	var onClose = _v0.bz;
 	return A2(
@@ -13594,7 +13596,7 @@ var $author$project$Material$Drawer$Modal$closeHandler = function (_v0) {
 var $author$project$Material$Drawer$Modal$modalCs = $elm$core$Maybe$Just(
 	$elm$html$Html$Attributes$class('mdc-drawer--modal'));
 var $author$project$Material$Drawer$Modal$openProp = function (_v0) {
-	var open = _v0.s;
+	var open = _v0.r;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -13647,7 +13649,7 @@ var $author$project$Material$Drawer$Modal$setOpen = F2(
 		var config_ = _v0;
 		return _Utils_update(
 			config_,
-			{s: open});
+			{r: open});
 	});
 var $author$project$Demo$ModalDrawer$view = function (model) {
 	return {
@@ -13656,7 +13658,7 @@ var $author$project$Demo$ModalDrawer$view = function (model) {
 			A2(
 				$author$project$Material$Drawer$Modal$setOnClose,
 				$author$project$Demo$ModalDrawer$CloseDrawer,
-				A2($author$project$Material$Drawer$Modal$setOpen, model.s, $author$project$Material$Drawer$Modal$config)),
+				A2($author$project$Material$Drawer$Modal$setOpen, model.r, $author$project$Material$Drawer$Modal$config)),
 			A2($author$project$Demo$DrawerPage$drawerBody, $author$project$Demo$ModalDrawer$SetSelectedIndex, model.a1)),
 		cP: $elm$core$Maybe$Just($author$project$Demo$ModalDrawer$OpenDrawer),
 		cV: $elm$core$Maybe$Just(
@@ -15034,7 +15036,7 @@ var $author$project$Demo$Slider$continuousSlider = function (model) {
 					$author$project$Demo$Slider$Changed(id),
 					A2(
 						$author$project$Material$Slider$setValue,
-						A2($elm$core$Dict$get, id, model.t),
+						A2($elm$core$Dict$get, id, model.s),
 						$author$project$Material$Slider$config)))));
 };
 var $author$project$Material$Slider$setDiscrete = F2(
@@ -15071,7 +15073,7 @@ var $author$project$Demo$Slider$discreteSlider = function (model) {
 							$author$project$Demo$Slider$Changed(id),
 							A2(
 								$author$project$Material$Slider$setValue,
-								A2($elm$core$Dict$get, id, model.t),
+								A2($elm$core$Dict$get, id, model.s),
 								$author$project$Material$Slider$config)))))));
 };
 var $author$project$Material$Slider$setDisplayMarkers = F2(
@@ -15104,7 +15106,7 @@ var $author$project$Demo$Slider$discreteSliderWithTickMarks = function (model) {
 								$author$project$Demo$Slider$Changed(id),
 								A2(
 									$author$project$Material$Slider$setValue,
-									A2($elm$core$Dict$get, id, model.t),
+									A2($elm$core$Dict$get, id, model.s),
 									$author$project$Material$Slider$config))))))));
 };
 var $author$project$Demo$Slider$heroSlider = function (model) {
@@ -15115,7 +15117,7 @@ var $author$project$Demo$Slider$heroSlider = function (model) {
 			$author$project$Demo$Slider$Changed(id),
 			A2(
 				$author$project$Material$Slider$setValue,
-				A2($elm$core$Dict$get, id, model.t),
+				A2($elm$core$Dict$get, id, model.s),
 				$author$project$Material$Slider$config)));
 };
 var $author$project$Demo$Slider$view = function (model) {
@@ -15262,7 +15264,7 @@ var $author$project$Material$Snackbar$leadingCs = function (_v0) {
 		$elm$html$Html$Attributes$class('mdc-snackbar--leading')) : $elm$core$Maybe$Nothing;
 };
 var $author$project$Material$Snackbar$messageIdProp = function (_v0) {
-	var messageId = _v0.l;
+	var messageId = _v0.o;
 	return $elm$core$Maybe$Just(
 		A2(
 			$elm$html$Html$Attributes$property,
@@ -15395,10 +15397,11 @@ var $author$project$Material$Snackbar$timeoutMsProp = function (_v0) {
 var $author$project$Material$Snackbar$snackbar = F3(
 	function (lift, config_, queue) {
 		var additionalAttributes = config_.a9;
+		var messages = queue.y;
 		var message_ = A2(
 			$elm$core$Maybe$withDefault,
 			$author$project$Material$Snackbar$message,
-			$elm$core$List$head(queue.p));
+			$elm$core$List$head(messages));
 		return A3(
 			$elm$html$Html$node,
 			'mdc-snackbar',
@@ -18516,7 +18519,7 @@ var $author$project$Demo$Typography$view = function (model) {
 	};
 };
 var $author$project$Main$body = function (model) {
-	var catalogPageConfig = {b$: $author$project$Main$CloseCatalogDrawer, bk: model.w, b9: $author$project$Main$OpenCatalogDrawer, a: model.a};
+	var catalogPageConfig = {b$: $author$project$Main$CloseCatalogDrawer, bk: model.v, b9: $author$project$Main$OpenCatalogDrawer, a: model.a};
 	var _v0 = model.a;
 	switch (_v0.$) {
 		case 0:
