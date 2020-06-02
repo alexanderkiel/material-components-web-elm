@@ -15398,6 +15398,10 @@ var $author$project$Material$Snackbar$snackbar = F3(
 	function (lift, config_, queue) {
 		var additionalAttributes = config_.a8;
 		var messages = queue.z;
+		var message_ = A2(
+			$elm$core$Maybe$withDefault,
+			$author$project$Material$Snackbar$message,
+			$elm$core$List$head(messages));
 		return A3(
 			$elm$html$Html$node,
 			'mdc-snackbar',
@@ -15418,7 +15422,7 @@ var $author$project$Material$Snackbar$snackbar = F3(
 				additionalAttributes),
 			_List_fromArray(
 				[
-					$author$project$Material$Snackbar$surfaceElt($author$project$Material$Snackbar$message)
+					$author$project$Material$Snackbar$surfaceElt(message_)
 				]));
 	});
 var $author$project$Demo$Snackbar$view = function (model) {
